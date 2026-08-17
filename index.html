@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Эксперт Новострой — согласование страниц</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --text: #26313d;
+      --muted: #6b7682;
+      --line: #dfe5ea;
+      --accent: #5d8aa3;
+      --shadow: 0 10px 30px rgba(32, 45, 59, .08);
+      --radius: 18px;
+      --status-work: #e9edf1;
+      --status-review: #fff1d8;
+      --status-changes: #fde4e4;
+      --status-approved: #e0f3e7;
+      --status-published: #dcecf7;
+      --work-text: #53606d;
+      --review-text: #9a6200;
+      --changes-text: #a33737;
+      --approved-text: #287342;
+      --published-text: #2a6588;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .wrap {
+      width: min(1440px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 64px;
+    }
+    .top {
+      display: flex;
+      gap: 24px;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 28px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+    .subtitle, .updated {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .summary-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+    }
+    .summary-card strong {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+    .summary-card span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+    input, select {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+      padding: 0 14px;
+      color: var(--text);
+      font: inherit;
+    }
+    input { min-width: min(360px, 100%); flex: 1; }
+    .table-shell {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+    th {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      background: #fafbfd;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .url {
+      color: var(--muted);
+      font-size: 12px;
+      word-break: break-all;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .in_progress { background: var(--status-work); color: var(--work-text); }
+    .ready_for_review { background: var(--status-review); color: var(--review-text); }
+    .changes_requested { background: var(--status-changes); color: var(--changes-text); }
+    .approved { background: var(--status-approved); color: var(--approved-text); }
+    .published { background: var(--status-published); color: var(--published-text); }
+    .open {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 13px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .open:hover { filter: brightness(.95); }
+    .empty, .error {
+      padding: 34px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .error { color: #a33737; }
+    .mobile-cards { display: none; }
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media (max-width: 900px) {
+      .summary { grid-template-columns: repeat(2, 1fr); }
+      .top { align-items: flex-start; flex-direction: column; }
+      table { display: none; }
+      .mobile-cards {
+        display: grid;
+        gap: 12px;
+        padding: 12px;
+      }
+      .mobile-card {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .mobile-card .meta {
+        display: grid;
+        gap: 10px;
+        margin: 14px 0;
+        font-size: 13px;
+      }
+      .mobile-card .open { width: 100%; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 24px, 1440px); padding-top: 24px; }
+      .summary { grid-template-columns: 1fr; }
+      .toolbar { flex-direction: column; }
+      input, select { width: 100%; min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <div>
+        <h1>Эксперт Новострой</h1>
+        <div class="subtitle">Витрина разработки и согласования нового сайта</div>
+      </div>
+      <div class="updated" id="updated">Обновление данных…</div>
+    </div>
+
+    <section class="summary" id="summary" aria-label="Сводка по статусам"></section>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Найти страницу или URL…" autocomplete="off">
+      <select id="statusFilter" aria-label="Фильтр по статусу">
+        <option value="">Все статусы</option>
+        <option value="in_progress">В работе</option>
+        <option value="ready_for_review">К согласованию</option>
+        <option value="changes_requested">Есть правки</option>
+        <option value="approved">Согласовано</option>
+        <option value="published">Опубликовано</option>
+      </select>
+    </div>
+
+    <section class="table-shell">
+      <table>
+        <thead>
+          <tr>
+            <th>Страница</th>
+            <th>Статус</th>
+            <th>Обновлено</th>
+            <th>Открыть</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="mobile-cards" id="mobileCards"></div>
+      <div class="empty" id="empty" hidden>
+        Пока нет страниц для согласования. Codex добавит их в <code>pages/_review/pages.json</code>.
+      </div>
+      <div class="error" id="error" hidden>
+        Не удалось загрузить <code>_review/pages.json</code>.
+      </div>
+    </section>
+
+    <footer>
+      Служебная страница. Не является частью публичного сайта «Эксперт Новострой».
+    </footer>
+  </main>
+
+  <script>
+    const labels = {
+      in_progress: "В работе",
+      ready_for_review: "К согласованию",
+      changes_requested: "Есть правки",
+      approved: "Согласовано",
+      published: "Опубликовано"
+    };
+
+    let allPages = [];
+
+    function safeText(value) {
+      return String(value ?? "");
+    }
+
+    function statusLabel(status) {
+      return labels[status] || status || "—";
+    }
+
+    function pageHref(page) {
+      if (page.preview) return page.preview;
+      if (page.file) return page.file.replace(/^pages\//, "");
+      return "#";
+    }
+
+    function filteredPages() {
+      const q = document.querySelector("#search").value.trim().toLowerCase();
+      const status = document.querySelector("#statusFilter").value;
+      return allPages.filter(page => {
+        const haystack = `${page.title || ""} ${page.url || ""}`.toLowerCase();
+        return (!q || haystack.includes(q)) && (!status || page.status === status);
+      });
+    }
+
+    function renderSummary() {
+      const summary = document.querySelector("#summary");
+      const statuses = ["in_progress", "ready_for_review", "changes_requested", "approved", "published"];
+      summary.innerHTML = statuses.map(status => {
+        const count = allPages.filter(p => p.status === status).length;
+        return `<div class="summary-card"><strong>${count}</strong><span>${statusLabel(status)}</span></div>`;
+      }).join("");
+    }
+
+    function render() {
+      const pages = filteredPages();
+      const tbody = document.querySelector("#rows");
+      const cards = document.querySelector("#mobileCards");
+      const empty = document.querySelector("#empty");
+
+      empty.hidden = pages.length !== 0;
+
+      tbody.innerHTML = pages.map(page => `
+        <tr>
+          <td>
+            <div class="title">${safeText(page.title)}</div>
+            <div class="url">${safeText(page.url)}</div>
+          </td>
+          <td><span class="status ${safeText(page.status)}">${statusLabel(page.status)}</span></td>
+          <td>${safeText(page.updated || "—")}</td>
+          <td><a class="open" href="${pageHref(page)}">Открыть</a></td>
+        </tr>
+      `).join("");
+
+      cards.innerHTML = pages.map(page => `
+        <article class="mobile-card">
+          <div class="title">${safeText(page.title)}</div>
+          <div class="url">${safeText(page.url)}</div>
+          <div class="meta">
+            <div><span class="status ${safeText(page.status)}">${statusLabel(page.status)}</span></div>
+            <div>Обновлено: ${safeText(page.updated || "—")}</div>
+          </div>
+          <a class="open" href="${pageHref(page)}">Открыть страницу</a>
+        </article>
+      `).join("");
+    }
+
+    async function init() {
+      try {
+        const response = await fetch("_review/pages.json", { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        allPages = Array.isArray(data) ? data : (data.pages || []);
+        document.querySelector("#updated").textContent =
+          `Реестр обновлён: ${(data.updated || "дата не указана")}`;
+        renderSummary();
+        render();
+      } catch (err) {
+        document.querySelector("#error").hidden = false;
+        document.querySelector("#updated").textContent = "Ошибка загрузки реестра";
+        console.error(err);
+      }
+    }
+
+    document.querySelector("#search").addEventListener("input", render);
+    document.querySelector("#statusFilter").addEventListener("change", render);
+    init();
+  </script>
+</body>
+</html>
