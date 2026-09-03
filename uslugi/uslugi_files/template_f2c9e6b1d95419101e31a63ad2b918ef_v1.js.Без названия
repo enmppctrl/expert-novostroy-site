@@ -1,0 +1,88 @@
+
+; /* Start:"a:4:{s:4:"full";s:75:"/local/components/stroy/lead.form/templates/uslugi/script.js?17829842142850";s:6:"source";s:60:"/local/components/stroy/lead.form/templates/uslugi/script.js";s:3:"min";s:0:"";s:3:"map";s:0:"";}"*/
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.querySelector('.loader_container');
+
+    const form = document.getElementById('leadForm');
+    const formAlert = form.querySelector('.form-alert');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+
+        const services = formData
+            .getAll('service')
+            .map(item => String(item).trim())
+            .filter(Boolean);
+
+        const payload = {
+            name:               (formData.get('name') || '').trim(),
+            phone:              (formData.get('phone') || '').trim(),
+            developer:          (formData.get('developer') || '').trim(),
+            acceptance_date:    (formData.get('acceptance_date') || '').trim(),
+            comment:            (formData.get('comment') || '').trim(),
+            service_text:       services.length ? services.join(', ') : 'Не выбрана',
+            privacy:            formData.get('privacy') === 'Y' ? 'Y' : 'N',
+            page:               window.location.href,
+            title:              document.title
+        };
+
+        let validationError = false;
+
+        if (!payload.name || !payload.phone || payload.privacy !== 'Y') {
+            validationError = true;
+        }
+
+        form.classList.add('was-validated');
+
+        if (validationError) {
+            submitBtn.disabled = false;
+            return;
+        }
+
+        loader.style.display = 'block';
+        formAlert.style.display = 'none';
+        formAlert.innerHTML = '';
+
+        try {
+            const response = await BX.ajax.runComponentAction('stroy:lead.form', 'submit', {
+                mode: 'class',
+                data: {
+                    data: payload
+                }
+            });
+
+            if (response.data && response.data.success) {
+                window.location.href = '/thanks.php';
+                return;
+            }
+
+            formAlert.style.display = 'inline-block';
+            formAlert.innerHTML = response.data?.message || 'Ошибка при отправке формы';
+        } catch (error) {
+            let errorMessage = 'Ошибка сети при отправке формы';
+
+            if (
+                error &&
+                error.errors &&
+                error.errors.length &&
+                error.errors[0].message
+            ) {
+                errorMessage = error.errors[0].message;
+            }
+
+            formAlert.style.display = 'inline-block';
+            formAlert.innerHTML = errorMessage;
+        } finally {
+            loader.style.display = 'none';
+            submitBtn.disabled = false;
+        }
+    });
+
+});
+/* End */
+;; /* /local/components/stroy/lead.form/templates/uslugi/script.js?17829842142850*/

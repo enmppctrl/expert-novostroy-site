@@ -4,196 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>Эксперт Новострой — согласование страниц</title>
+  <title>Эксперт Новострой — карта разработки сайта</title>
   <style>
     :root {
-      --bg: #f4f6f8;
-      --panel: #ffffff;
-      --text: #26313d;
-      --muted: #6b7682;
-      --line: #dfe5ea;
+      --bg: #f3f6f8;
+      --panel: #fff;
+      --text: #263442;
+      --muted: #6d7a87;
+      --line: #dce4ea;
       --accent: #5d8aa3;
-      --shadow: 0 10px 30px rgba(32, 45, 59, .08);
+      --review-bg: #e8f3ff;
+      --review-border: #76aee0;
+      --review-text: #245f96;
+      --published-bg: #e6f6eb;
+      --published-border: #74c28e;
+      --published-text: #23733d;
+      --work-bg: #f0f3f5;
+      --work-text: #596673;
+      --shadow: 0 12px 34px rgba(35, 52, 67, .08);
       --radius: 18px;
-      --status-work: #e9edf1;
-      --status-review: #fff1d8;
-      --status-changes: #fde4e4;
-      --status-approved: #e0f3e7;
-      --status-published: #dcecf7;
-      --work-text: #53606d;
-      --review-text: #9a6200;
-      --changes-text: #a33737;
-      --approved-text: #287342;
-      --published-text: #2a6588;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-    }
-    .wrap {
-      width: min(1440px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 44px 0 64px;
-    }
-    .top {
-      display: flex;
-      gap: 24px;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 28px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.05;
-      letter-spacing: -.035em;
-    }
-    .subtitle, .updated {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    .summary {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(130px, 1fr));
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .summary-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px 16px;
-      box-shadow: var(--shadow);
-    }
-    .summary-card strong {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 3px;
-    }
-    .summary-card span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .toolbar {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 18px 0;
-    }
-    input, select {
-      min-height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: white;
-      padding: 0 14px;
-      color: var(--text);
-      font: inherit;
-    }
-    input { min-width: min(360px, 100%); flex: 1; }
-    .table-shell {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: left;
-      padding: 16px 18px;
-      border-bottom: 1px solid var(--line);
-      vertical-align: middle;
-    }
-    th {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      color: var(--muted);
-      background: #fafbfd;
-    }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: Arial, sans-serif; }
+    button, input, select { font: inherit; }
+    .wrap { width: min(1540px, calc(100% - 40px)); margin: 0 auto; padding: 44px 0 64px; }
+    .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 28px; }
+    h1, h2 { margin: 0; letter-spacing: -.035em; }
+    h1 { margin-bottom: 8px; font-size: clamp(32px, 4vw, 50px); line-height: 1.04; }
+    h2 { font-size: clamp(25px, 2.5vw, 34px); }
+    .subtitle, .updated, .section-copy { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .summary { display: grid; grid-template-columns: repeat(3, minmax(170px, 1fr)); gap: 14px; margin-bottom: 28px; }
+    .summary-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 15px; background: var(--panel); box-shadow: var(--shadow); }
+    .summary-card.review { border-color: var(--review-border); background: var(--review-bg); }
+    .summary-card.published { border-color: var(--published-border); background: var(--published-bg); }
+    .summary-card strong { display: block; margin-bottom: 4px; font-size: 28px; }
+    .summary-card span { color: var(--muted); font-size: 13px; font-weight: 700; }
+    .panel { margin-top: 22px; padding: 26px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 22px; }
+    .section-copy { max-width: 670px; margin-top: 8px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 9px; }
+    .legend-item, .status { display: inline-flex; align-items: center; min-height: 29px; padding: 5px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .legend-item:before { width: 9px; height: 9px; margin-right: 7px; border-radius: 3px; background: #fff; border: 1px solid var(--line); content: ""; }
+    .legend-item.review:before { background: var(--review-bg); border-color: var(--review-border); }
+    .legend-item.published:before { background: var(--published-bg); border-color: var(--published-border); }
+    .architecture-root { display: flex; justify-content: center; margin-bottom: 30px; }
+    .architecture-root:after { position: absolute; content: ""; }
+    .architecture-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; align-items: start; }
+    .tree-branch { min-width: 0; }
+    .node { display: block; min-height: 90px; padding: 15px 16px; border: 1px solid var(--line); border-radius: 15px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
+    a.node:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .node.review { border-color: var(--review-border); background: var(--review-bg); }
+    .node.published { border-color: var(--published-border); background: var(--published-bg); }
+    .node-title { display: block; margin-bottom: 5px; font-size: 14px; line-height: 1.35; font-weight: 700; }
+    .node-url { display: block; overflow-wrap: anywhere; color: var(--muted); font-size: 11px; line-height: 1.4; }
+    .node .status { margin-top: 10px; background: var(--work-bg); color: var(--work-text); }
+    .node.review .status { background: #d7eaff; color: var(--review-text); }
+    .node.published .status { background: #d4efdc; color: var(--published-text); }
+    .children { position: relative; display: grid; gap: 10px; margin: 10px 0 0 14px; padding-left: 15px; }
+    .children:before { position: absolute; top: 0; bottom: 10px; left: 0; width: 1px; background: #cbd5dc; content: ""; }
+    .children > .tree-branch { position: relative; }
+    .children > .tree-branch:before { position: absolute; top: 29px; left: -15px; width: 15px; height: 1px; background: #cbd5dc; content: ""; }
+    .toolbar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+    input, select { min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--text); }
+    input { min-width: min(380px, 100%); flex: 1; }
+    .table-shell { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { padding: 15px 17px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+    th { background: #f8fafb; color: var(--muted); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
     tr:last-child td { border-bottom: 0; }
-    .title {
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .url {
-      color: var(--muted);
-      font-size: 12px;
-      word-break: break-all;
-    }
-    .status {
-      display: inline-flex;
-      align-items: center;
-      min-height: 30px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    .in_progress { background: var(--status-work); color: var(--work-text); }
-    .ready_for_review { background: var(--status-review); color: var(--review-text); }
-    .changes_requested { background: var(--status-changes); color: var(--changes-text); }
-    .approved { background: var(--status-approved); color: var(--approved-text); }
-    .published { background: var(--status-published); color: var(--published-text); }
-    .open {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 38px;
-      padding: 8px 13px;
-      border-radius: 10px;
-      background: var(--accent);
-      color: white;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-    }
+    .page-title { margin-bottom: 4px; font-weight: 700; }
+    .page-url { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .status.in_progress { background: var(--work-bg); color: var(--work-text); }
+    .status.review { background: var(--review-bg); color: var(--review-text); }
+    .status.published { background: var(--published-bg); color: var(--published-text); }
+    .open { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 8px 13px; border-radius: 10px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; }
     .open:hover { filter: brightness(.95); }
-    .empty, .error {
-      padding: 34px 20px;
-      text-align: center;
-      color: var(--muted);
-    }
+    .not-ready { color: #929ca6; font-size: 12px; }
+    .empty, .error { padding: 30px 20px; text-align: center; color: var(--muted); }
     .error { color: #a33737; }
     .mobile-cards { display: none; }
-    footer {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }
+    footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
     @media (max-width: 900px) {
-      .summary { grid-template-columns: repeat(2, 1fr); }
-      .top { align-items: flex-start; flex-direction: column; }
+      .top, .section-head { align-items: flex-start; flex-direction: column; }
+      .summary { grid-template-columns: 1fr; }
+      .architecture-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       table { display: none; }
-      .mobile-cards {
-        display: grid;
-        gap: 12px;
-        padding: 12px;
-      }
-      .mobile-card {
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 16px;
-      }
-      .mobile-card .meta {
-        display: grid;
-        gap: 10px;
-        margin: 14px 0;
-        font-size: 13px;
-      }
+      .mobile-cards { display: grid; gap: 12px; padding: 12px; }
+      .mobile-card { padding: 16px; border: 1px solid var(--line); border-radius: 14px; }
+      .mobile-card.review { background: var(--review-bg); border-color: var(--review-border); }
+      .mobile-card.published { background: var(--published-bg); border-color: var(--published-border); }
+      .mobile-meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 14px 0; }
       .mobile-card .open { width: 100%; }
     }
-    @media (max-width: 520px) {
-      .wrap { width: min(100% - 24px, 1440px); padding-top: 24px; }
-      .summary { grid-template-columns: 1fr; }
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 24px); padding-top: 25px; }
+      .panel { padding: 18px; }
+      .architecture-grid { grid-template-columns: 1fr; }
       .toolbar { flex-direction: column; }
       input, select { width: 100%; min-width: 0; }
     }
@@ -201,128 +107,122 @@
 </head>
 <body>
   <main class="wrap">
-    <div class="top">
+    <header class="top">
       <div>
         <h1>Эксперт Новострой</h1>
-        <div class="subtitle">Витрина разработки и согласования нового сайта</div>
+        <div class="subtitle">Карта архитектуры, разработки и согласования нового сайта</div>
       </div>
       <div class="updated" id="updated">Обновление данных…</div>
-    </div>
+    </header>
 
     <section class="summary" id="summary" aria-label="Сводка по статусам"></section>
 
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="Найти страницу или URL…" autocomplete="off">
-      <select id="statusFilter" aria-label="Фильтр по статусу">
-        <option value="">Все статусы</option>
-        <option value="in_progress">В работе</option>
-        <option value="ready_for_review">К согласованию</option>
-        <option value="changes_requested">Есть правки</option>
-        <option value="approved">Согласовано</option>
-        <option value="published">Опубликовано</option>
-      </select>
-    </div>
-
-    <section class="table-shell">
-      <table>
-        <thead>
-          <tr>
-            <th>Страница</th>
-            <th>Статус</th>
-            <th>Обновлено</th>
-            <th>Открыть</th>
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      </table>
-      <div class="mobile-cards" id="mobileCards"></div>
-      <div class="empty" id="empty" hidden>
-        Пока нет страниц для согласования. Codex добавит их в <code>pages/_review/pages.json</code>.
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Архитектура сайта</h2>
+          <div class="section-copy">Страницы расположены по канонической структуре. Цветом отмечены только опубликованные страницы и страницы на согласовании.</div>
+        </div>
+        <div class="legend" aria-label="Легенда карты">
+          <span class="legend-item">В работе</span>
+          <span class="legend-item review">Согласование</span>
+          <span class="legend-item published">Опубликовано</span>
+        </div>
       </div>
-      <div class="error" id="error" hidden>
-        Не удалось загрузить <code>_review/pages.json</code>.
+      <div id="architecture"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Все страницы</h2>
+          <div class="section-copy">Поиск и фильтрация по трём рабочим статусам.</div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Найти страницу или URL…" autocomplete="off">
+        <select id="statusFilter" aria-label="Фильтр по статусу">
+          <option value="">Все статусы</option>
+          <option value="in_progress">В работе</option>
+          <option value="review">Согласование</option>
+          <option value="published">Опубликовано</option>
+        </select>
+      </div>
+      <div class="table-shell">
+        <table>
+          <thead><tr><th>Страница</th><th>Тип</th><th>Статус</th><th>Открыть</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="mobile-cards" id="mobileCards"></div>
+        <div class="empty" id="empty" hidden>Страницы по заданным условиям не найдены.</div>
+        <div class="error" id="error" hidden>Не удалось загрузить реестр страниц.</div>
       </div>
     </section>
 
-    <footer>
-      Служебная страница. Не является частью публичного сайта «Эксперт Новострой».
-    </footer>
+    <footer>Служебная страница. Не является частью публичного сайта «Эксперт Новострой».</footer>
   </main>
 
   <script>
-    const labels = {
-      in_progress: "В работе",
-      ready_for_review: "К согласованию",
-      changes_requested: "Есть правки",
-      approved: "Согласовано",
-      published: "Опубликовано"
-    };
-
+    const labels = { in_progress: "В работе", review: "Согласование", published: "Опубликовано" };
+    const statusOrder = ["in_progress", "review", "published"];
     let allPages = [];
 
-    function safeText(value) {
-      return String(value ?? "");
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
     }
 
-    function statusLabel(status) {
-      return labels[status] || status || "—";
+    function label(status) { return labels[status] || labels.in_progress; }
+    function href(page) { return page.preview || ""; }
+
+    function nodeMarkup(page, includeChildren = true) {
+      const children = includeChildren ? allPages.filter(item => item.parent === page.url) : [];
+      const tag = page.preview ? "a" : "div";
+      const link = page.preview ? ` href="${escapeHtml(href(page))}"` : "";
+      return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}"${link}>
+        <span class="node-title">${escapeHtml(page.title)}</span>
+        <span class="node-url">${escapeHtml(page.url)}</span>
+        <span class="status">${label(page.status)}</span>
+      </${tag}>${children.length ? `<div class="children">${children.map(child => nodeMarkup(child)).join("")}</div>` : ""}</div>`;
     }
 
-    function pageHref(page) {
-      if (page.preview) return page.preview;
-      if (page.file) return page.file.replace(/^pages\//, "");
-      return "#";
-    }
-
-    function filteredPages() {
-      const q = document.querySelector("#search").value.trim().toLowerCase();
-      const status = document.querySelector("#statusFilter").value;
-      return allPages.filter(page => {
-        const haystack = `${page.title || ""} ${page.url || ""}`.toLowerCase();
-        return (!q || haystack.includes(q)) && (!status || page.status === status);
-      });
+    function renderArchitecture() {
+      const root = allPages.find(page => page.url === "/");
+      const topLevel = allPages.filter(page => page.parent === "/");
+      document.querySelector("#architecture").innerHTML = `
+        ${root ? `<div class="architecture-root">${nodeMarkup(root, false)}</div>` : ""}
+        <div class="architecture-grid">${topLevel.map(page => nodeMarkup(page)).join("")}</div>`;
     }
 
     function renderSummary() {
-      const summary = document.querySelector("#summary");
-      const statuses = ["in_progress", "ready_for_review", "changes_requested", "approved", "published"];
-      summary.innerHTML = statuses.map(status => {
-        const count = allPages.filter(p => p.status === status).length;
-        return `<div class="summary-card"><strong>${count}</strong><span>${statusLabel(status)}</span></div>`;
+      document.querySelector("#summary").innerHTML = statusOrder.map(status => {
+        const count = allPages.filter(page => page.status === status).length;
+        return `<div class="summary-card ${status}"><strong>${count}</strong><span>${label(status)}</span></div>`;
       }).join("");
     }
 
-    function render() {
+    function filteredPages() {
+      const query = document.querySelector("#search").value.trim().toLowerCase();
+      const status = document.querySelector("#statusFilter").value;
+      return allPages.filter(page => {
+        const haystack = `${page.title || ""} ${page.url || ""} ${page.type || ""}`.toLowerCase();
+        return (!query || haystack.includes(query)) && (!status || page.status === status);
+      });
+    }
+
+    function renderList() {
       const pages = filteredPages();
-      const tbody = document.querySelector("#rows");
-      const cards = document.querySelector("#mobileCards");
-      const empty = document.querySelector("#empty");
-
-      empty.hidden = pages.length !== 0;
-
-      tbody.innerHTML = pages.map(page => `
-        <tr>
-          <td>
-            <div class="title">${safeText(page.title)}</div>
-            <div class="url">${safeText(page.url)}</div>
-          </td>
-          <td><span class="status ${safeText(page.status)}">${statusLabel(page.status)}</span></td>
-          <td>${safeText(page.updated || "—")}</td>
-          <td><a class="open" href="${pageHref(page)}">Открыть</a></td>
-        </tr>
-      `).join("");
-
-      cards.innerHTML = pages.map(page => `
-        <article class="mobile-card">
-          <div class="title">${safeText(page.title)}</div>
-          <div class="url">${safeText(page.url)}</div>
-          <div class="meta">
-            <div><span class="status ${safeText(page.status)}">${statusLabel(page.status)}</span></div>
-            <div>Обновлено: ${safeText(page.updated || "—")}</div>
-          </div>
-          <a class="open" href="${pageHref(page)}">Открыть страницу</a>
-        </article>
-      `).join("");
+      document.querySelector("#empty").hidden = pages.length !== 0;
+      document.querySelector("#rows").innerHTML = pages.map(page => `<tr>
+        <td><div class="page-title">${escapeHtml(page.title)}</div><div class="page-url">${escapeHtml(page.url)}</div></td>
+        <td>${escapeHtml(page.type || "—")}</td>
+        <td><span class="status ${escapeHtml(page.status)}">${label(page.status)}</span></td>
+        <td>${page.preview ? `<a class="open" href="${escapeHtml(href(page))}">Открыть</a>` : `<span class="not-ready">Ещё не размещена</span>`}</td>
+      </tr>`).join("");
+      document.querySelector("#mobileCards").innerHTML = pages.map(page => `<article class="mobile-card ${escapeHtml(page.status)}">
+        <div class="page-title">${escapeHtml(page.title)}</div><div class="page-url">${escapeHtml(page.url)}</div>
+        <div class="mobile-meta"><span>${escapeHtml(page.type || "—")}</span><span class="status ${escapeHtml(page.status)}">${label(page.status)}</span></div>
+        ${page.preview ? `<a class="open" href="${escapeHtml(href(page))}">Открыть страницу</a>` : `<span class="not-ready">Ещё не размещена</span>`}
+      </article>`).join("");
     }
 
     async function init() {
@@ -331,19 +231,19 @@
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         allPages = Array.isArray(data) ? data : (data.pages || []);
-        document.querySelector("#updated").textContent =
-          `Реестр обновлён: ${(data.updated || "дата не указана")}`;
+        document.querySelector("#updated").textContent = `Реестр обновлён: ${data.updated || "дата не указана"}`;
         renderSummary();
-        render();
-      } catch (err) {
+        renderArchitecture();
+        renderList();
+      } catch (error) {
         document.querySelector("#error").hidden = false;
         document.querySelector("#updated").textContent = "Ошибка загрузки реестра";
-        console.error(err);
+        console.error(error);
       }
     }
 
-    document.querySelector("#search").addEventListener("input", render);
-    document.querySelector("#statusFilter").addEventListener("change", render);
+    document.querySelector("#search").addEventListener("input", renderList);
+    document.querySelector("#statusFilter").addEventListener("change", renderList);
     init();
   </script>
 </body>

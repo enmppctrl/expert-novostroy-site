@@ -1,0 +1,48 @@
+
+
+/* Start:/local/components/stroy/loader/templates/.default/style.css?1779889054896*/
+.loader_container {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.loader_img {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background: url('/local/templates/stroy-v1/images/loader.png') no-repeat 100% / contain;
+}
+
+.loader {
+    top: -6px;
+    right: -5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    border: 10px solid;
+    border-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.35) rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    animation: rotation 1s
+    linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* End */
+/* /local/components/stroy/loader/templates/.default/style.css?1779889054896 */
