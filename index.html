@@ -33,75 +33,35 @@
     h1 { margin-bottom: 8px; font-size: clamp(32px, 4vw, 50px); line-height: 1.04; }
     h2 { font-size: clamp(25px, 2.5vw, 34px); }
     .subtitle, .updated, .section-copy { color: var(--muted); font-size: 14px; line-height: 1.55; }
-    .summary { display: grid; grid-template-columns: repeat(3, minmax(170px, 1fr)); gap: 14px; margin-bottom: 28px; }
-    .summary-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 15px; background: var(--panel); box-shadow: var(--shadow); }
-    .summary-card.review { border-color: var(--review-border); background: var(--review-bg); }
-    .summary-card.published { border-color: var(--published-border); background: var(--published-bg); }
-    .summary-card strong { display: block; margin-bottom: 4px; font-size: 28px; }
-    .summary-card span { color: var(--muted); font-size: 13px; font-weight: 700; }
-    .panel { margin-top: 22px; padding: 26px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
-    .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 22px; }
-    .section-copy { max-width: 670px; margin-top: 8px; }
-    .legend { display: flex; flex-wrap: wrap; gap: 9px; }
-    .legend-item, .status { display: inline-flex; align-items: center; min-height: 29px; padding: 5px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; white-space: nowrap; }
-    .legend-item:before { width: 9px; height: 9px; margin-right: 7px; border-radius: 3px; background: #fff; border: 1px solid var(--line); content: ""; }
-    .legend-item.review:before { background: var(--review-bg); border-color: var(--review-border); }
-    .legend-item.published:before { background: var(--published-bg); border-color: var(--published-border); }
-    .architecture-root { display: flex; justify-content: center; margin-bottom: 30px; }
-    .architecture-root:after { position: absolute; content: ""; }
-    .architecture-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; align-items: start; }
-    .tree-branch { min-width: 0; }
-    .node { display: block; min-height: 90px; padding: 15px 16px; border: 1px solid var(--line); border-radius: 15px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
+    .panel { margin-top: 22px; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
+    .architecture-root { display: flex; justify-content: flex-start; margin-bottom: 16px; }
+    .architecture-scroll-top { height: 16px; margin-bottom: 8px; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--accent) #e7edf1; }
+    .architecture-scroll-top-track { height: 1px; }
+    .architecture-scroll { overflow-x: auto; padding: 2px 2px 14px; scrollbar-width: thin; scrollbar-color: var(--accent) #e7edf1; }
+    .architecture-scroll-top::-webkit-scrollbar, .architecture-scroll::-webkit-scrollbar { height: 8px; }
+    .architecture-scroll-top::-webkit-scrollbar-track, .architecture-scroll::-webkit-scrollbar-track { border-radius: 8px; background: #e7edf1; }
+    .architecture-scroll-top::-webkit-scrollbar-thumb, .architecture-scroll::-webkit-scrollbar-thumb { border-radius: 8px; background: var(--accent); }
+    .architecture-grid { display: flex; align-items: flex-start; gap: 10px; width: max-content; min-width: 100%; }
+    .tree-branch { flex: 0 0 auto; width: max-content; max-width: 240px; }
+    .node { display: block; width: max-content; min-width: 120px; max-width: 220px; height: 40px; padding: 5px 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
     a.node:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
     .node.review { border-color: var(--review-border); background: var(--review-bg); }
     .node.published { border-color: var(--published-border); background: var(--published-bg); }
-    .node-title { display: block; margin-bottom: 5px; font-size: 14px; line-height: 1.35; font-weight: 700; }
-    .node-url { display: block; overflow-wrap: anywhere; color: var(--muted); font-size: 11px; line-height: 1.4; }
-    .node .status { margin-top: 10px; background: var(--work-bg); color: var(--work-text); }
-    .node.review .status { background: #d7eaff; color: var(--review-text); }
-    .node.published .status { background: #d4efdc; color: var(--published-text); }
-    .children { position: relative; display: grid; gap: 10px; margin: 10px 0 0 14px; padding-left: 15px; }
-    .children:before { position: absolute; top: 0; bottom: 10px; left: 0; width: 1px; background: #cbd5dc; content: ""; }
+    .node-title, .node-url { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .node-title { font-size: 12px; line-height: 14px; font-weight: 700; }
+    .node-url { color: var(--muted); font-size: 9px; line-height: 12px; }
+    .children { position: relative; display: grid; gap: 7px; margin: 7px 0 0 10px; padding-left: 12px; }
+    .children:before { position: absolute; top: 0; bottom: 7px; left: 0; width: 1px; background: #cbd5dc; content: ""; }
     .children > .tree-branch { position: relative; }
-    .children > .tree-branch:before { position: absolute; top: 29px; left: -15px; width: 15px; height: 1px; background: #cbd5dc; content: ""; }
-    .toolbar { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
-    input, select { min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--text); }
-    input { min-width: min(380px, 100%); flex: 1; }
-    .table-shell { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); }
-    table { width: 100%; border-collapse: collapse; background: #fff; }
-    th, td { padding: 15px 17px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
-    th { background: #f8fafb; color: var(--muted); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
-    tr:last-child td { border-bottom: 0; }
-    .page-title { margin-bottom: 4px; font-weight: 700; }
-    .page-url { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
-    .status.in_progress { background: var(--work-bg); color: var(--work-text); }
-    .status.review { background: var(--review-bg); color: var(--review-text); }
-    .status.published { background: var(--published-bg); color: var(--published-text); }
-    .open { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 8px 13px; border-radius: 10px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; }
-    .open:hover { filter: brightness(.95); }
-    .not-ready { color: #929ca6; font-size: 12px; }
-    .empty, .error { padding: 30px 20px; text-align: center; color: var(--muted); }
-    .error { color: #a33737; }
-    .mobile-cards { display: none; }
+    .children > .tree-branch:before { position: absolute; top: 20px; left: -12px; width: 12px; height: 1px; background: #cbd5dc; content: ""; }
+    .error { padding: 30px 20px; text-align: center; color: #a33737; }
     footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
     @media (max-width: 900px) {
-      .top, .section-head { align-items: flex-start; flex-direction: column; }
-      .summary { grid-template-columns: 1fr; }
-      .architecture-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      table { display: none; }
-      .mobile-cards { display: grid; gap: 12px; padding: 12px; }
-      .mobile-card { padding: 16px; border: 1px solid var(--line); border-radius: 14px; }
-      .mobile-card.review { background: var(--review-bg); border-color: var(--review-border); }
-      .mobile-card.published { background: var(--published-bg); border-color: var(--published-border); }
-      .mobile-meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 14px 0; }
-      .mobile-card .open { width: 100%; }
+      .top { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 600px) {
       .wrap { width: calc(100% - 24px); padding-top: 25px; }
       .panel { padding: 18px; }
-      .architecture-grid { grid-template-columns: 1fr; }
-      .toolbar { flex-direction: column; }
-      input, select { width: 100%; min-width: 0; }
     }
   </style>
 </head>
@@ -115,63 +75,21 @@
       <div class="updated" id="updated">Обновление данных…</div>
     </header>
 
-    <section class="summary" id="summary" aria-label="Сводка по статусам"></section>
-
     <section class="panel">
-      <div class="section-head">
-        <div>
-          <h2>Архитектура сайта</h2>
-          <div class="section-copy">Страницы расположены по канонической структуре. Цветом отмечены только опубликованные страницы и страницы на согласовании.</div>
-        </div>
-        <div class="legend" aria-label="Легенда карты">
-          <span class="legend-item">В работе</span>
-          <span class="legend-item review">Согласование</span>
-          <span class="legend-item published">Опубликовано</span>
-        </div>
-      </div>
       <div id="architecture"></div>
-    </section>
-
-    <section class="panel">
-      <div class="section-head">
-        <div>
-          <h2>Все страницы</h2>
-          <div class="section-copy">Поиск и фильтрация по трём рабочим статусам.</div>
-        </div>
-      </div>
-      <div class="toolbar">
-        <input id="search" type="search" placeholder="Найти страницу или URL…" autocomplete="off">
-        <select id="statusFilter" aria-label="Фильтр по статусу">
-          <option value="">Все статусы</option>
-          <option value="in_progress">В работе</option>
-          <option value="review">Согласование</option>
-          <option value="published">Опубликовано</option>
-        </select>
-      </div>
-      <div class="table-shell">
-        <table>
-          <thead><tr><th>Страница</th><th>Тип</th><th>Статус</th><th>Открыть</th></tr></thead>
-          <tbody id="rows"></tbody>
-        </table>
-        <div class="mobile-cards" id="mobileCards"></div>
-        <div class="empty" id="empty" hidden>Страницы по заданным условиям не найдены.</div>
-        <div class="error" id="error" hidden>Не удалось загрузить реестр страниц.</div>
-      </div>
+      <div class="error" id="error" hidden>Не удалось загрузить реестр страниц.</div>
     </section>
 
     <footer>Служебная страница. Не является частью публичного сайта «Эксперт Новострой».</footer>
   </main>
 
   <script>
-    const labels = { in_progress: "В работе", review: "Согласование", published: "Опубликовано" };
-    const statusOrder = ["in_progress", "review", "published"];
     let allPages = [];
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
     }
 
-    function label(status) { return labels[status] || labels.in_progress; }
     function href(page) { return page.preview || ""; }
 
     function nodeMarkup(page, includeChildren = true) {
@@ -181,7 +99,6 @@
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}"${link}>
         <span class="node-title">${escapeHtml(page.title)}</span>
         <span class="node-url">${escapeHtml(page.url)}</span>
-        <span class="status">${label(page.status)}</span>
       </${tag}>${children.length ? `<div class="children">${children.map(child => nodeMarkup(child)).join("")}</div>` : ""}</div>`;
     }
 
@@ -190,39 +107,30 @@
       const topLevel = allPages.filter(page => page.parent === "/");
       document.querySelector("#architecture").innerHTML = `
         ${root ? `<div class="architecture-root">${nodeMarkup(root, false)}</div>` : ""}
-        <div class="architecture-grid">${topLevel.map(page => nodeMarkup(page)).join("")}</div>`;
-    }
+        <div class="architecture-scroll-top" id="architectureScrollTop" tabindex="0" aria-label="Горизонтальная прокрутка карты"><div class="architecture-scroll-top-track" id="architectureScrollTopTrack"></div></div>
+        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${topLevel.map(page => nodeMarkup(page)).join("")}</div></div>`;
 
-    function renderSummary() {
-      document.querySelector("#summary").innerHTML = statusOrder.map(status => {
-        const count = allPages.filter(page => page.status === status).length;
-        return `<div class="summary-card ${status}"><strong>${count}</strong><span>${label(status)}</span></div>`;
-      }).join("");
-    }
+      const topScroll = document.querySelector("#architectureScrollTop");
+      const bottomScroll = document.querySelector("#architectureScroll");
+      const grid = document.querySelector("#architectureGrid");
+      const topTrack = document.querySelector("#architectureScrollTopTrack");
+      const updateTopTrack = () => { topTrack.style.width = `${grid.scrollWidth}px`; };
+      let syncing = false;
 
-    function filteredPages() {
-      const query = document.querySelector("#search").value.trim().toLowerCase();
-      const status = document.querySelector("#statusFilter").value;
-      return allPages.filter(page => {
-        const haystack = `${page.title || ""} ${page.url || ""} ${page.type || ""}`.toLowerCase();
-        return (!query || haystack.includes(query)) && (!status || page.status === status);
-      });
-    }
-
-    function renderList() {
-      const pages = filteredPages();
-      document.querySelector("#empty").hidden = pages.length !== 0;
-      document.querySelector("#rows").innerHTML = pages.map(page => `<tr>
-        <td><div class="page-title">${escapeHtml(page.title)}</div><div class="page-url">${escapeHtml(page.url)}</div></td>
-        <td>${escapeHtml(page.type || "—")}</td>
-        <td><span class="status ${escapeHtml(page.status)}">${label(page.status)}</span></td>
-        <td>${page.preview ? `<a class="open" href="${escapeHtml(href(page))}">Открыть</a>` : `<span class="not-ready">Ещё не размещена</span>`}</td>
-      </tr>`).join("");
-      document.querySelector("#mobileCards").innerHTML = pages.map(page => `<article class="mobile-card ${escapeHtml(page.status)}">
-        <div class="page-title">${escapeHtml(page.title)}</div><div class="page-url">${escapeHtml(page.url)}</div>
-        <div class="mobile-meta"><span>${escapeHtml(page.type || "—")}</span><span class="status ${escapeHtml(page.status)}">${label(page.status)}</span></div>
-        ${page.preview ? `<a class="open" href="${escapeHtml(href(page))}">Открыть страницу</a>` : `<span class="not-ready">Ещё не размещена</span>`}
-      </article>`).join("");
+      topScroll.addEventListener("scroll", () => {
+        if (syncing) return;
+        syncing = true;
+        bottomScroll.scrollLeft = topScroll.scrollLeft;
+        syncing = false;
+      }, { passive: true });
+      bottomScroll.addEventListener("scroll", () => {
+        if (syncing) return;
+        syncing = true;
+        topScroll.scrollLeft = bottomScroll.scrollLeft;
+        syncing = false;
+      }, { passive: true });
+      updateTopTrack();
+      window.addEventListener("resize", updateTopTrack, { passive: true });
     }
 
     async function init() {
@@ -232,9 +140,7 @@
         const data = await response.json();
         allPages = Array.isArray(data) ? data : (data.pages || []);
         document.querySelector("#updated").textContent = `Реестр обновлён: ${data.updated || "дата не указана"}`;
-        renderSummary();
         renderArchitecture();
-        renderList();
       } catch (error) {
         document.querySelector("#error").hidden = false;
         document.querySelector("#updated").textContent = "Ошибка загрузки реестра";
@@ -242,8 +148,6 @@
       }
     }
 
-    document.querySelector("#search").addEventListener("input", renderList);
-    document.querySelector("#statusFilter").addEventListener("change", renderList);
     init();
   </script>
 </body>
