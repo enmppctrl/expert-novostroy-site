@@ -33,6 +33,18 @@
     h1 { margin-bottom: 8px; font-size: clamp(32px, 4vw, 50px); line-height: 1.04; }
     h2 { font-size: clamp(25px, 2.5vw, 34px); }
     .subtitle, .updated, .section-copy { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .filter-card { min-height: 74px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--text); text-align: left; cursor: pointer; box-shadow: var(--shadow); transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease; }
+    .filter-card:hover { transform: translateY(-2px); }
+    .filter-card:focus-visible { outline: 3px solid rgba(93, 138, 163, .28); outline-offset: 2px; }
+    .filter-card strong { display: block; margin-bottom: 3px; font-size: 26px; line-height: 1; }
+    .filter-card span { color: var(--muted); font-size: 13px; font-weight: 700; }
+    .filter-card[data-filter="in_progress"] { background: var(--work-bg); }
+    .filter-card[data-filter="review"] { border-color: var(--review-border); background: var(--review-bg); }
+    .filter-card[data-filter="published"] { border-color: var(--published-border); background: var(--published-bg); }
+    .filter-card.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(93, 138, 163, .16), var(--shadow); }
+    .filter-card[data-filter="review"].active { border-color: var(--review-text); }
+    .filter-card[data-filter="published"].active { border-color: var(--published-text); }
     .panel { margin-top: 22px; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
     .architecture-root { display: flex; justify-content: flex-start; margin-bottom: 16px; }
     .architecture-scroll-top { height: 16px; margin-bottom: 8px; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--accent) #e7edf1; }
@@ -58,10 +70,14 @@
     footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
     @media (max-width: 900px) {
       .top { align-items: flex-start; flex-direction: column; }
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 600px) {
       .wrap { width: calc(100% - 24px); padding-top: 25px; }
       .panel { padding: 18px; }
+      .filters { gap: 8px; }
+      .filter-card { min-height: 66px; padding: 12px 14px; }
+      .filter-card strong { font-size: 23px; }
     }
   </style>
 </head>
@@ -75,6 +91,8 @@
       <div class="updated" id="updated">Обновление данных…</div>
     </header>
 
+    <section class="filters" id="filters" aria-label="Фильтр карты по статусу"></section>
+
     <section class="panel">
       <div id="architecture"></div>
       <div class="error" id="error" hidden>Не удалось загрузить реестр страниц.</div>
@@ -85,6 +103,7 @@
 
   <script>
     let allPages = [];
+    let activeFilter = "all";
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
@@ -92,23 +111,47 @@
 
     function href(page) { return page.preview || ""; }
 
-    function nodeMarkup(page, includeChildren = true) {
-      const children = includeChildren ? allPages.filter(item => item.parent === page.url) : [];
+    function nodeMarkup(page, visiblePages, includeChildren = true) {
+      const children = includeChildren ? visiblePages.filter(item => item.parent === page.url) : [];
       const tag = page.preview ? "a" : "div";
       const link = page.preview ? ` href="${escapeHtml(href(page))}"` : "";
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}"${link}>
         <span class="node-title">${escapeHtml(page.title)}</span>
         <span class="node-url">${escapeHtml(page.url)}</span>
-      </${tag}>${children.length ? `<div class="children">${children.map(child => nodeMarkup(child)).join("")}</div>` : ""}</div>`;
+      </${tag}>${children.length ? `<div class="children">${children.map(child => nodeMarkup(child, visiblePages)).join("")}</div>` : ""}</div>`;
+    }
+
+    function renderFilters() {
+      const options = [
+        { value: "all", label: "все страницы" },
+        { value: "in_progress", label: "в работе" },
+        { value: "review", label: "к согласованию" },
+        { value: "published", label: "опубликовано" }
+      ];
+      document.querySelector("#filters").innerHTML = options.map(option => {
+        const count = option.value === "all" ? allPages.length : allPages.filter(page => page.status === option.value).length;
+        const active = activeFilter === option.value;
+        return `<button class="filter-card${active ? " active" : ""}" type="button" data-filter="${option.value}" aria-pressed="${active}"><strong>${count}</strong><span>${option.label}</span></button>`;
+      }).join("");
+
+      document.querySelectorAll(".filter-card").forEach(button => {
+        button.addEventListener("click", () => {
+          activeFilter = button.dataset.filter;
+          renderFilters();
+          renderArchitecture();
+        });
+      });
     }
 
     function renderArchitecture() {
-      const root = allPages.find(page => page.url === "/");
-      const topLevel = allPages.filter(page => page.parent === "/");
+      const visiblePages = activeFilter === "all" ? allPages : allPages.filter(page => page.status === activeFilter);
+      const visibleUrls = new Set(visiblePages.map(page => page.url));
+      const root = visiblePages.find(page => page.url === "/");
+      const topLevel = visiblePages.filter(page => page.url !== "/" && (activeFilter === "all" ? page.parent === "/" : (!page.parent || !visibleUrls.has(page.parent))));
       document.querySelector("#architecture").innerHTML = `
-        ${root ? `<div class="architecture-root">${nodeMarkup(root, false)}</div>` : ""}
+        ${root ? `<div class="architecture-root">${nodeMarkup(root, visiblePages, false)}</div>` : ""}
         <div class="architecture-scroll-top" id="architectureScrollTop" tabindex="0" aria-label="Горизонтальная прокрутка карты"><div class="architecture-scroll-top-track" id="architectureScrollTopTrack"></div></div>
-        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${topLevel.map(page => nodeMarkup(page)).join("")}</div></div>`;
+        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${topLevel.map(page => nodeMarkup(page, visiblePages)).join("")}</div></div>`;
 
       const topScroll = document.querySelector("#architectureScrollTop");
       const bottomScroll = document.querySelector("#architectureScroll");
@@ -130,7 +173,6 @@
         syncing = false;
       }, { passive: true });
       updateTopTrack();
-      window.addEventListener("resize", updateTopTrack, { passive: true });
     }
 
     async function init() {
@@ -140,6 +182,7 @@
         const data = await response.json();
         allPages = Array.isArray(data) ? data : (data.pages || []);
         document.querySelector("#updated").textContent = `Реестр обновлён: ${data.updated || "дата не указана"}`;
+        renderFilters();
         renderArchitecture();
       } catch (error) {
         document.querySelector("#error").hidden = false;
