@@ -16,6 +16,12 @@
       --review-bg: #e8f3ff;
       --review-border: #76aee0;
       --review-text: #245f96;
+      --revision-bg: #fff0e8;
+      --revision-border: #e79a6b;
+      --revision-text: #a84d20;
+      --upcoming-bg: #f1ebff;
+      --upcoming-border: #b9a2ea;
+      --upcoming-text: #6546a3;
       --published-bg: #e6f6eb;
       --published-border: #74c28e;
       --published-text: #23733d;
@@ -33,16 +39,20 @@
     h1 { margin-bottom: 8px; font-size: clamp(32px, 4vw, 50px); line-height: 1.04; }
     h2 { font-size: clamp(25px, 2.5vw, 34px); }
     .subtitle, .updated, .section-copy { color: var(--muted); font-size: 14px; line-height: 1.55; }
-    .filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .filters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
     .filter-card { min-height: 74px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--text); text-align: left; cursor: pointer; box-shadow: var(--shadow); transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease; }
     .filter-card:hover { transform: translateY(-2px); }
     .filter-card:focus-visible { outline: 3px solid rgba(93, 138, 163, .28); outline-offset: 2px; }
     .filter-card strong { display: block; margin-bottom: 3px; font-size: 26px; line-height: 1; }
     .filter-card span { color: var(--muted); font-size: 13px; font-weight: 700; }
     .filter-card[data-filter="in_progress"] { background: var(--work-bg); }
+    .filter-card[data-filter="upcoming"] { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
+    .filter-card[data-filter="needs_revision"] { border-color: var(--revision-border); background: var(--revision-bg); }
     .filter-card[data-filter="review"] { border-color: var(--review-border); background: var(--review-bg); }
     .filter-card[data-filter="published"] { border-color: var(--published-border); background: var(--published-bg); }
     .filter-card.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(93, 138, 163, .16), var(--shadow); }
+    .filter-card[data-filter="upcoming"].active { border-color: var(--upcoming-text); }
+    .filter-card[data-filter="needs_revision"].active { border-color: var(--revision-text); }
     .filter-card[data-filter="review"].active { border-color: var(--review-text); }
     .filter-card[data-filter="published"].active { border-color: var(--published-text); }
     .panel { margin-top: 22px; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
@@ -58,6 +68,8 @@
     .node { display: block; width: max-content; min-width: 120px; max-width: 220px; height: 40px; padding: 5px 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
     a.node:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
     .node.review { border-color: var(--review-border); background: var(--review-bg); }
+    .node.upcoming { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
+    .node.needs_revision { border-color: var(--revision-border); background: var(--revision-bg); }
     .node.published { border-color: var(--published-border); background: var(--published-bg); }
     .node-title, .node-url { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .node-title { font-size: 12px; line-height: 14px; font-weight: 700; }
@@ -70,12 +82,13 @@
     footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
     @media (max-width: 900px) {
       .top { align-items: flex-start; flex-direction: column; }
-      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
     @media (max-width: 600px) {
       .wrap { width: calc(100% - 24px); padding-top: 25px; }
       .panel { padding: 18px; }
       .filters { gap: 8px; }
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .filter-card { min-height: 66px; padding: 12px 14px; }
       .filter-card strong { font-size: 23px; }
     }
@@ -125,6 +138,8 @@
       const options = [
         { value: "all", label: "все страницы" },
         { value: "in_progress", label: "в работе" },
+        { value: "upcoming", label: "скоро в работу" },
+        { value: "needs_revision", label: "на доработке" },
         { value: "review", label: "к согласованию" },
         { value: "published", label: "опубликовано" }
       ];
