@@ -22,9 +22,12 @@
       --upcoming-bg: #f1ebff;
       --upcoming-border: #b9a2ea;
       --upcoming-text: #6546a3;
-      --published-bg: #e6f6eb;
-      --published-border: #74c28e;
-      --published-text: #23733d;
+      --approved-bg: #e6f6eb;
+      --approved-border: #74c28e;
+      --approved-text: #23733d;
+      --published-bg: #d2f3dc;
+      --published-border: #42ad68;
+      --published-text: #12652f;
       --work-bg: #f0f3f5;
       --work-text: #596673;
       --shadow: 0 12px 34px rgba(35, 52, 67, .08);
@@ -49,11 +52,13 @@
     .filter-card[data-filter="upcoming"] { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
     .filter-card[data-filter="needs_revision"] { border-color: var(--revision-border); background: var(--revision-bg); }
     .filter-card[data-filter="review"] { border-color: var(--review-border); background: var(--review-bg); }
+    .filter-card[data-filter="approved"] { border-color: var(--approved-border); background: var(--approved-bg); }
     .filter-card[data-filter="published"] { border-color: var(--published-border); background: var(--published-bg); }
     .filter-card.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(93, 138, 163, .16), var(--shadow); }
     .filter-card[data-filter="upcoming"].active { border-color: var(--upcoming-text); }
     .filter-card[data-filter="needs_revision"].active { border-color: var(--revision-text); }
     .filter-card[data-filter="review"].active { border-color: var(--review-text); }
+    .filter-card[data-filter="approved"].active { border-color: var(--approved-text); }
     .filter-card[data-filter="published"].active { border-color: var(--published-text); }
     .panel { margin-top: 22px; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
     .architecture-root { display: flex; justify-content: flex-start; margin-bottom: 16px; }
@@ -68,6 +73,7 @@
     .node { display: block; width: max-content; min-width: 120px; max-width: 220px; height: 40px; padding: 5px 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
     a.node:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
     .node.review { border-color: var(--review-border); background: var(--review-bg); }
+    .node.approved { border-color: var(--approved-border); background: var(--approved-bg); }
     .node.upcoming { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
     .node.needs_revision { border-color: var(--revision-border); background: var(--revision-bg); }
     .node.published { border-color: var(--published-border); background: var(--published-bg); }
@@ -111,7 +117,6 @@
       <div class="error" id="error" hidden>Не удалось загрузить реестр страниц.</div>
     </section>
 
-    <footer>Служебная страница. Не является частью публичного сайта «Эксперт Новострой».</footer>
   </main>
 
   <script>
@@ -137,10 +142,10 @@
     function renderFilters() {
       const options = [
         { value: "all", label: "все страницы" },
-        { value: "in_progress", label: "в работе" },
         { value: "upcoming", label: "скоро в работу" },
         { value: "needs_revision", label: "на доработке" },
         { value: "review", label: "к согласованию" },
+        { value: "approved", label: "согласовано" },
         { value: "published", label: "опубликовано" }
       ];
       document.querySelector("#filters").innerHTML = options.map(option => {
