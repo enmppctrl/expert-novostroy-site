@@ -56,7 +56,15 @@ button,input,select,textarea{font:inherit}
 /* hero */
 .hero-section{background:var(--en-bg);padding:38px 0 80px}
 .hero-box{padding:58px;border-radius:var(--en-r-hero);border:1px solid #D4E4EC;box-shadow:var(--en-shadow-lg);background:linear-gradient(135deg,#fff 0%,#EFF8FC 47%,#D8F1FB 100%);display:grid;grid-template-columns:1fr .88fr;gap:42px;align-items:center;overflow:hidden}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:31px}
+.hero-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:31px}
+.hero-actions>.btn{padding-inline:14px}
+.hero-messengers{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.messenger-btn{width:47.33px;height:47.33px;border:0;border-radius:15px;display:grid;place-items:center;color:#fff;box-shadow:0 10px 22px rgba(66,76,92,.14);transition:transform .2s ease,box-shadow .2s ease}
+.messenger-btn:hover{transform:translateY(-2px);box-shadow:0 14px 26px rgba(66,76,92,.2)}
+.messenger-btn:focus-visible{outline:3px solid rgba(122,175,202,.35);outline-offset:3px}
+.messenger-btn svg{width:29px;height:29px;display:block;fill:currentColor}
+.messenger-btn.telegram{background:#29A9EA}.messenger-btn.max{background:linear-gradient(145deg,#49D4FF,#6248F4 70%,#A34FDF)}
+.messenger-btn.vk{background:#0077FF}.messenger-btn.whatsapp{background:#25D366}
 .proof-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:30px}
 .proof-card{padding:14px 13px;border:1px solid var(--en-line);border-radius:17px;background:rgba(255,255,255,.83)}
 .proof-card strong{display:block;font-size:16px;line-height:1.25;font-weight:700;color:#2E3948}
@@ -136,13 +144,15 @@ button,input,select,textarea{font:inherit}
 .req-note{margin-top:22px;padding:18px 22px;border-radius:20px;border:1px solid var(--en-line);background:#fff;font-size:14px;color:#5F6D7D}
 
 /* FAQ */
-.faq-list{display:grid;gap:14px}
-.faq-list details{background:#fff;border:1px solid var(--en-line);border-radius:20px;padding:0 22px}
-.faq-list summary{position:relative;list-style:none;cursor:pointer;padding:21px 45px 21px 0;font-size:24px;line-height:1.25;font-weight:700;color:var(--en-heading)}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:after{content:"+";position:absolute;right:0;top:16px;font-size:27px;color:var(--en-orange);font-weight:400}
-.faq-list details[open] summary:after{content:"−"}
-.faq-list p{margin:0;padding:0 45px 22px 0;font-size:17px;color:var(--en-body);line-height:1.58}
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:42px;align-items:start}
+.faq-intro{position:sticky;top:105px}
+.faq-list{display:grid;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--en-line);border-radius:20px;overflow:hidden;box-shadow:none}
+.faq-question{width:100%;padding:22px;border:0;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;font-size:24px;line-height:1.25;font-weight:700;color:var(--en-heading);cursor:pointer}
+.faq-question:after{content:"+";width:15px;height:15px;flex:0 0 15px;display:grid;place-items:center;color:var(--en-orange);font-size:27px;line-height:18px;font-weight:400;transform:rotate(0);transition:transform .2s ease-in-out}
+.faq-question[aria-expanded="true"]:after{transform:rotate(135deg)}
+.faq-answer{height:0;overflow:hidden;transition:height .35s ease}
+.faq-answer-inner{padding:0 22px 22px;font-size:17px;line-height:1.58;font-weight:400;color:var(--en-body)}
 
 /* final CTA */
 .final-section{padding:82px 0;background:#fff}
@@ -150,8 +160,6 @@ button,input,select,textarea{font:inherit}
 .final-copy .eyebrow{color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
 .final-copy h2{margin:18px 0 0;font-size:38px;line-height:1.12;letter-spacing:-.03em;font-weight:700;color:#fff}
 .final-copy p{margin:16px 0 0;font-size:17px;line-height:1.58;color:#D9E5ED}
-.final-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-.final-chip{padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:#E3EDF3;font-size:12px}
 .final-form{background:#fff;border-radius:26px;padding:28px}
 .final-form .form-grid{gap:14px}
 
@@ -167,7 +175,8 @@ button,input,select,textarea{font:inherit}
 @media(max-width:1080px){
  .en-h1{font-size:44px} .en-h2{font-size:32px}
  .hero-box{grid-template-columns:1fr;gap:26px}.hero-contact-visual,.hero-contact-visual img{min-height:420px}
- .contacts-layout,.feedback-grid,.req-grid{grid-template-columns:1fr}
+ .contacts-layout,.feedback-grid,.req-grid,.faq-wrap{grid-template-columns:1fr}
+ .faq-intro{position:static}
  .route-layout{grid-template-columns:1fr .58fr}
  .final-cta{grid-template-columns:1fr;gap:28px}
  .footer-main{grid-template-columns:1fr 1fr} .footer-brand{grid-column:1/-1}
@@ -181,6 +190,7 @@ button,input,select,textarea{font:inherit}
  .hero-box{padding:26px;border-radius:29px}.hero-contact-visual,.hero-contact-visual img{min-height:300px}
  .hero-actions{display:grid;grid-template-columns:1fr}
  .hero-actions .btn{width:100%}
+ .hero-messengers{width:100%;justify-content:space-between;gap:0}
  .proof-grid{grid-template-columns:1fr}
  .section{padding:62px 0} .section-head{margin-bottom:28px}
  .contacts-layout{gap:16px} .contact-card{padding:20px}
@@ -193,15 +203,18 @@ button,input,select,textarea{font:inherit}
  .video-card{max-width:330px;margin-inline:auto;width:100%}
  .req-intro{grid-template-columns:1fr}
  .req-row{grid-template-columns:1fr;gap:4px}
- .faq-list summary{font-size:17px;padding:18px 38px 18px 0}
- .faq-list p{font-size:14px;padding-right:30px}
+ .faq-wrap{gap:28px}
+ .faq-item{padding:10px}
+ .faq-question{padding:9px 8px;font-size:17px;line-height:1.24}
+ .faq-answer-inner{padding:3px 8px 9px;font-size:17px}
  .final-section{padding:62px 0}
  .final-cta{width:calc(100% - 40px);padding:24px 20px;border-radius:30px}
  .final-copy h2{font-size:27px} .final-copy p{font-size:15px}
  .final-form{padding:20px}
  .footer-main{grid-template-columns:1fr;gap:30px;padding:46px 0 34px}.footer-brand{grid-column:auto}
- .footer-bottom{padding:26px 0;flex-direction:column}
+.footer-bottom{padding:26px 0;flex-direction:column}
 }
+@media(prefers-reduced-motion:reduce){.faq-answer,.faq-question:after,.messenger-btn{transition:none}}
 </style>
 </head>
 <body>
@@ -227,7 +240,13 @@ button,input,select,textarea{font:inherit}
         <h1 class="en-h1" style="margin-top:23px">Свяжитесь с «Эксперт Новострой» удобным способом</h1>
         <p class="en-lead">Позвоните, напишите в мессенджер или приезжайте в офис в Москве. Подскажем по приёмке квартиры, оценке для банка, строительной экспертизе и юридическим вопросам по новостройкам.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+74951528580">Позвонить +7 (495) 152-85-80</a>
+          <a class="btn btn-primary" href="tel:+74951528580">Позвонить</a>
+          <div class="hero-messengers" aria-label="Написать в мессенджер">
+          <a class="messenger-btn telegram" href="https://t.me/expert_novostroy_info" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Написать в Telegram"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M38.7 10.1 32.9 39c-.4 2-1.6 2.5-3.2 1.6l-8.9-6.5-4.3 4.1c-.5.5-.9.9-1.8.9l.6-9.1 16.6-15c.7-.6-.2-1-1.1-.4L10.3 27.5l-8.8-2.8c-1.9-.6-2-1.9.4-2.8L36.4 8.6c1.6-.6 3 .4 2.3 1.5Z"/></svg></a>
+          <a class="messenger-btn max" href="https://max.ru/id730291384501_bot" target="_blank" rel="noopener" aria-label="Написать в MAX" title="Написать в MAX"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill-rule="evenodd" d="M24 7C13.5 7 5 14.8 5 24.4c0 4.5 1.9 8.6 5 11.7-.1 2.2-.5 4.5-1.4 6.8-.3.8.5 1.6 1.3 1.3 3.1-1 5.8-2.3 8-3.9 2 .7 4 1.1 6.2 1.1 10.5 0 19-7.8 19-17.4C43 14.7 34.5 7 24 7Zm-8.6 10.2c.8-.7 2-.6 2.7.2l5.9 7.2 5.9-7.2c.7-.8 1.9-.9 2.7-.2.4.4.7.9.7 1.5v12.7a1.9 1.9 0 1 1-3.8 0v-7.3l-4 4.9c-.8 1-2.2 1-3 0l-4-4.9v7.3a1.9 1.9 0 1 1-3.8 0V18.7c0-.6.3-1.1.7-1.5Z" clip-rule="evenodd"/></svg></a>
+          <a class="messenger-btn vk" href="https://vk.me/expert.novostroy" target="_blank" rel="noopener" aria-label="Написать во ВКонтакте" title="Написать во ВКонтакте"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9.3 13.2h6.2c.5 0 .8.3 1 .8 1.8 5.2 4.2 9.7 6.1 9.7.7 0 1-1 1-3V16c0-2.1-.5-2.7-2-3.1-.6-.1-.5-.8.1-1.1 1.1-.5 2.9-.8 4.6-.8 2.3 0 3.1 1.1 3.1 3.7v6.4c0 1.4.5 2 1 2 1.1 0 3.8-3.9 5.4-8.8.2-.7.6-1.1 1.3-1.1h6.2c1 0 1.4.5 1.1 1.4-.8 2.8-5.6 8.5-5.6 8.5-.6.8-.8 1.3 0 2.2.5.7 2.4 2.4 3.6 3.9 2.1 2.5 3.1 4.3 2.7 5.2-.4.8-1.3 1.1-2.3 1.1h-5.5c-1.5 0-2.1-1.2-3.7-2.8-1.6-1.7-2.8-2.7-3.7-2.7-.8 0-1.2.5-1.2 1.9v2.2c0 1-.4 1.4-1.4 1.4h-2.8c-5.1 0-10-3.1-13.6-8.8-2.8-4.3-5-9.4-5-11.9 0-1 .4-1.6 1.4-1.6Z"/></svg></a>
+          <a class="messenger-btn whatsapp" href="https://wa.me/74951528580" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="Написать в WhatsApp"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill-rule="evenodd" d="M24 5.5A18.4 18.4 0 0 0 8.1 33.2L5.5 42.5l9.6-2.5A18.5 18.5 0 1 0 24 5.5Zm0 33.8c-3 0-5.9-.8-8.4-2.3l-.6-.3-5.7 1.5 1.5-5.5-.4-.6A15.2 15.2 0 1 1 24 39.3Zm8.4-11.4c-.5-.2-2.7-1.3-3.1-1.5-.4-.1-.7-.2-1 .3-.5.7-1.2 1.8-1.6 2.2-.3.4-.7.4-1.2.1-3-1.5-5-2.7-7.1-6.1-.5-.9.5-.8 1.5-2.7.2-.4.1-.8-.1-1.1-.1-.3-1-2.5-1.4-3.4-.4-1-.8-.8-1.1-.8h-.9c-.3 0-.8.1-1.3.6-.4.5-1.7 1.7-1.7 4.1s1.8 4.8 2 5.1c.2.3 3.5 5.4 8.6 7.5 3.2 1.4 4.5 1.5 6.1 1.3 1-.1 2.7-1.1 3.1-2.2.4-1.1.4-2 .3-2.2-.2-.2-.6-.3-1.1-.5Z" clip-rule="evenodd"/></svg></a>
+          </div>
           <a class="btn btn-ghost" href="#map">Посмотреть на карте</a>
         </div>
         <div class="proof-grid">
@@ -395,17 +414,20 @@ button,input,select,textarea{font:inherit}
   </div>
 </section>
 
-<section class="section gray">
+<section class="section gray" id="faq">
   <div class="en-wide">
-    <div class="section-head">
-      <span class="eyebrow">Вопросы по связи</span>
-      <h2 class="en-h2" style="margin-top:18px">Перед поездкой в офис</h2>
-    </div>
-    <div class="faq-list">
-      <details open><summary>Нужно ли заранее записываться на личную встречу?</summary><p>Лучше предварительно связаться с компанией по телефону или оставить обращение на сайте, чтобы нужный сотрудник был на месте и мог уделить время вашему вопросу.</p></details>
-      <details><summary>Нужен ли паспорт для входа?</summary><p>Да. Для посетителей офиса действует пропускной режим, поэтому для оформления пропуска на ресепшене понадобится паспорт.</p></details>
-      <details><summary>Когда работает офис, а когда можно звонить?</summary><p>Офис принимает посетителей по будням с 10:00 до 18:00. Call-центр доступен ежедневно с 09:00 до 21:00.</p></details>
-      <details><summary>Куда писать по документам или бухгалтерскому вопросу?</summary><p>Используйте общий email info@expert-novostroy.ru или форму выше и выберите тему «Документы и бухгалтерия».</p></details>
+    <div class="faq-wrap">
+      <div class="faq-intro">
+        <span class="eyebrow">Вопросы по связи</span>
+        <h2 class="en-h2" style="margin-top:18px">Перед поездкой в офис</h2>
+        <p class="en-section-lead">Коротко о записи, пропускном режиме и времени работы.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-1" aria-expanded="true" aria-controls="faq-answer-1">Нужно ли заранее записываться на личную встречу?</button><div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="false"><div class="faq-answer-inner">Лучше предварительно связаться с компанией по телефону или оставить обращение на сайте, чтобы нужный сотрудник был на месте и мог уделить время вашему вопросу.</div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">Нужен ли паспорт для входа?</button><div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true"><div class="faq-answer-inner">Да. Для посетителей офиса действует пропускной режим, поэтому для оформления пропуска на ресепшене понадобится паспорт.</div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">Когда работает офис, а когда можно звонить?</button><div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true"><div class="faq-answer-inner">Офис принимает посетителей по будням с 10:00 до 18:00. Call-центр доступен ежедневно с 09:00 до 21:00.</div></div></div>
+        <div class="faq-item"><button class="faq-question" type="button" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">Куда писать по документам или бухгалтерскому вопросу?</button><div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden="true"><div class="faq-answer-inner">Используйте общий email info@expert-novostroy.ru или форму выше и выберите тему «Документы и бухгалтерия».</div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -416,7 +438,6 @@ button,input,select,textarea{font:inherit}
       <span class="eyebrow">Связаться с компанией</span>
       <h2>Оставьте номер — направим вопрос нужному специалисту</h2>
       <p>Укажите, с чем вы обращаетесь. Менеджер поймёт контекст до звонка: приёмка, оценка, экспертиза, юридический вопрос, документы или личная встреча в офисе.</p>
-      <div class="final-chips"><span class="final-chip">Приёмка</span><span class="final-chip">Оценка</span><span class="final-chip">Экспертиза</span><span class="final-chip">Юридические услуги</span><span class="final-chip">Документы</span><span class="final-chip">Встреча в офисе</span></div>
     </div>
     <form class="final-form" action="#" method="post">
       <input type="hidden" name="source_page" value="/kontakty/">
@@ -456,6 +477,19 @@ const burger=document.getElementById('mobileBurger'),mobileMenu=document.getElem
 burger&&burger.addEventListener('click',()=>{
  const isOpen=mobileMenu.classList.toggle('open');
  burger.setAttribute('aria-expanded',String(isOpen));
+});
+document.querySelectorAll('.faq-question').forEach((button,index)=>{
+ const answer=document.getElementById(button.getAttribute('aria-controls'));
+ const setState=(open,animate=true)=>{
+  button.setAttribute('aria-expanded',String(open));
+  if(!answer)return;
+  answer.setAttribute('aria-hidden',String(!open));
+  if(!animate){answer.style.height=open?'auto':'0px';return}
+  if(open){answer.style.height=answer.scrollHeight+'px';answer.addEventListener('transitionend',()=>{if(button.getAttribute('aria-expanded')==='true')answer.style.height='auto'},{once:true})}
+  else{answer.style.height=answer.scrollHeight+'px';requestAnimationFrame(()=>{answer.style.height='0px'})}
+ };
+ setState(index===0,false);
+ button.addEventListener('click',()=>setState(button.getAttribute('aria-expanded')!=='true'));
 });
 document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>e.preventDefault()));
 </script>
