@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-09-11",
+  "updated": "2026-09-18",
   "pages": [
     { "title": "Главная", "url": "/", "type": "Главная", "parent": null, "status": "in_progress", "updated": "2026-09-03" },
     { "title": "Услуги", "url": "/uslugi/", "type": "Хаб услуг", "parent": "/", "status": "published", "updated": "2026-09-03", "preview": "uslugi/uslugi.html" },
@@ -27,8 +27,9 @@
     { "title": "Застройщик задерживает ключи", "url": "/zastroyshchik-zaderzhivaet-klyuchi/", "type": "Сценарный лендинг", "parent": "/yuridicheskie-uslugi/", "status": "in_progress", "updated": "2026-09-03" },
     { "title": "Цены", "url": "/ceny/", "type": "Цены", "parent": "/", "status": "published", "updated": "2026-09-03", "preview": "ceny/ceny.html" },
     { "title": "Специальные предложения", "url": "/specialnye-predlozheniya/", "type": "Спецпредложения", "parent": "/", "status": "in_progress", "updated": "2026-09-03" },
-    { "title": "Отзывы", "url": "/otzyvy/", "type": "Отзывы", "parent": "/", "status": "needs_revision", "updated": "2026-09-11", "preview": "otzyvy/otzyvy.html" },
-    { "title": "Компания", "url": "/kompaniya/", "type": "Компания", "parent": "/", "status": "review", "updated": "2026-09-11", "preview": "kompaniya/kompaniya.html" },
+    { "title": "Отзывы", "url": "/otzyvy/", "type": "Отзывы", "parent": "/", "status": "review", "updated": "2026-09-18", "preview": "otzyvy/otzyvy.html" },
+    { "title": "Компания", "url": "/kompaniya/", "type": "Компания", "parent": "/", "status": "review", "updated": "2026-09-18", "preview": "kompaniya/kompaniya.html" },
+    { "title": "Оборудование экспертов", "url": "/kompaniya/oborudovanie/", "type": "Оборудование", "parent": "/kompaniya/", "status": "review", "updated": "2026-09-18", "preview": "kompaniya/oborudovanie/oborudovanie.html" },
     { "title": "Руководители", "url": "/kompaniya/rukovoditeli/", "type": "Команда", "parent": "/kompaniya/", "status": "in_progress", "updated": "2026-09-11" },
     { "title": "Атаманов Павел", "url": "/kompaniya/rukovoditeli/atamanov-pavel/", "type": "Руководитель", "parent": "/kompaniya/rukovoditeli/", "status": "in_progress", "updated": "2026-09-11" },
     { "title": "Яруткин Владимир", "url": "/kompaniya/rukovoditeli/yarutkin-vladimir/", "type": "Руководитель", "parent": "/kompaniya/rukovoditeli/", "status": "in_progress", "updated": "2026-09-11" },
@@ -53,7 +54,7 @@
     { "title": "Соколов Владимир", "url": "/kompaniya/experts/sokolov-vladimir/", "type": "Эксперт", "parent": "/kompaniya/experts/", "status": "in_progress", "updated": "2026-09-04" },
     { "title": "Колесник Максим", "url": "/kompaniya/experts/kolesnik-maksim/", "type": "Эксперт", "parent": "/kompaniya/experts/", "status": "in_progress", "updated": "2026-09-04" },
     { "title": "Документы компании", "url": "/kompaniya/dokumenty/", "type": "Документы", "parent": "/kompaniya/", "status": "in_progress", "updated": "2026-09-11" },
-    { "title": "Почему мы", "url": "/pochemu-my/", "type": "Доверие", "parent": "/kompaniya/", "status": "in_progress", "updated": "2026-09-03" },
+    { "title": "Почему мы", "url": "/pochemu-my/", "type": "Доверие", "parent": "/kompaniya/", "status": "review", "updated": "2026-09-18", "preview": "pochemu-my/pochemu-my.html" },
     { "title": "Контакты", "url": "/kontakty/", "type": "Контакты", "parent": "/", "status": "review", "updated": "2026-09-11", "preview": "kontakty/kontakty.html" },
     { "title": "База знаний", "url": "/baza-znaniy/", "type": "Хаб базы знаний", "parent": "/", "status": "upcoming", "updated": "2026-09-11" },
     { "title": "Города", "url": "/baza-znaniy/goroda/", "type": "Хаб городов", "parent": "/baza-znaniy/", "status": "in_progress", "updated": "2026-09-11" },
