@@ -42,25 +42,29 @@
     h1 { margin-bottom: 8px; font-size: clamp(32px, 4vw, 50px); line-height: 1.04; }
     h2 { font-size: clamp(25px, 2.5vw, 34px); }
     .subtitle, .updated, .section-copy { color: var(--muted); font-size: 14px; line-height: 1.55; }
-    .filters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
-    .filter-card { min-height: 74px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--text); text-align: left; cursor: pointer; box-shadow: var(--shadow); transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease; }
+    .filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .filter-card { min-height: 54px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--text); text-align: left; cursor: pointer; box-shadow: var(--shadow); transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease; }
     .filter-card:hover { transform: translateY(-2px); }
     .filter-card:focus-visible { outline: 3px solid rgba(93, 138, 163, .28); outline-offset: 2px; }
-    .filter-card strong { display: block; margin-bottom: 3px; font-size: 26px; line-height: 1; }
-    .filter-card span { color: var(--muted); font-size: 13px; font-weight: 700; }
+    .filter-card strong { display: inline-block; flex: 0 0 auto; margin: 0; font-size: 26px; line-height: 1; }
+    .filter-card span { color: var(--muted); font-size: 13px; font-weight: 700; line-height: 1.15; }
     .filter-card[data-filter="in_progress"] { background: var(--work-bg); }
     .filter-card[data-filter="upcoming"] { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
-    .filter-card[data-filter="needs_revision"] { border-color: var(--revision-border); background: var(--revision-bg); }
     .filter-card[data-filter="review"] { border-color: var(--review-border); background: var(--review-bg); }
-    .filter-card[data-filter="approved"] { border-color: var(--approved-border); background: var(--approved-bg); }
     .filter-card[data-filter="published"] { border-color: var(--published-border); background: var(--published-bg); }
     .filter-card.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(93, 138, 163, .16), var(--shadow); }
     .filter-card[data-filter="upcoming"].active { border-color: var(--upcoming-text); }
-    .filter-card[data-filter="needs_revision"].active { border-color: var(--revision-text); }
     .filter-card[data-filter="review"].active { border-color: var(--review-text); }
-    .filter-card[data-filter="approved"].active { border-color: var(--approved-text); }
     .filter-card[data-filter="published"].active { border-color: var(--published-text); }
     .panel { margin-top: 22px; padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); box-shadow: var(--shadow); }
+    .notes-panel { margin-top: 22px; padding: 26px; border: 1px solid var(--line); border-radius: 22px; background: #fbfcfd; box-shadow: var(--shadow); }
+    .notes-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
+    .notes-heading h2 { margin-bottom: 6px; }
+    .notes-badge { flex: 0 0 auto; padding: 7px 11px; border-radius: 999px; background: #eef2f5; color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+    .notes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .note-card { padding: 16px; border: 1px solid var(--line); border-radius: 15px; background: var(--panel); }
+    .note-card h3 { margin: 0 0 7px; color: var(--text); font-size: 16px; line-height: 1.2; }
+    .note-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
     .architecture-root { display: flex; justify-content: flex-start; margin-bottom: 16px; }
     .architecture-scroll-top { height: 16px; margin-bottom: 8px; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--accent) #e7edf1; }
     .architecture-scroll-top-track { height: 1px; }
@@ -88,15 +92,18 @@
     footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
     @media (max-width: 900px) {
       .top { align-items: flex-start; flex-direction: column; }
-      .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .notes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 600px) {
       .wrap { width: calc(100% - 24px); padding-top: 25px; }
       .panel { padding: 18px; }
       .filters { gap: 8px; }
       .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .filter-card { min-height: 66px; padding: 12px 14px; }
-      .filter-card strong { font-size: 23px; }
+      .filter-card { min-height: 52px; padding: 10px 12px; }
+      .notes-panel { padding: 20px 18px; }
+      .notes-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .notes-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -115,6 +122,42 @@
     <section class="panel">
       <div id="architecture"></div>
       <div class="error" id="error" hidden>Не удалось загрузить реестр страниц.</div>
+    </section>
+
+    <section class="notes-panel" aria-labelledby="drafts-heading">
+      <div class="notes-heading">
+        <div>
+          <h2 id="drafts-heading">Черновики и наработки</h2>
+          <p class="section-copy">Внутренний список задач, которые важно не потерять при подготовке следующих страниц.</p>
+        </div>
+        <span class="notes-badge">Внутреннее</span>
+      </div>
+      <div class="notes-grid">
+        <article class="note-card">
+          <h3>Отзывы</h3>
+          <p>Продумать две CRM-формы: короткая заявка после просмотра отзывов и отдельная форма для запроса разбора ситуации. Согласовать поля, метки источника, передачу в CRM и состояние после отправки.</p>
+        </article>
+        <article class="note-card">
+          <h3>Контакты</h3>
+          <p>Проверить реальные ссылки Telegram, MAX, VK и WhatsApp, а также события CRM для звонка, карты и каждого мессенджера на desktop и mobile.</p>
+        </article>
+        <article class="note-card">
+          <h3>Компания</h3>
+          <p>Довести до рабочей архитектуры страницы сотрудников и раздел «Все документы компании», затем проверить кликабельность карточек команды и документальных ссылок.</p>
+        </article>
+        <article class="note-card">
+          <h3>Застройщик ПИК</h3>
+          <p>Подготовить фактическое наполнение из базы знаний: особенности приёмки, подтверждённые сценарии, внутренние ссылки и FAQ без неподтверждённых обещаний.</p>
+        </article>
+        <article class="note-card">
+          <h3>Результаты и база знаний</h3>
+          <p>Собрать подтверждённые кейсы для результатов приёмки и судебных решений, а для базы знаний и блога — связать статьи с услугами и сценариями клиентов.</p>
+        </article>
+        <article class="note-card">
+          <h3>Перед новой страницей</h3>
+          <p>Проверять источники истины, структуру URL, канонические Header/Footer, фон первого блока #F4F8FB, чередование секций и Final CTA шириной 1305px.</p>
+        </article>
+      </div>
     </section>
 
   </main>
@@ -143,9 +186,7 @@
       const options = [
         { value: "all", label: "все страницы" },
         { value: "upcoming", label: "скоро в работу" },
-        { value: "needs_revision", label: "на доработке" },
         { value: "review", label: "к согласованию" },
-        { value: "approved", label: "согласовано" },
         { value: "published", label: "опубликовано" }
       ];
       document.querySelector("#filters").innerHTML = options.map(option => {
