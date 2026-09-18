@@ -208,7 +208,7 @@
       const visiblePages = activeFilter === "all" ? allPages : allPages.filter(page => page.status === activeFilter);
       const visibleUrls = new Set(visiblePages.map(page => page.url));
       const root = visiblePages.find(page => page.url === "/");
-      const topLevel = visiblePages.filter(page => page.url !== "/" && (activeFilter === "all" ? page.parent === "/" : (!page.parent || !visibleUrls.has(page.parent))));
+      const topLevel = visiblePages.filter(page => page.url !== "/" && (activeFilter === "all" ? page.parent === "/" : (page.parent === "/" || !page.parent || !visibleUrls.has(page.parent))));
       document.querySelector("#architecture").innerHTML = `
         ${root ? `<div class="architecture-root">${nodeMarkup(root, visiblePages, false)}</div>` : ""}
         <div class="architecture-scroll-top" id="architectureScrollTop" tabindex="0" aria-label="Горизонтальная прокрутка карты"><div class="architecture-scroll-top-track" id="architectureScrollTopTrack"></div></div>
