@@ -2,7 +2,7 @@
   "project": "Эксперт Новострой",
   "updated": "2026-09-18",
   "pages": [
-    { "title": "Главная", "url": "/", "type": "Главная", "parent": null, "status": "in_progress", "updated": "2026-09-03" },
+    { "title": "Главная", "url": "/", "type": "Главная", "parent": null, "status": "review", "updated": "2026-09-18", "preview": "glavnaya/glavnaya.html" },
     { "title": "Услуги", "url": "/uslugi/", "type": "Хаб услуг", "parent": "/", "status": "published", "updated": "2026-09-03", "preview": "uslugi/uslugi.html" },
     { "title": "Приёмка квартиры", "url": "/priemka-kvartiry/", "type": "Услуга", "parent": "/uslugi/", "status": "published", "updated": "2026-09-03", "preview": "priemka-kvartiry/priemka-kvartiry.html" },
     { "title": "Приёмка квартиры в городе", "url": "/priemka-kvartiry-{город}/", "type": "GEO-услуга", "parent": "/priemka-kvartiry/", "status": "in_progress", "updated": "2026-09-03" },
