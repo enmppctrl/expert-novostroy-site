@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "pages": [
     { "title": "Главная", "url": "/", "type": "Главная", "parent": null, "status": "review", "updated": "2026-09-18", "preview": "glavnaya/glavnaya.html" },
     { "title": "Услуги", "url": "/uslugi/", "type": "Хаб услуг", "parent": "/", "status": "published", "updated": "2026-09-03", "preview": "uslugi/uslugi.html" },
@@ -56,7 +56,7 @@
     { "title": "Клиентский сервис", "url": "/kompaniya/klientskiy-servis/", "type": "Команда", "parent": "/kompaniya/", "status": "in_progress", "updated": "2026-09-21" },
     { "title": "Документы компании", "url": "/kompaniya/dokumenty/", "type": "Документы", "parent": "/kompaniya/", "status": "in_progress", "updated": "2026-09-11" },
     { "title": "Почему мы", "url": "/pochemu-my/", "type": "Доверие", "parent": "/kompaniya/oborudovanie/", "status": "review", "updated": "2026-09-21", "preview": "pochemu-my/pochemu-my.html" },
-    { "title": "Контакты", "url": "/kontakty/", "type": "Контакты", "parent": "/", "status": "review", "updated": "2026-09-11", "preview": "kontakty/kontakty.html" },
+    { "title": "Контакты", "url": "/kontakty/", "type": "Контакты", "parent": "/", "status": "published", "updated": "2026-09-22", "preview": "kontakty/kontakty.html" },
     { "title": "База знаний", "url": "/baza-znaniy/", "type": "Хаб базы знаний", "parent": "/", "status": "upcoming", "updated": "2026-09-11" },
     { "title": "Города", "url": "/baza-znaniy/goroda/", "type": "Хаб городов", "parent": "/baza-znaniy/", "status": "in_progress", "updated": "2026-09-11" },
     { "title": "Санкт-Петербург", "url": "/baza-znaniy/goroda/sankt-peterburg/", "type": "Город", "parent": "/baza-znaniy/goroda/", "status": "in_progress", "updated": "2026-09-11" },
