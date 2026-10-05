@@ -37,7 +37,7 @@
 /* CRM stories */
 .story-filter-bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:12px;align-items:end;margin-bottom:28px;padding:18px 20px;border:1px solid var(--en-line);border-radius:22px;background:#fff;box-shadow:var(--shadow-sm)}.story-filter{display:flex;flex-direction:column;gap:7px;min-width:0}.story-filter>span{font-size:12px;line-height:1.2;font-weight:700;color:var(--en-heading)}.story-filter select{width:100%;min-height:44px;border:1px solid var(--en-line);border-radius:14px;background:#F8FBFD;color:var(--en-body);padding:11px 34px 11px 13px;font-size:13px;outline:none}.story-filter select:focus{border-color:var(--en-blue);box-shadow:0 0 0 3px rgba(122,175,202,.12)}.story-filter-reset{min-height:44px;padding:11px 14px;border:1px solid var(--en-line);border-radius:14px;background:#fff;color:var(--en-deep);font-size:12px;font-weight:700;cursor:pointer}.story-filter-reset:hover{border-color:var(--en-blue)}.story-grid{display:flex;gap:18px;overflow-x:auto;padding:4px 4px 24px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--en-blue) #E7EEF2}.story-grid::-webkit-scrollbar{height:8px}.story-grid::-webkit-scrollbar-track{background:#E7EEF2;border-radius:999px}.story-grid::-webkit-scrollbar-thumb{background:var(--en-blue);border-radius:999px}.story-card{display:flex;flex:0 0 min(430px,calc(100vw - 40px));flex-direction:column;padding:25px;border:1px solid var(--en-line);border-radius:24px;background:#fff;box-shadow:var(--shadow-sm);scroll-snap-align:start}.story-card[hidden]{display:none}.story-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}.story-badge,.story-kind{display:inline-flex;align-items:center;border-radius:999px;font-size:10px;line-height:1.2;font-weight:700}.story-badge{padding:8px 10px;background:#FFF5E4;color:#A36B12}.story-kind{color:var(--en-deep);text-transform:uppercase;letter-spacing:.04em}.story-card h3{font-size:21px}.story-meta{display:grid;gap:10px;margin-top:20px;padding-top:18px;border-top:1px solid var(--en-line)}.story-meta>div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:baseline;font-size:13px;line-height:1.4}.story-meta span{color:var(--en-muted)}.story-meta a{color:var(--en-deep);font-weight:700}.story-meta a:hover{text-decoration:underline}.story-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}.story-facts>div{padding:12px 10px;border-radius:15px;background:var(--en-icon-bg)}.story-facts span,.story-facts strong{display:block}.story-facts span{font-size:10px;color:var(--en-muted)}.story-facts strong{margin-top:4px;font-size:13px;color:var(--en-heading)}.story-text{margin-top:19px;font-size:14px;line-height:1.58}.story-result{display:grid;gap:5px;margin-top:auto;padding-top:18px}.story-result span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--en-deep)}.story-result strong{font-size:13px;line-height:1.4;color:var(--en-heading)}.story-empty{flex:0 0 100%;padding:30px;border:1px dashed var(--en-blue);border-radius:20px;text-align:center;color:var(--en-muted)}
 /* story carousel */
-.story-card{flex-basis:380px;height:500px}.story-carousel{position:relative}.story-scroll{position:absolute;z-index:2;top:50%;display:grid;place-items:center;width:42px;height:42px;padding:0;border:1px solid var(--en-line);border-radius:50%;background:rgba(255,255,255,.96);color:var(--en-deep);font-size:24px;line-height:1;box-shadow:var(--shadow-sm);cursor:pointer;transform:translateY(-50%)}.story-scroll:hover{border-color:var(--en-blue)}.story-scroll:disabled{opacity:.4;cursor:default}.story-scroll-prev{left:-12px}.story-scroll-next{right:-12px}.story-carousel:not(.has-overflow) .story-scroll{display:none}
+.story-card{flex-basis:380px;height:500px}.story-carousel{position:relative}.story-scroll{position:absolute;z-index:2;top:50%;display:grid;place-items:center;width:42px;height:42px;padding:0;border:1px solid var(--en-line);border-radius:50%;background:rgba(255,255,255,.96);color:var(--en-deep);font-size:24px;line-height:1;box-shadow:var(--shadow-sm);cursor:pointer;transform:translateY(-50%)}.story-scroll:hover{border-color:var(--en-blue)}.story-scroll:disabled{opacity:.4;cursor:default}.story-scroll-prev{left:-12px}.story-scroll-next{right:-12px}.story-carousel:not(.has-overflow) .story-scroll{display:none}.story-load-more,.gallery-load-more{display:block;margin:14px auto 0;min-height:44px;padding:11px 18px;border:1px solid var(--en-line);border-radius:14px;background:#fff;color:var(--en-deep);font-size:12px;font-weight:700;cursor:pointer;box-shadow:var(--shadow-sm)}.story-load-more:hover,.gallery-load-more:hover{border-color:var(--en-blue)}.chat-card[hidden]{display:none}
 @media(max-width:720px){.story-carousel{margin-inline:-20px}.story-grid{padding-inline:20px;scroll-padding-inline:20px}.story-card{flex-basis:calc(100vw - 40px);height:auto}.story-scroll{width:40px;height:40px}.story-scroll-prev{left:8px}.story-scroll-next{right:8px}}
 @media(min-width:721px){.story-card{padding:20px}.story-card-top{margin-bottom:12px}.story-card h3{font-size:19px;line-height:1.2}.story-meta{gap:7px;margin-top:14px;padding-top:14px}.story-meta>div{grid-template-columns:86px minmax(0,1fr);font-size:12px;line-height:1.3}.story-facts{gap:7px;margin-top:14px}.story-facts>div{padding:10px 8px}.story-text{margin-top:14px;font-size:13px;line-height:1.48}.story-result{gap:4px;padding-top:12px}}
 /* chat gallery */
@@ -64,6 +64,24 @@
 @media(max-width:720px){.hero{padding-top:8px}}
 @media(max-width:720px){.chat-card{height:auto}.chat-card img{height:560px;flex-basis:560px}.chat-card-caption{padding:12px 14px 14px}} @media(max-width:480px){.chat-card img{height:530px;flex-basis:530px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.headerfixed,.header-dropdown,.mobile-menu,.faq-panel,.faq-button:after{transition:none!important}}
+</style>
+<style>
+.hero-shot.one{width:37%;height:480px;left:0;top:5%;z-index:1}.hero-shot.three{width:39%;height:510px;left:30%;top:0;z-index:2;transform:rotate(0deg)}.hero-shot.two{width:37%;height:465px;right:0;top:8%;z-index:1}
+.story-card{flex-basis:300px;height:360px;padding:18px}.story-card .story-facts,.story-card .story-result{display:none}.story-card .story-meta{gap:6px;margin-top:12px;padding-top:12px}.story-card .story-meta>div{grid-template-columns:78px minmax(0,1fr);font-size:11px;line-height:1.25}.story-card .story-text{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin-top:13px;font-size:13px;line-height:1.45}.story-view{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:42px;margin-top:auto;padding:10px 14px;border:0;border-radius:13px;background:var(--en-orange);color:#fff;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 8px 18px rgba(255,168,40,.2)}.story-view:hover{transform:translateY(-1px)}
+.chat-card{flex-basis:230px;height:auto}.chat-card:focus-visible{outline:3px solid var(--en-blue);outline-offset:3px}.chat-card img{height:498px;flex:0 0 498px;object-fit:contain;background:#fff}.chat-card-caption{min-height:66px}.chat-meta-link{color:var(--en-deep);text-decoration:underline;text-decoration-color:rgba(31,83,111,.25);text-underline-offset:2px}.chat-meta-link:hover{text-decoration-color:currentColor}.chat-card-caption strong .chat-meta-link{font-size:12px}.chat-card-caption span{display:flex;flex-wrap:wrap;gap:0 4px}.chat-card-caption span .chat-meta-link{font-size:10px}
+.story-lightbox{position:fixed;z-index:10001;inset:0;display:none;place-items:center;overflow:auto;padding:26px 78px;background:rgba(25,33,43,.9);backdrop-filter:blur(8px)}.story-lightbox.open{display:grid}.story-lightbox-dialog{position:relative;width:min(760px,100%);max-height:calc(100vh - 52px);overflow:auto;padding:30px;border-radius:28px;background:#F4F8FB;box-shadow:0 24px 80px rgba(0,0,0,.35)}.story-lightbox-head{display:flex;justify-content:space-between;gap:20px;padding-bottom:20px;border-bottom:1px solid var(--en-line)}.story-lightbox-kind{display:inline-flex;padding:7px 10px;border-radius:999px;background:#FFF5E4;color:#A36B12;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}.story-lightbox-title{margin-top:14px;font-size:30px;line-height:1.1}.story-lightbox-reviewer{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin-top:15px;font-size:13px;color:var(--en-muted)}.story-lightbox-reviewer strong{color:var(--en-heading)}.story-stars{color:#E69A18;font-size:17px;letter-spacing:2px}.story-lightbox-dialog .story-meta{margin-top:20px;padding-top:18px}.story-lightbox-dialog .story-facts{margin-top:20px}.story-lightbox-dialog .story-text{margin-top:20px;font-size:15px}.story-lightbox-dialog .story-result{margin-top:20px;padding:16px;border-radius:16px;background:#E8F5FA}.story-lightbox-dialog .story-result strong{font-size:14px}.story-lightbox-close,.story-lightbox-nav{position:fixed;z-index:2;width:46px;height:46px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}.story-lightbox-close{top:22px;right:24px;font-size:28px}.story-lightbox-nav{top:50%;transform:translateY(-50%);font-size:28px}.story-lightbox-prev{left:24px}.story-lightbox-next{right:24px}
+@media(max-width:720px){.hero-shot.one{width:43%;height:360px;left:0;top:6%}.hero-shot.three{width:44%;height:375px;left:28%;top:0}.hero-shot.two{width:43%;height:350px;right:0;top:9%}.story-card{flex-basis:calc(100vw - 40px);height:360px;min-height:360px}.chat-card{flex-basis:min(72vw,270px)}.chat-card img{height:clamp(500px,156vw,585px);flex-basis:clamp(500px,156vw,585px)}.story-lightbox{padding:20px}.story-lightbox-dialog{width:min(100%,520px);max-height:calc(100vh - 40px);padding:22px;border-radius:22px}.story-lightbox-title{font-size:24px}.story-lightbox-nav{display:none}}
+@media(max-width:480px){.hero-shot.one{height:320px}.hero-shot.three{height:335px}.hero-shot.two{height:310px}.chat-card{flex-basis:72vw}.chat-card img{height:500px;flex-basis:500px}}
+</style>
+<style>
+.chat-card{flex-basis:228px;height:auto}.chat-card img{height:350px;flex:0 0 350px;object-fit:cover;object-position:top;background:#fff}
+@media(max-width:720px){.chat-card{flex-basis:228px}.chat-card img{height:350px;flex-basis:350px}}
+.story-card-top{justify-content:flex-start;gap:7px;margin-bottom:14px}.story-client-name{font-size:13px;line-height:1.2;color:var(--en-heading)}.story-review-date{font-size:11px;color:var(--en-muted)}.story-review-stars{font-size:14px;line-height:1;color:#E69A18;letter-spacing:1px}.story-view{background:#fff;color:var(--en-blue);border:1px solid #A9CBDC;box-shadow:none}.story-view:hover{background:#F4F8FB;border-color:var(--en-blue)}
+.direction{padding:0 26px 26px;overflow:hidden}.direction-image{display:block;width:calc(100% + 52px);max-width:none;height:220px;margin:0 -26px 22px;object-fit:cover;object-position:center;border-radius:23px 23px 0 0}
+@media(max-width:720px){.direction-image{height:200px}}
+.story-filter input{width:100%;min-height:44px;border:1px solid var(--en-line);border-radius:14px;background:#F8FBFD;color:var(--en-body);padding:11px 13px;font-size:13px;outline:none}.story-filter input:focus{border-color:var(--en-blue);box-shadow:0 0 0 3px rgba(122,175,202,.12)}
+.chat-carousel{position:relative}.chat-carousel:not(.has-overflow) .chat-scroll{display:none}
+.lightbox-label{color:#000}.lightbox-value{color:var(--en-deep);text-decoration:none;text-underline-offset:3px}.lightbox-value:hover,.lightbox-value:focus-visible{text-decoration:underline}.lightbox-client-text{color:#000}
 </style>
 </head>
 <body>
@@ -105,316 +123,10 @@
 <main>
 <section class="hero">
   <div class="en-wide"><div class="hero-box"><div class="hero-grid">
-    <div><span class="eyebrow">Отзывы клиентов</span><h1>Реальные отзывы о приёмке квартир и других услугах</h1><p class="hero-lead">Здесь собраны отзывы на Яндекс Картах и сообщения из чатов жильцов. Клиенты рассказывают о маршруте от технической проверки и экспертизы до юридического сопровождения.</p><div class="hero-actions"><a class="btn btn-primary" href="#reviews">Смотреть отзывы</a><a class="btn btn-secondary" href="https://yandex.com/maps/org/expert_novostroy/150227447728/reviews/" target="_blank" rel="nofollow noopener">Открыть Яндекс Карты</a></div><div class="hero-proof"><div class="proof"><strong>5,0</strong><span>рейтинг на Яндекс Картах</span></div><div class="proof"><strong>1200+</strong><span>отзывов в Яндекс</span></div><div class="proof"><strong>17000+</strong><span>приемок квартир</span></div></div></div>
-    <div class="hero-collage" aria-label="Примеры отзывов клиентов"><figure class="hero-shot one"><img src="assets/reviews/review-chat-26.jpg" alt="Отзыв клиента о работе специалиста Александра Никитина"></figure><figure class="hero-shot two"><img src="assets/reviews/review-chat-37.jpg" alt="Отзыв клиента о приёмке студии со специалистом Вадимом Даушевым"></figure><div class="hero-yandex"><span class="ya">Я</span><div><strong>Отзывы на Яндекс Картах</strong><span>Карточка компании «Эксперт Новострой»</span></div></div></div>
+    <div><span class="eyebrow">Отзывы клиентов</span><h1>Реальные отзывы о приёмке квартир и других услугах</h1><p class="hero-lead">Здесь собраны отзывы на Яндекс Картах и сообщения из чатов жильцов. Клиенты рассказывают о маршруте от технической проверки и экспертизы до юридического сопровождения.</p><div class="hero-actions"><a class="btn btn-primary" href="#reviews">Отзывы на Яндекс</a><a class="btn btn-secondary" href="#client-stories">Отзывы клиентов</a><a class="btn btn-secondary" href="#client-messages">Отзывы в чатах</a></div><div class="hero-proof"><div class="proof"><strong>5,0</strong><span>рейтинг на Яндекс Картах</span></div><div class="proof"><strong>1200+</strong><span>отзывов в Яндекс</span></div><div class="proof"><strong>17000+</strong><span>приемок квартир</span></div></div></div>
+    <div class="hero-collage" aria-label="Примеры отзывов клиентов"><figure class="hero-shot one"><img src="assets/reviews/review-chat-26.jpg" alt="Отзыв клиента о работе специалиста Александра Никитина"></figure><figure class="hero-shot three"><img src="assets/reviews/review-chat-09.jpg" alt="Отзыв клиента о приёмке квартиры в ЖК Люблинский Парк"></figure><figure class="hero-shot two"><img src="assets/reviews/review-chat-37.jpg" alt="Отзыв клиента о приёмке студии со специалистом Вадимом Даушевым"></figure></div>
   </div></div></div>
 </section>
-
-<section class="section white crm-reviews" id="client-stories"><div class="en-wide">
-  <div class="section-head"><div><span class="eyebrow">Истории клиентов</span><h2>От задачи до результата</h2></div></div>
-  <div class="story-filter-bar" aria-label="Фильтры историй клиентов">
-    <label class="story-filter"><span>Жилой комплекс</span><select data-story-filter="complex"><option value="all">Все ЖК</option><option value="unino">Юнино</option><option value="pyatnitskie-luga">Пятницкие Луга</option><option value="yauza-park">Яуза Парк</option><option value="bolshaya-akademicheskaya-85">Большая Академическая 85</option><option value="volzhskiy-park">Волжский Парк</option><option value="dvizhenie-govorovo">Движение Говорово</option><option value="ilinoys">Ильинойс</option><option value="zelenograd-rivera">Зеленоград Ривьера</option><option value="ostafyevo">Остафьево</option><option value="dmitrovskoe-nebo">Дмитровское небо</option><option value="perviy-dubrovskiy">Первый Дубровский</option><option value="yaroslavskaya">Ярославская</option><option value="lyublinskiy-park">Люблинский Парк</option><option value="signalniy-16">Сигнальный 16</option><option value="kvartal-na-vode">Квартал на воде</option><option value="novoe-vidnoe">Новое Видное</option></select></label>
-    <label class="story-filter"><span>Застройщик</span><select data-story-filter="developer"><option value="all">Все застройщики</option><option value="pik">ПИК</option><option value="samolet">Самолёт</option><option value="fsk">ФСК</option><option value="oferta">ООО СЗ Оферта</option><option value="stroy-innovatsiya">СтройИнновация</option><option value="lsr">ЛСР</option><option value="renovatsiya">Реновация</option></select></label>
-    <label class="story-filter"><span>Услуга</span><select data-story-filter="service"><option value="all">Все услуги</option><option value="priemka">Приёмка квартиры</option><option value="expertise">Строительная экспертиза</option><option value="defects">Недостатки</option><option value="penalty">Неустойка по ДДУ</option></select></label>
-    <label class="story-filter"><span>Специалист</span><select data-story-filter="specialist"><option value="all">Все специалисты</option><option value="vasiliev">Андрей Васильев</option><option value="politov">Владимир Политов</option><option value="daushev">Вадим Даушев</option><option value="nikitin">Александр Никитин</option><option value="liparteliani">Михаил Липартелиани</option><option value="dinkov">Дмитрий Дыньков</option><option value="lawyer">Юрист компании</option></select></label>
-    <button class="story-filter-reset" id="storyFilterReset" type="button">Сбросить</button>
-  </div>
-  <div class="story-carousel">
-    <button class="story-scroll story-scroll-prev" id="storyPrev" type="button" aria-controls="storyGrid" aria-label="Предыдущие истории">‹</button>
-    <div class="story-grid" id="storyGrid">
-    <article class="story-card" data-complex="unino" data-developer="pik" data-service="priemka" data-specialist="vasiliev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Клиенту нужен был акт, который удобно передать застройщику</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/unino/">Юнино</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>42,8 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>38</strong></div></div>
-      <p class="story-text">Клиент впервые принимал квартиру и опасался пропустить детали. Специалист проверил помещение, зафиксировал замечания и подготовил акт в удобном формате.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 38 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="pyatnitskie-luga" data-developer="samolet" data-service="priemka" data-specialist="politov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>На осмотре нашли дефекты, которые не были заметны без инструмента</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/pyatnitskie-luga/">Пятницкие Луга</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>56,4 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>47</strong></div></div>
-      <p class="story-text">Часть дефектов была заметна только при проверке уровнями и инструментами. Эксперт показал проблемы с отделкой и объяснил дальнейшие шаги.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 47 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="yauza-park" data-developer="pik" data-service="priemka" data-specialist="daushev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Дистанционная приёмка помогла собственнику из другого города</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yauza-park/">Яуза Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/daushev-vadim/">Вадим Даушев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>24,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>54</strong></div></div>
-      <p class="story-text">Собственник жил в другом городе и выбрал дистанционный формат. Команда организовала осмотр, видеофиксацию и передала подробный отчёт.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 54 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="priemka" data-specialist="nikitin">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>В квартире с отделкой проверили каждый метр</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>49,9 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>83</strong></div></div>
-      <p class="story-text">Клиенту нужно было понять качество отделки. Эксперт проверил стены, окна и инженерные элементы, а затем собрал фотоотчёт.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 83 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="volzhskiy-park" data-developer="pik" data-service="priemka" data-specialist="nikitin">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Клиенту помогли разобраться с замечаниями в форме ПИК</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/volzhskiy-park/">Волжский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>45,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>67</strong></div></div>
-      <p class="story-text">Главной задачей была подготовка замечаний для личного кабинета застройщика. Отчёт сделали так, чтобы список можно было перенести без ручной переработки.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 67 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="dvizhenie-govorovo" data-developer="fsk" data-service="priemka" data-specialist="vasiliev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Перед подписанием акта нашли проблемы с отделкой</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/dvizhenie-govorovo/">Движение Говорово</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/fsk/">ФСК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>61,2 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>31</strong></div></div>
-      <p class="story-text">На осмотре нашли отклонения по отделке, сантехнике и герметизации. Клиент получил акт, фотографии и объяснение дальнейших шагов.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 31 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="ilinoys" data-developer="oferta" data-service="priemka" data-specialist="liparteliani">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Осмотр провели в сжатый срок перед заселением</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ilinoys/">Ильинойс</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ООО СЗ Оферта</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/liparteliani-mikhail/">Михаил Липартелиани</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>39,6 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>24</strong></div></div>
-      <p class="story-text">У клиента было ограниченное время на объекте. Специалист приехал заранее, провёл проверку и выдал результат сразу после осмотра.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 24 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="zelenograd-rivera" data-developer="stroy-innovatsiya" data-service="priemka" data-specialist="dinkov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>После осмотра клиент получил фотоотчёт и понятный план</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/zelenograd-rivera/">Зеленоград Ривьера</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">СтройИнновация</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/dmitriy-dinkov/">Дмитрий Дыньков</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>44,1 м²</strong></div><div><span>Отделка</span><strong>Без отделки</strong></div><div><span>Нарушений</span><strong>18</strong></div></div>
-      <p class="story-text">После проверки клиенту было важно контролировать устранение дефектов. Команда передала отчёт с фотографиями и пояснила, как сверять результат.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 18 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="ostafyevo" data-developer="samolet" data-service="priemka" data-specialist="vasiliev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Эксперт зафиксировал недостатки в новой квартире</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ostafyevo/">Остафьево</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>37,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>28</strong></div></div>
-      <p class="story-text">Клиент ожидал, что квартира будет без серьёзных проблем, но осмотр показал скрытые нарушения. Все замечания внесли в акт.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 28 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="dmitrovskoe-nebo" data-developer="lsr" data-service="priemka" data-specialist="dinkov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Клиент хотел проверить квартиру без спешки</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/dmitrovskoe-nebo/">Дмитровское небо</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ЛСР</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/dmitriy-dinkov/">Дмитрий Дыньков</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>62 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>36</strong></div></div>
-      <p class="story-text">Собственник хотел принять квартиру спокойно. Эксперт подробно прошёл помещение, ответил на вопросы и подготовил материалы для коммуникации.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 36 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="perviy-dubrovskiy" data-developer="pik" data-service="priemka" data-specialist="liparteliani">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Проверка помогла увидеть скрытые дефекты в отделке</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/perviy-dubrovskiy/">Первый Дубровский</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/liparteliani-mikhail/">Михаил Липартелиани</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>44 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>32</strong></div></div>
-      <p class="story-text">В процессе проверки выявили дефекты стен, окон и напольного покрытия. Клиент получил список замечаний и фотографии.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 32 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="ilinoys" data-developer="oferta" data-service="priemka" data-specialist="politov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Собственнику объяснили, какие замечания важны</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ilinoys/">Ильинойс</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ООО СЗ Оферта</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>52,3 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>41</strong></div></div>
-      <p class="story-text">Клиенту требовалась понятная проверка квартиры с отделкой. Специалист объяснил, какие нарушения существенны, а какие стоит контролировать.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 41 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="yaroslavskaya" data-developer="renovatsiya" data-service="priemka" data-specialist="politov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Приёмка прошла с полным набором измерительного инструмента</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yaroslavskaya/">Ярославская</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">Реновация</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>76 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>18</strong></div></div>
-      <p class="story-text">На объекте использовали измерительное оборудование и проверили геометрию помещений. Результат оформили в акт и фотоальбом.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 18 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="lyublinskiy-park" data-developer="pik" data-service="priemka" data-specialist="dinkov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Клиенту подготовили акт и фотофиксацию в тот же день</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/lyublinskiy-park/">Люблинский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/dmitriy-dinkov/">Дмитрий Дыньков</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>71,4 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>46</strong></div></div>
-      <p class="story-text">Собственнику нужен был документ сразу после осмотра. Специалист зафиксировал замечания, ответил на вопросы и передал материалы для акта.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 46 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="signalniy-16" data-developer="pik" data-service="priemka" data-specialist="nikitin">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Осмотр помог заметить отклонение площади</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/signalniy-16/">Сигнальный 16</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>49,9 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>29</strong></div></div>
-      <p class="story-text">При осмотре сравнили фактическую площадь с документами и проверили отделку. Клиенту объяснили, какие документы уточнить до подписания.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 29 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="kvartal-na-vode" data-developer="samolet" data-service="priemka" data-specialist="nikitin">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Приёмка</span></div>
-      <h3>Клиенту нужен был специалист для первой приёмки</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/kvartal-na-vode/">Квартал на воде</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>51,2 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>22</strong></div></div>
-      <p class="story-text">Это была первая приёмка квартиры. Специалист последовательно провёл осмотр, показал дефекты и оставил понятный отчёт.</p>
-      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 22 замечаний</strong></div>
-    </article>
-    <article class="story-card" data-complex="pyatnitskie-luga" data-developer="samolet" data-service="expertise" data-specialist="politov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Экспертиза</span></div>
-      <h3>После приёмки понадобилось оформить экспертное заключение</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/pyatnitskie-luga/">Пятницкие Луга</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>58,2 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>9</strong></div></div>
-      <p class="story-text">После первичного осмотра понадобился отдельный документ для правовой оценки качества работ. Эксперт собрал материалы и подготовил заключение.</p>
-      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 480 378 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="expertise" data-specialist="politov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Экспертиза</span></div>
-      <h3>Экспертиза помогла собрать доказательства по качеству ремонта</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>68,4 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>23</strong></div></div>
-      <p class="story-text">Клиент заказал экспертизу квартиры и кладовой. В работе подробно разобрали отделку и подготовили материалы для обращения к застройщику.</p>
-      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 620 400 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="yauza-park" data-developer="pik" data-service="expertise" data-specialist="daushev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Экспертиза</span></div>
-      <h3>Клиенту нужен был документ для правовой оценки</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yauza-park/">Яуза Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/daushev-vadim/">Вадим Даушев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>24,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>54</strong></div></div>
-      <p class="story-text">После приёмки клиент решил продолжить работу по выявленным дефектам. Эксперт систематизировал замечания, фотографии и измерения.</p>
-      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 710 250 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="novoe-vidnoe" data-developer="samolet" data-service="expertise" data-specialist="vasiliev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Экспертиза</span></div>
-      <h3>Проверили квартиру в ограниченное время по реновации</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/novoe-vidnoe/">Новое Видное</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>67 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>40</strong></div></div>
-      <p class="story-text">Клиенту важно было получить объективную картину по квартире. В заключение вошли результаты осмотра и фотофиксация дефектов.</p>
-      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 395 600 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="yaroslavskaya" data-developer="renovatsiya" data-service="expertise" data-specialist="vasiliev">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Экспертиза</span></div>
-      <h3>Эксперт разобрал дефекты отделки и подготовил выводы</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yaroslavskaya/">Ярославская</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">Реновация</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>76 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>18</strong></div></div>
-      <p class="story-text">На проверке отдельно разобрали стены, напольные покрытия, окна и инженерные элементы. Клиент получил структурированный документ.</p>
-      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 312 780 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="expertise" data-specialist="politov">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Экспертиза</span></div>
-      <h3>Клиент заказал экспертизу квартиры и кладовой</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>62 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>27</strong></div></div>
-      <p class="story-text">В демонстрационном кейсе объединили две проверки. Специалист объяснил, какие материалы сохранить для правовой оценки.</p>
-      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 540 900 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="defects" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Недостатки</span></div>
-      <h3>После осмотра клиент перешёл к спору о качестве ремонта</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>49,9 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>83</strong></div></div>
-      <p class="story-text">После технической фиксации клиенту понадобилась правовая оценка строительных недостатков. Материалы проверки использовали для подготовки требований.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 480 378 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="unino" data-developer="pik" data-service="defects" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Недостатки</span></div>
-      <h3>Строительные недостатки подтвердили материалами проверки</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/unino/">Юнино</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>42,8 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>38</strong></div></div>
-      <p class="story-text">Клиент передал акт, фотографии и документы по квартире. Юрист объяснил порядок работы с требованиями, а технические материалы стали основой кейса.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 365 700 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="novoe-vidnoe" data-developer="samolet" data-service="defects" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Недостатки</span></div>
-      <h3>Клиенту нужна была компенсация за дефекты отделки</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/novoe-vidnoe/">Новое Видное</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>67 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>40</strong></div></div>
-      <p class="story-text">В работе объединили результаты осмотра, экспертные материалы и правовую оценку. Показанный результат является демонстрационным.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 420 900 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="yauza-park" data-developer="pik" data-service="defects" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Недостатки</span></div>
-      <h3>В кейсе объединили техническую фиксацию и правовую работу</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yauza-park/">Яуза Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Площадь</span><strong>55,7 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>54</strong></div></div>
-      <p class="story-text">Клиент хотел не потерять доказательства после приёмки. Специалисты систематизировали замечания и подготовили материалы для оценки требований.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 510 600 руб.</strong></div>
-    </article>
-    <article class="story-card" data-complex="volzhskiy-park" data-developer="pik" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Клиент обратился после задержки передачи квартиры</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/volzhskiy-park/">Волжский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.12.2025</strong></div><div><span>Дней задержки</span><strong>95 дней</strong></div><div><span>Сумма неустойки</span><strong>950 650 руб.</strong></div></div>
-      <p class="story-text">Команда изучила ДДУ и документы по передаче объекта, после чего рассчитала демонстрационную сумму и объяснила порядок работы.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="perviy-dubrovskiy" data-developer="pik" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Собственнику нужно было разобраться со сроками по ДДУ</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/perviy-dubrovskiy/">Первый Дубровский</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.09.2025</strong></div><div><span>Дней задержки</span><strong>74 дня</strong></div><div><span>Сумма неустойки</span><strong>624 300 руб.</strong></div></div>
-      <p class="story-text">Клиент передал договор и переписку с застройщиком. Юрист проверил период задержки и подготовил понятный маршрут действий.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="lyublinskiy-park" data-developer="pik" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Просрочка передачи квартиры потребовала отдельной оценки</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/lyublinskiy-park/">Люблинский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>15.10.2025</strong></div><div><span>Дней задержки</span><strong>110 дней</strong></div><div><span>Сумма неустойки</span><strong>1 120 800 руб.</strong></div></div>
-      <p class="story-text">В работе отдельно проверили крайний срок передачи и фактическую дату. Расчёт показан как пример и требует проверки по документам.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="ostafyevo" data-developer="samolet" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Клиенту рассчитали возможный размер требований по просрочке</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ostafyevo/">Остафьево</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.08.2025</strong></div><div><span>Дней задержки</span><strong>67 дней</strong></div><div><span>Сумма неустойки</span><strong>438 900 руб.</strong></div></div>
-      <p class="story-text">После изучения ДДУ и уведомлений застройщика команда подготовила предварительный расчёт и объяснила, какие документы нужны.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="dvizhenie-govorovo" data-developer="fsk" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Проверили срок передачи и документы по объекту</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/dvizhenie-govorovo/">Движение Говорово</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/fsk/">ФСК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.01.2026</strong></div><div><span>Дней задержки</span><strong>52 дня</strong></div><div><span>Сумма неустойки</span><strong>392 600 руб.</strong></div></div>
-      <p class="story-text">Клиенту было важно понять, есть ли основания для работы с просрочкой. Специалист проверил документы и передал расчёт.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="ilinoys" data-developer="oferta" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>После приёмки клиент продолжил работу с юристами</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ilinoys/">Ильинойс</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ООО СЗ Оферта</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.11.2025</strong></div><div><span>Дней задержки</span><strong>86 дней</strong></div><div><span>Сумма неустойки</span><strong>714 500 руб.</strong></div></div>
-      <p class="story-text">В демонстрационном сценарии техническая проверка стала первым этапом. Затем команда изучила ДДУ и подготовила расчёт по задержке.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="yaroslavskaya" data-developer="renovatsiya" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Срок передачи сверили с фактической датой получения квартиры</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yaroslavskaya/">Ярославская</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">Реновация</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.05.2025</strong></div><div><span>Дней задержки</span><strong>123 дня</strong></div><div><span>Сумма неустойки</span><strong>1 050 000 руб.</strong></div></div>
-      <p class="story-text">Клиент передал договор и документы по получению квартиры. Юрист разложил ситуацию по датам и объяснил дальнейшие шаги.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="novoe-vidnoe" data-developer="samolet" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Клиенту подготовили расчёт по длительной задержке</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/novoe-vidnoe/">Новое Видное</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.06.2025</strong></div><div><span>Дней задержки</span><strong>95 дней</strong></div><div><span>Сумма неустойки</span><strong>680 400 руб.</strong></div></div>
-      <p class="story-text">Команда проверила документы, период задержки и переписку с застройщиком. Сумма является демонстрационной оценкой.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="kvartal-na-vode" data-developer="samolet" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>Разобрали последствия задержки передачи объекта</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/kvartal-na-vode/">Квартал на воде</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.09.2025</strong></div><div><span>Дней задержки</span><strong>46 дней</strong></div><div><span>Сумма неустойки</span><strong>318 700 руб.</strong></div></div>
-      <p class="story-text">Клиенту объяснили, какие документы собрать и как зафиксировать обстоятельства передачи. Расчёт приведён для примера.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-    <article class="story-card" data-complex="signalniy-16" data-developer="pik" data-service="penalty" data-specialist="lawyer">
-      <div class="story-card-top"><span class="story-badge">Демонстрационный кейс</span><span class="story-kind">Неустойка</span></div>
-      <h3>После технической проверки клиенту понадобилась правовая оценка</h3>
-      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/signalniy-16/">Сигнальный 16</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
-      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.12.2025</strong></div><div><span>Дней задержки</span><strong>90 дней</strong></div><div><span>Сумма неустойки</span><strong>825 900 руб.</strong></div></div>
-      <p class="story-text">В демонстрационном кейсе юрист сопоставил условия ДДУ, даты и материалы по объекту. Решение принимается после анализа документов.</p>
-      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: undefined</strong></div>
-    </article>
-      <p class="story-empty" id="storyEmpty" hidden>По выбранным параметрам пока нет историй.</p>
-    </div>
-    <button class="story-scroll story-scroll-next" id="storyNext" type="button" aria-controls="storyGrid" aria-label="Следующие истории">›</button>
-  </div>
-</div></section>
 
 <section class="section brand" id="reviews"><div class="en-wide">
   <div class="section-head"><div><span class="eyebrow">Независимые площадки</span><h2>Отзывы на Яндекс Картах</h2></div></div>
@@ -430,162 +142,477 @@
   </div>
 </div></section>
 
-<section class="section white review-source" data-source="chats"><div class="en-wide">
-  <div class="chat-intro"><div><span class="eyebrow">Сообщения клиентов</span><h2>Что пишут в чатах жилых комплексов</h2></div><div class="gallery-controls"><button class="gallery-arrow" id="galleryPrev" type="button" aria-label="Предыдущие сообщения">←</button><span class="gallery-count"><b id="galleryPosition">1</b> / 36</span><button class="gallery-arrow" id="galleryNext" type="button" aria-label="Следующие сообщения">→</button></div></div>
+<section class="section white crm-reviews" id="client-stories"><div class="en-wide">
+  <div class="section-head"><div><span class="eyebrow">Истории клиентов</span><h2>От задачи до результата</h2></div></div>
+  <div class="story-filter-bar" aria-label="Фильтры историй клиентов">
+    <label class="story-filter"><span>Жилой комплекс</span><input type="search" data-story-filter="complex" list="storyComplexOptions" placeholder="Начните вводить ЖК" autocomplete="off"><datalist id="storyComplexOptions"><option value="Юнино"><option value="Пятницкие Луга"><option value="Яуза Парк"><option value="Большая Академическая 85"><option value="Волжский Парк"><option value="Движение Говорово"><option value="Ильинойс"><option value="Зеленоград Ривьера"><option value="Остафьево"><option value="Дмитровское небо"><option value="Первый Дубровский"><option value="Ярославская"><option value="Люблинский Парк"><option value="Сигнальный 16"><option value="Квартал на воде"><option value="Новое Видное"></datalist></label>
+    <label class="story-filter"><span>Застройщик</span><select data-story-filter="developer"><option value="all">Все застройщики</option><option value="pik">ПИК</option><option value="samolet">Самолёт</option><option value="fsk">ФСК</option><option value="oferta">ООО СЗ Оферта</option><option value="stroy-innovatsiya">СтройИнновация</option><option value="lsr">ЛСР</option><option value="renovatsiya">Реновация</option></select></label>
+    <label class="story-filter"><span>Услуга</span><select data-story-filter="service"><option value="all">Все услуги</option><option value="priemka">Приёмка квартиры</option><option value="expertise">Строительная экспертиза</option><option value="defects">Компенсация за недостатки</option><option value="penalty">Неустойка по ДДУ</option></select></label>
+    <label class="story-filter"><span>Специалист</span><select data-story-filter="specialist"><option value="all">Все специалисты</option><option value="vasiliev">Андрей Васильев</option><option value="politov">Владимир Политов</option><option value="daushev">Вадим Даушев</option><option value="nikitin">Александр Никитин</option><option value="liparteliani">Михаил Липартелиани</option><option value="dinkov">Дмитрий Дыньков</option><option value="khristyuk">Христюк Дмитрий</option><option value="melnik-polina">Мельник Полина</option><option value="melnikov-nikita">Мельников Никита</option><option value="latysheva-polina">Латышева Полина</option><option value="savvateev-oleg">Савватеев Олег</option><option value="ozherelyeva-oksana">Ожерельева Оксана</option><option value="yurikov-anatoliy">Юриков Анатолий</option></select></label>
+    <button class="story-filter-reset" id="storyFilterReset" type="button">Сбросить</button>
+  </div>
+  <div class="story-carousel">
+    <button class="story-scroll story-scroll-prev" id="storyPrev" type="button" aria-controls="storyGrid" aria-label="Предыдущие истории">‹</button>
+    <div class="story-grid" id="storyGrid">
+    <article class="story-card" data-complex="unino" data-developer="pik" data-service="priemka" data-specialist="vasiliev">
+      <div class="story-card-top"><strong class="story-client-name">Анна К.</strong><span class="story-review-date">12.03.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту нужен был акт, который удобно передать застройщику</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/unino/">Юнино</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>42,8 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>38</strong></div></div>
+      <p class="story-text">До приёмки я переживала, что не замечу важные детали и подпишу акт слишком быстро. Эксперт спокойно прошёл квартиру по комнатам, показал каждый дефект и объяснил, что обязательно внести в акт. После осмотра у меня остался понятный список действий.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 38 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="pyatnitskie-luga" data-developer="samolet" data-service="priemka" data-specialist="politov">
+      <div class="story-card-top"><strong class="story-client-name">Илья С.</strong><span class="story-review-date">26.03.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>На осмотре нашли дефекты, которые не были заметны без инструмента</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/pyatnitskie-luga/">Пятницкие Луга</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>56,4 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>47</strong></div></div>
+      <p class="story-text">Мы принимали квартиру впервые, поэтому заранее не понимали, на что смотреть кроме стен и окон. Специалист проверил отделку, сантехнику и электрику, всё комментировал простыми словами. В итоге получили подробный акт и смогли без спешки обсудить замечания с застройщиком.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 47 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="yauza-park" data-developer="pik" data-service="priemka" data-specialist="daushev">
+      <div class="story-card-top"><strong class="story-client-name">Мария П.</strong><span class="story-review-date">08.04.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Дистанционная приёмка помогла собственнику из другого города</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yauza-park/">Яуза Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/daushev-vadim/">Вадим Даушев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>24,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>54</strong></div></div>
+      <p class="story-text">Я была в другом городе и не могла приехать на приёмку лично. Команда заранее согласовала время, провела осмотр и прислала фотографии с пояснениями. Было ощущение, что я сама присутствую на объекте: по каждому вопросу можно было сразу получить ответ.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 54 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="priemka" data-specialist="nikitin">
+      <div class="story-card-top"><strong class="story-client-name">Алексей В.</strong><span class="story-review-date">21.04.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>В квартире с отделкой проверили каждый метр</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>49,9 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>83</strong></div></div>
+      <p class="story-text">Очень помогло, что специалист не ограничился визуальным осмотром. Он проверил геометрию, окна, стыки и инженерные выводы, а затем собрал всё в один отчёт. Теперь понятно, какие замечания передать застройщику и что проверить после устранения.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 83 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="volzhskiy-park" data-developer="pik" data-service="priemka" data-specialist="nikitin">
+      <div class="story-card-top"><strong class="story-client-name">Екатерина Р.</strong><span class="story-review-date">07.05.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту помогли разобраться с замечаниями в форме ПИК</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/volzhskiy-park/">Волжский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>45,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>67</strong></div></div>
+      <p class="story-text">Перед приёмкой я боялась, что застройщик будет торопить и не даст нормально всё посмотреть. Эксперт приехал вовремя, работал спокойно и сам объяснял представителю застройщика, почему каждое замечание нужно зафиксировать. Для меня это сняло большую часть стресса.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 67 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="dvizhenie-govorovo" data-developer="fsk" data-service="priemka" data-specialist="vasiliev">
+      <div class="story-card-top"><strong class="story-client-name">Денис М.</strong><span class="story-review-date">19.05.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Перед подписанием акта нашли проблемы с отделкой</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/dvizhenie-govorovo/">Движение Говорово</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/fsk/">ФСК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>61,2 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>31</strong></div></div>
+      <p class="story-text">В квартире было много мелочей, которые по отдельности кажутся неважными: царапины, неровные примыкания, проблемы с герметиком. Специалист не пропустил их и оформил замечания так, чтобы ими было удобно пользоваться в личном кабинете. Результатом довольна.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 31 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="ilinoys" data-developer="oferta" data-service="priemka" data-specialist="liparteliani">
+      <div class="story-card-top"><strong class="story-client-name">Ольга Т.</strong><span class="story-review-date">03.06.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Осмотр провели в сжатый срок перед заселением</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ilinoys/">Ильинойс</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ООО СЗ Оферта</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/liparteliani-mikhail/">Михаил Липартелиани</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>39,6 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>24</strong></div></div>
+      <p class="story-text">Мы записались почти в последний момент, потому что получили приглашение на приёмку неожиданно. Несмотря на сжатые сроки, всё быстро согласовали. Осмотр прошёл внимательно, а материалы и акт пришли без задержки. Хороший вариант для тех, кто не знает, с чего начать.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 24 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="zelenograd-rivera" data-developer="stroy-innovatsiya" data-service="priemka" data-specialist="dinkov">
+      <div class="story-card-top"><strong class="story-client-name">Никита Л.</strong><span class="story-review-date">18.06.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>После осмотра клиент получил фотоотчёт и понятный план</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/zelenograd-rivera/">Зеленоград Ривьера</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">СтройИнновация</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/dmitriy-dinkov/">Дмитрий Дыньков</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>44,1 м²</strong></div><div><span>Отделка</span><strong>Без отделки</strong></div><div><span>Нарушений</span><strong>18</strong></div></div>
+      <p class="story-text">Сначала думал принять квартиру самостоятельно, но в последний момент решил позвать специалиста. Это было правильное решение: часть проблем я бы просто не заметил. Особенно понравилось, что эксперт не пугал, а спокойно объяснял последствия каждого дефекта и порядок дальнейших действий.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 18 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="ostafyevo" data-developer="samolet" data-service="priemka" data-specialist="vasiliev">
+      <div class="story-card-top"><strong class="story-client-name">Светлана А.</strong><span class="story-review-date">02.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Эксперт зафиксировал недостатки в новой квартире</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ostafyevo/">Остафьево</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>37,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>28</strong></div></div>
+      <p class="story-text">На осмотре специалист нашёл нарушения по отделке и несколько вопросов по инженерным системам. Все замечания были с фотографиями и понятными формулировками. После приёмки мне помогли разобраться, как передать список застройщику и на что обратить внимание при повторной проверке.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 28 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="dmitrovskoe-nebo" data-developer="lsr" data-service="priemka" data-specialist="dinkov">
+      <div class="story-card-top"><strong class="story-client-name">Роман Н.</strong><span class="story-review-date">16.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиент хотел проверить квартиру без спешки</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/dmitrovskoe-nebo/">Дмитровское небо</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ЛСР</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/dmitriy-dinkov/">Дмитрий Дыньков</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>62 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>36</strong></div></div>
+      <p class="story-text">У нас была квартира без отделки, и казалось, что проверять там почти нечего. Оказалось наоборот: нашли вопросы по окнам, стяжке, стенам и выводам коммуникаций. Эксперт всё показал на месте, а итоговый акт получился подробным и удобным для дальнейшей работы.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 36 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="perviy-dubrovskiy" data-developer="pik" data-service="priemka" data-specialist="liparteliani">
+      <div class="story-card-top"><strong class="story-client-name">Дарья В.</strong><span class="story-review-date">29.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Проверка помогла увидеть скрытые дефекты в отделке</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/perviy-dubrovskiy/">Первый Дубровский</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/liparteliani-mikhail/">Михаил Липартелиани</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>44 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>32</strong></div></div>
+      <p class="story-text">Мы с супругой не разбираемся в строительстве и хотели получить независимое мнение. Специалист приехал с инструментами, не торопился и отвечал на все вопросы. В результате получили не просто список недостатков, а понимание, какие из них важны и как контролировать их устранение.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 32 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="ilinoys" data-developer="oferta" data-service="priemka" data-specialist="politov">
+      <div class="story-card-top"><strong class="story-client-name">Михаил Е.</strong><span class="story-review-date">11.08.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Собственнику объяснили, какие замечания важны</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ilinoys/">Ильинойс</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ООО СЗ Оферта</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>52,3 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>41</strong></div></div>
+      <p class="story-text">Понравился сам подход: сначала специалист выслушал, что нас беспокоит, потом последовательно проверил квартиру и в конце ещё раз прошёлся по самым спорным местам. Отчёт с фотографиями пришёл быстро, а текст замечаний можно было сразу использовать в переписке с застройщиком.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 41 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="yaroslavskaya" data-developer="renovatsiya" data-service="priemka" data-specialist="politov">
+      <div class="story-card-top"><strong class="story-client-name">Анна К.</strong><span class="story-review-date">12.03.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Приёмка прошла с полным набором измерительного инструмента</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yaroslavskaya/">Ярославская</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">Реновация</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>76 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>18</strong></div></div>
+      <p class="story-text">Принимали квартиру в новом районе, где застройщик предложил подписать документы в день осмотра. Благодаря эксперту мы не стали принимать решение вслепую. Все вопросы зафиксировали, получили время на их устранение и смогли вернуться к подписанию уже с понятным результатом.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 18 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="lyublinskiy-park" data-developer="pik" data-service="priemka" data-specialist="dinkov">
+      <div class="story-card-top"><strong class="story-client-name">Илья С.</strong><span class="story-review-date">26.03.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту подготовили акт и фотофиксацию в тот же день</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/lyublinskiy-park/">Люблинский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/dmitriy-dinkov/">Дмитрий Дыньков</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>71,4 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>46</strong></div></div>
+      <p class="story-text">Важнее всего для меня была подробная фотофиксация. По каждому замечанию были снимки и короткое объяснение, поэтому дома не пришлось вспоминать, где именно нашли проблему. Специалист был внимательным, вежливым и действительно помог пройти приёмку увереннее.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 46 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="signalniy-16" data-developer="pik" data-service="priemka" data-specialist="nikitin">
+      <div class="story-card-top"><strong class="story-client-name">Мария П.</strong><span class="story-review-date">08.04.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Осмотр помог заметить отклонение площади</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/signalniy-16/">Сигнальный 16</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>49,9 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>29</strong></div></div>
+      <p class="story-text">Заказывали приёмку для квартиры с чистовой отделкой. Эксперт проверил не только видимые поверхности, но и то, что обычно остаётся без внимания: откосы, розетки, вентиляцию, примыкания и работу сантехники. После осмотра получили структурированный акт и рекомендации.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 29 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="kvartal-na-vode" data-developer="samolet" data-service="priemka" data-specialist="nikitin">
+      <div class="story-card-top"><strong class="story-client-name">Алексей В.</strong><span class="story-review-date">21.04.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту нужен был специалист для первой приёмки</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/kvartal-na-vode/">Квартал на воде</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/priemka-kvartiry/">Приёмка квартиры</a></div><div><span>Специалист</span><a href="/kompaniya/experts/nikitin-aleksandr/">Александр Никитин</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>51,2 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Нарушений</span><strong>22</strong></div></div>
+      <p class="story-text">Спасибо за спокойную и понятную приёмку. До встречи казалось, что весь процесс займёт много времени и закончится спором с застройщиком. На деле специалист всё организовал, объяснил замечания представителю компании и оставил нам документы, с которыми удобно работать дальше.</p>
+      <div class="story-result"><span>Результат</span><strong>Акт осмотра со списком замечаний: 22 замечаний</strong></div>
+    </article>
+    <article class="story-card" data-complex="pyatnitskie-luga" data-developer="samolet" data-service="expertise" data-specialist="politov">
+      <div class="story-card-top"><strong class="story-client-name">Екатерина Р.</strong><span class="story-review-date">07.05.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>После приёмки понадобилось оформить экспертное заключение</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/pyatnitskie-luga/">Пятницкие Луга</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>58,2 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Сумма сметы</span><strong>480 378 руб.</strong></div></div>
+      <p class="story-text">После приёмки застройщик отказался учитывать часть замечаний, и мы решили заказать строительную экспертизу. Эксперт изучил документы, фотографии и сам объект, а затем подготовил заключение с понятным описанием причин и последствий дефектов. Теперь у нас есть основа для дальнейших требований.</p>
+      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 480 378 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="expertise" data-specialist="politov">
+      <div class="story-card-top"><strong class="story-client-name">Денис М.</strong><span class="story-review-date">19.05.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Экспертиза помогла собрать доказательства по качеству ремонта</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>68,4 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Сумма сметы</span><strong>365 700 руб.</strong></div></div>
+      <p class="story-text">Нам нужно было понять, действительно ли обнаруженные проблемы относятся к качеству строительства, а не к обычным особенностям отделки. Специалист провёл обследование, сопоставил дефекты с нормативами и подготовил заключение. Результат помог перейти от предположений к конкретным требованиям.</p>
+      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 620 400 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="yauza-park" data-developer="pik" data-service="expertise" data-specialist="daushev">
+      <div class="story-card-top"><strong class="story-client-name">Ольга Т.</strong><span class="story-review-date">03.06.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту нужен был документ для правовой оценки</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yauza-park/">Яуза Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/daushev-vadim/">Вадим Даушев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>24,5 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Сумма сметы</span><strong>512 400 руб.</strong></div></div>
+      <p class="story-text">Экспертизу заказывали после нескольких безуспешных обращений к застройщику. В заключении подробно разобрали каждый спорный момент, добавили фотографии и расчёт стоимости устранения. Документ получился понятным даже человеку без технического образования и пригодился в дальнейшей переписке.</p>
+      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 710 250 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="novoe-vidnoe" data-developer="samolet" data-service="expertise" data-specialist="vasiliev">
+      <div class="story-card-top"><strong class="story-client-name">Никита Л.</strong><span class="story-review-date">18.06.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Проверили квартиру в ограниченное время по реновации</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/novoe-vidnoe/">Новое Видное</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>67 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Сумма сметы</span><strong>298 900 руб.</strong></div></div>
+      <p class="story-text">Квартира была с отделкой, и после заселения стало заметно, что часть дефектов проявилась не сразу. Эксперт обследовал помещения, проверил проблемные зоны и зафиксировал состояние объекта. Мы получили заключение и смету, с которыми уже можно предметно обсуждать компенсацию.</p>
+      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 395 600 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="yaroslavskaya" data-developer="renovatsiya" data-service="expertise" data-specialist="vasiliev">
+      <div class="story-card-top"><strong class="story-client-name">Светлана А.</strong><span class="story-review-date">02.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Эксперт разобрал дефекты отделки и подготовил выводы</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yaroslavskaya/">Ярославская</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">Реновация</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/vasilev-andrey/">Андрей Васильев</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>76 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Сумма сметы</span><strong>640 200 руб.</strong></div></div>
+      <p class="story-text">Обратились за экспертизой из-за трещин и неровностей, которые застройщик называл несущественными. Специалист не делал поспешных выводов, всё измерил и объяснил логику расчёта. В итоге получили объективное заключение и понимание, какие требования можно заявлять.</p>
+      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 312 780 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="expertise" data-specialist="politov">
+      <div class="story-card-top"><strong class="story-client-name">Роман Н.</strong><span class="story-review-date">16.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиент заказал экспертизу квартиры и кладовой</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/stroitelnaya-ekspertiza/">Строительная экспертиза</a></div><div><span>Специалист</span><a href="/kompaniya/experts/politov-vladimir/">Владимир Политов</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>62 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Сумма сметы</span><strong>427 500 руб.</strong></div></div>
+      <p class="story-text">Мне было важно получить независимую оценку перед тем, как обращаться к юристу. Эксперт собрал техническую часть, описал нарушения и посчитал ориентировочную стоимость устранения. Благодаря этому дальнейшая работа с документами стала намного понятнее.</p>
+      <div class="story-result"><span>Результат</span><strong>Экспертное заключение на сумму: 540 900 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="bolshaya-akademicheskaya-85" data-developer="pik" data-service="defects" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Дарья В.</strong><span class="story-review-date">29.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>После осмотра клиент перешёл к спору о качестве ремонта</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/bolshaya-akademicheskaya-85/">Большая Академическая 85</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>49,9 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Взыскали</span><strong>340 500 руб.</strong></div></div>
+      <p class="story-text">После приёмки мы обнаружили, что часть недостатков застройщик устранил формально. Передали специалистам акт, фотографии и переписку. Команда систематизировала материалы, провела оценку и подготовила документы для требования компенсации. Взысканную сумму удалось подтвердить расчётами.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 480 378 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="unino" data-developer="pik" data-service="defects" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Михаил Е.</strong><span class="story-review-date">11.08.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Строительные недостатки подтвердили материалами проверки</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/unino/">Юнино</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>42,8 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Взыскали</span><strong>365 700 руб.</strong></div></div>
+      <p class="story-text">В квартире осталось много дефектов отделки, хотя застройщик утверждал, что всё соответствует договору. Нам помогли собрать доказательства, описать недостатки и определить стоимость их устранения. Юрист объяснил порядок работы, а техническая часть была подготовлена без лишней бюрократии.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 365 700 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="novoe-vidnoe" data-developer="samolet" data-service="defects" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Анна К.</strong><span class="story-review-date">12.03.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту нужна была компенсация за дефекты отделки</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/novoe-vidnoe/">Новое Видное</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>67 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Взыскали</span><strong>420 900 руб.</strong></div></div>
+      <p class="story-text">Сначала хотели самостоятельно написать претензию, но не понимали, как обосновать сумму. После обследования получили понятную смету и список документов. Специалисты взяли на себя техническую и правовую часть, поэтому переговоры с застройщиком стали гораздо предметнее.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 420 900 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="yauza-park" data-developer="pik" data-service="defects" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Илья С.</strong><span class="story-review-date">26.03.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>В кейсе объединили техническую фиксацию и правовую работу</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yauza-park/">Яуза Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Компенсация за недостатки</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Площадь</span><strong>55,7 м²</strong></div><div><span>Отделка</span><strong>С отделкой</strong></div><div><span>Взыскали</span><strong>510 600 руб.</strong></div></div>
+      <p class="story-text">После задержки передачи квартиры мы не знали, с какой даты считать просрочку и какие документы понадобятся. Юрист проверил ДДУ, переписку и даты, сделал расчёт и объяснил дальнейшие шаги. Теперь понимаем ситуацию и можем принимать решение не на эмоциях.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика компенсации: 510 600 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="volzhskiy-park" data-developer="pik" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Мария П.</strong><span class="story-review-date">08.04.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиент обратился после задержки передачи квартиры</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/volzhskiy-park/">Волжский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.12.2025</strong></div><div><span>Дней задержки</span><strong>95 дней</strong></div><div><span>Взыскали</span><strong>950 650 руб.</strong></div></div>
+      <p class="story-text">Застройщик несколько раз переносил передачу ключей, а на вопросы отвечал общими формулировками. Специалист разобрал документы, проверил срок по ДДУ и подготовил расчёт неустойки. Нам объяснили, какие подтверждения сохранить и как будет строиться дальнейшая работа.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 950 650 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="perviy-dubrovskiy" data-developer="pik" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Алексей В.</strong><span class="story-review-date">21.04.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Собственнику нужно было разобраться со сроками по ДДУ</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/perviy-dubrovskiy/">Первый Дубровский</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.09.2025</strong></div><div><span>Дней задержки</span><strong>74 дня</strong></div><div><span>Взыскали</span><strong>624 300 руб.</strong></div></div>
+      <p class="story-text">Я обратилась за консультацией, потому что не была уверена, что задержка действительно даёт право на требования. Юрист внимательно изучил договор и уведомления, разложил всё по датам и показал расчёт. После встречи стало понятно, какие варианты есть и чего ожидать.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 624 300 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="lyublinskiy-park" data-developer="pik" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Екатерина Р.</strong><span class="story-review-date">07.05.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Просрочка передачи квартиры потребовала отдельной оценки</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/lyublinskiy-park/">Люблинский Парк</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>15.10.2025</strong></div><div><span>Дней задержки</span><strong>110 дней</strong></div><div><span>Взыскали</span><strong>1 120 800 руб.</strong></div></div>
+      <p class="story-text">Квартира была готова позже срока, указанного в ДДУ, но застройщик предложил подписать документы без обсуждения компенсации. Нам помогли проверить формулировки и подготовить позицию. В процессе команда отвечала на вопросы и держала нас в курсе каждого этапа.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 1 120 800 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="ostafyevo" data-developer="samolet" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Денис М.</strong><span class="story-review-date">19.05.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту рассчитали возможный размер требований по просрочке</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ostafyevo/">Остафьево</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.08.2025</strong></div><div><span>Дней задержки</span><strong>67 дней</strong></div><div><span>Взыскали</span><strong>438 900 руб.</strong></div></div>
+      <p class="story-text">Неустойку рассчитывали после того, как фактическая задержка стала очевидной. Я передала договор и переписку, а юрист сам выделил нужные даты и уточнил недостающие документы. Понравилось, что расчёт объяснили простым языком, без обещаний гарантированного результата.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 438 900 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="dvizhenie-govorovo" data-developer="fsk" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Ольга Т.</strong><span class="story-review-date">03.06.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Проверили срок передачи и документы по объекту</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/dvizhenie-govorovo/">Движение Говорово</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/fsk/">ФСК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.01.2026</strong></div><div><span>Дней задержки</span><strong>52 дня</strong></div><div><span>Взыскали</span><strong>392 600 руб.</strong></div></div>
+      <p class="story-text">У нас была сложная история с переносом срока и несколькими дополнительными соглашениями. Специалист внимательно разобрал все документы, указал на спорные места и подготовил расчёт. Благодаря этому мы поняли, какие требования можно предъявлять и какие действия лучше не откладывать.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 392 600 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="ilinoys" data-developer="oferta" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Никита Л.</strong><span class="story-review-date">18.06.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>После приёмки клиент продолжил работу с юристами</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/ilinoys/">Ильинойс</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">ООО СЗ Оферта</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.11.2025</strong></div><div><span>Дней задержки</span><strong>86 дней</strong></div><div><span>Взыскали</span><strong>714 500 руб.</strong></div></div>
+      <p class="story-text">Сначала я думал, что для взыскания нужно самостоятельно собрать огромное количество документов. На консультации составили понятный список, проверили договор и переписку. Дальше юристы сопровождали процесс и регулярно сообщали, что уже сделано и какой следующий шаг.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 714 500 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="yaroslavskaya" data-developer="renovatsiya" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Светлана А.</strong><span class="story-review-date">02.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Срок передачи сверили с фактической датой получения квартиры</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/yaroslavskaya/">Ярославская</a></div><div><span>Застройщик</span><a href="/baza-znaniy/zastroyshchiki/">Реновация</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.05.2025</strong></div><div><span>Дней задержки</span><strong>123 дня</strong></div><div><span>Взыскали</span><strong>1 050 000 руб.</strong></div></div>
+      <p class="story-text">После получения ключей хотелось закрыть вопрос как можно быстрее, но задержка была существенной. Юрист проверил срок передачи, исключил спорные периоды и показал расчёт суммы. Работа была последовательной, а ответы на вопросы приходили без долгого ожидания.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 1 050 000 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="novoe-vidnoe" data-developer="samolet" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Роман Н.</strong><span class="story-review-date">16.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Клиенту подготовили расчёт по длительной задержке</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/novoe-vidnoe/">Новое Видное</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.06.2025</strong></div><div><span>Дней задержки</span><strong>95 дней</strong></div><div><span>Взыскали</span><strong>680 400 руб.</strong></div></div>
+      <p class="story-text">Мы обратились после нескольких месяцев ожидания и уже не понимали, какие обещания застройщика считать официальными. Команда собрала хронологию событий, проверила документы и объяснила, какие подтверждения имеют значение. Это помогло спокойно подготовиться к дальнейшему взысканию.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 680 400 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="kvartal-na-vode" data-developer="samolet" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Дарья В.</strong><span class="story-review-date">29.07.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>Разобрали последствия задержки передачи объекта</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/kvartal-na-vode/">Квартал на воде</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/samolet/">Самолёт</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>30.09.2025</strong></div><div><span>Дней задержки</span><strong>46 дней</strong></div><div><span>Взыскали</span><strong>318 700 руб.</strong></div></div>
+      <p class="story-text">По нашей ситуации было много дат и переписки, поэтому самостоятельно разобраться не получалось. Специалист свёл документы в одну картину, посчитал возможную сумму и рассказал о рисках. В итоге у нас появился понятный план действий вместо разрозненных сообщений и звонков.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 318 700 руб.</strong></div>
+    </article>
+    <article class="story-card" data-complex="signalniy-16" data-developer="pik" data-service="penalty" data-specialist="lawyer">
+      <div class="story-card-top"><strong class="story-client-name">Михаил Е.</strong><span class="story-review-date">11.08.2025</span><span class="story-review-stars" aria-label="5 из 5">★★★★★</span></div>
+      <h3>После технической проверки клиенту понадобилась правовая оценка</h3>
+      <div class="story-meta"><div><span>ЖК</span><a href="/zhk/signalniy-16/">Сигнальный 16</a></div><div><span>Застройщик</span><a href="/zastroyshchiki/pik/">ПИК</a></div><div><span>Услуга</span><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Неустойка по ДДУ</a></div><div><span>Специалист</span><a href="/kompaniya/yuristy/">Юрист компании</a></div></div>
+      <div class="story-facts"><div><span>Срок по ДДУ</span><strong>31.12.2025</strong></div><div><span>Дней задержки</span><strong>90 дней</strong></div><div><span>Взыскали</span><strong>825 900 руб.</strong></div></div>
+      <p class="story-text">После консультации стало понятно, что вопрос не ограничивается одним расчётом. Нужно было проверить ДДУ, дату передачи и документы от застройщика. Юристы всё разложили по этапам, подготовили необходимые материалы и сопровождали дело до получения результата.</p>
+      <div class="story-result"><span>Результат</span><strong>Взыскание с застройщика неустойки: 825 900 руб.</strong></div>
+    </article>
+      <p class="story-empty" id="storyEmpty" hidden>По выбранным параметрам пока нет историй.</p>
+    </div>
+    <button class="story-scroll story-scroll-next" id="storyNext" type="button" aria-controls="storyGrid" aria-label="Следующие истории">›</button>
+  </div>
+  <button class="story-load-more" id="storyLoadMore" type="button">Показать ещё 12 историй</button>
+</div></section>
+
+<section class="section white review-source" id="client-messages" data-source="chats"><div class="en-wide">
+  <div class="chat-intro"><div><span class="eyebrow">Сообщения клиентов</span><h2>Что пишут в чатах жилых комплексов</h2></div></div>
+  <div class="chat-carousel">
+  <button class="story-scroll story-scroll-prev chat-scroll" id="galleryPrev" type="button" aria-controls="chatGallery" aria-label="Предыдущие сообщения">‹</button>
   <div class="chat-gallery" id="chatGallery">
-    <button class="chat-card" type="button" data-complex="ЖК Юнино" data-developer="ПИК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="В Эксперт Новострой помогли с приёмкой квартиры. Отличный профессионал Андрей: всё сделал оперативно, максимально информативно и доходчиво объяснил нюансы. В поддержке отвечают на вопросы даже после завершения работ. Если нужно кому-то, могу сбросить сюда контакты.">
+    <article class="chat-card" tabindex="0" data-complex="ЖК Юнино" data-developer="ПИК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="В Эксперт Новострой помогли с приёмкой квартиры. Отличный профессионал Андрей: всё сделал оперативно, максимально информативно и доходчиво объяснил нюансы. В поддержке отвечают на вопросы даже после завершения работ. Если нужно кому-то, могу сбросить сюда контакты.">
       <img src="assets/reviews/review-chat-01.webp" alt="Сообщение клиента о приёмке квартиры в ЖК Юнино" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Юнино</strong><span>ПИК · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Пятницкие Луга" data-developer="Самолёт" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Оставлю личный отзыв для заселяющихся соседей. Рекомендую для приёмки и дальнейших процессов компанию Эксперт Новострой, в частности специалиста Владимира. Детально провёл приёмку, зафиксировал все недочёты. После приёмки компания оперативно проводит необходимые процедуры, связанные с оценкой и судебным процессом.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Пятницкие Луга" data-developer="Самолёт" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Оставлю личный отзыв для заселяющихся соседей. Рекомендую для приёмки и дальнейших процессов компанию Эксперт Новострой, в частности специалиста Владимира. Детально провёл приёмку, зафиксировал все недочёты. После приёмки компания оперативно проводит необходимые процедуры, связанные с оценкой и судебным процессом.">
       <img src="assets/reviews/review-chat-02.webp" alt="Рекомендация Эксперт Новострой в чате ЖК Пятницкие Луга" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Пятницкие Луга</strong><span>Самолёт · Приёмка · Политов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Яуза Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Соседи, мне посоветовали фирму Эксперт Новострой. Ставлю им 10 с плюсом. Специалисты приехали вовремя, со всеми задачами справились, всё сделали правильно и в срок. Приёмку подготовили грамотно и указали на нюансы, которые я могла пропустить.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Яуза Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Соседи, мне посоветовали фирму Эксперт Новострой. Ставлю им 10 с плюсом. Специалисты приехали вовремя, со всеми задачами справились, всё сделали правильно и в срок. Приёмку подготовили грамотно и указали на нюансы, которые я могла пропустить.">
       <img src="assets/reviews/review-chat-03.jpg" alt="Рекомендация Эксперт Новострой в чате ЖК Яуза Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Яуза Парк</strong><span>ПИК · Приёмка · Даушев Вадим</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Сигнальный 16" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="В прошлом четверг принимала квартиру с Александром Никитиным из Эксперт Новострой. Он нашёл около 250 замечаний, обмерил квартиру, на всё ушло около 2,5 часов. Очень удобная форма для замечаний, отчёт с фотографиями и текстом.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Сигнальный 16" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="В прошлом четверг принимала квартиру с Александром Никитиным из Эксперт Новострой. Он нашёл около 250 замечаний, обмерил квартиру, на всё ушло около 2,5 часов. Очень удобная форма для замечаний, отчёт с фотографиями и текстом.">
       <img src="assets/reviews/review-chat-04.jpg" alt="Отзыв о приёмке квартиры в ЖК Сигнальный 16" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Сигнальный 16</strong><span>ПИК · Приёмка · Никитин Александр</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Малевич" data-developer="Концерн КРОСТ" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Если кто-то ещё не принял квартиру и ищет приёмщиков, я принимала с Эксперт Новострой — специалистом Дмитрием. Заказала сразу приёмку и оценку для банка. Он заметил, что мне предлагают подписать дополнительное соглашение об уменьшении площади, и обсудил это с представителем застройщика.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Малевич" data-developer="Концерн КРОСТ" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Если кто-то ещё не принял квартиру и ищет приёмщиков, я принимала с Эксперт Новострой — специалистом Дмитрием. Заказала сразу приёмку и оценку для банка. Он заметил, что мне предлагают подписать дополнительное соглашение об уменьшении площади, и обсудил это с представителем застройщика.">
       <img src="assets/reviews/review-chat-05.jpg" alt="Рекомендация специалиста после приёмки в ЖК Малевич" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Малевич</strong><span>Концерн КРОСТ · Приёмка · Дыньков Дмитрий</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Переделкино Ближнее" data-developer="ООО СЗ Переделкино Ближнее" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Пару недель назад приняли квартиру с Эксперт Новострой, приёмщик Васильев Андрей. Очень внимательно всё осматривал и фиксировал, не торопился. На приёмку двушки ушло около двух с половиной часов. Работу выполнил профессионально, всё комментировал и отвечал на вопросы.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Переделкино Ближнее" data-developer="ООО СЗ Переделкино Ближнее" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Пару недель назад приняли квартиру с Эксперт Новострой, приёмщик Васильев Андрей. Очень внимательно всё осматривал и фиксировал, не торопился. На приёмку двушки ушло около двух с половиной часов. Работу выполнил профессионально, всё комментировал и отвечал на вопросы.">
       <img src="assets/reviews/review-chat-06.jpg" alt="Отзыв о приёмке квартиры в ЖК Переделкино Ближнее" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Переделкино Ближнее</strong><span>ООО СЗ Переделкино Ближнее · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Квартал на воде" data-developer="Самолёт" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Фирма Эксперт Новострой. Рекомендую приёмщика Александра Никитина: сразу описание всех замечаний с учётом ГОСТов и фотографии, приложили к акту приёма.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Квартал на воде" data-developer="Самолёт" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Фирма Эксперт Новострой. Рекомендую приёмщика Александра Никитина: сразу описание всех замечаний с учётом ГОСТов и фотографии, приложили к акту приёма.">
       <img src="assets/reviews/review-chat-07.jpg" alt="Рекомендация приёмщика в чате ЖК Квартал на воде" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Квартал на воде</strong><span>Самолёт · Приёмка · Никитин Александр</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Середневский лес" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Если кто-то ещё находится в поисках компании по приёмке квартиры, рекомендую Эксперт Новострой. Нам помогал специалист Вадим, и в итоге прислали очень удобный отчёт для заполнения акта в личном кабинете ПИК.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Середневский лес" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Если кто-то ещё находится в поисках компании по приёмке квартиры, рекомендую Эксперт Новострой. Нам помогал специалист Вадим, и в итоге прислали очень удобный отчёт для заполнения акта в личном кабинете ПИК.">
       <img src="assets/reviews/review-chat-08.jpg" alt="Сообщение клиента о приёмке в ЖК Середневский лес" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Середневский лес</strong><span>ПИК · Приёмка · Даушев Вадим</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Впервые столкнулась с необходимостью обращаться в суд, поэтому внимательно выбирала специалистов. Квартиру принимала вместе с Дмитрием Дыньковым. Осмотр провели профессионально и оперативно, все замечания выявили и зафиксировали. Дмитрий помог разобраться с приложением ПИК.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Впервые столкнулась с необходимостью обращаться в суд, поэтому внимательно выбирала специалистов. Квартиру принимала вместе с Дмитрием Дыньковым. Осмотр провели профессионально и оперативно, все замечания выявили и зафиксировали. Дмитрий помог разобраться с приложением ПИК.">
       <img src="assets/reviews/review-chat-09.jpg" alt="Рекомендация специалиста по приёмке в ЖК Люблинский Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Люблинский Парк</strong><span>ПИК · Приёмка · Дыньков Дмитрий</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Первый Дубровский" data-developer="ПИК" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Наконец получили ключи. У специалистов Эксперт Новострой есть сертификаты НОПРИЗ и НОСТРОЙ. Владимир очень понравился: педантично нашёл царапины на ламинате, подоконниках и дверях.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Первый Дубровский" data-developer="ПИК" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Наконец получили ключи. У специалистов Эксперт Новострой есть сертификаты НОПРИЗ и НОСТРОЙ. Владимир очень понравился: педантично нашёл царапины на ламинате, подоконниках и дверях.">
       <img src="assets/reviews/review-chat-10.jpg" alt="Отзыв о приёмке квартиры в ЖК Первый Дубровский" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Первый Дубровский</strong><span>ПИК · Приёмка · Политов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Квартал на воде" data-developer="Самолёт" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Принимали квартиру с приёмщиком от Эксперт Новострой. Специалист приехал на 20 минут раньше, дождался нас, не торопился, всё осматривал, замерял и проверял. Качество приёмки понравилось.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Квартал на воде" data-developer="Самолёт" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Принимали квартиру с приёмщиком от Эксперт Новострой. Специалист приехал на 20 минут раньше, дождался нас, не торопился, всё осматривал, замерял и проверял. Качество приёмки понравилось.">
       <img src="assets/reviews/review-chat-11.jpg" alt="Отзыв о работе приёмщика в ЖК Квартал на воде" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Квартал на воде</strong><span>Самолёт · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Движение Говорово" data-developer="ФСК" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Я с этими ребятами принимала квартиру, все специалисты сертифицированные в НОПРИЗ и НОСТРОЙ. Подруга тоже с ними. Всё прошло отлично.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Движение Говорово" data-developer="ФСК" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Я с этими ребятами принимала квартиру, все специалисты сертифицированные в НОПРИЗ и НОСТРОЙ. Подруга тоже с ними. Всё прошло отлично.">
       <img src="assets/reviews/review-chat-13.jpg" alt="Рекомендация приёмки квартиры в ЖК Движение Говорово" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Движение Говорово</strong><span>ФСК · Приёмка · Политов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Большая Академическая 85" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Хочу порекомендовать специалиста по приёмке Александра Никитина. Перед приёмкой переживала, что сама не увижу скрытых дефектов, но Александр спокойно и по-деловому провёл осмотр с полным набором профессионального инструмента.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Большая Академическая 85" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Хочу порекомендовать специалиста по приёмке Александра Никитина. Перед приёмкой переживала, что сама не увижу скрытых дефектов, но Александр спокойно и по-деловому провёл осмотр с полным набором профессионального инструмента.">
       <img src="assets/reviews/review-chat-14.jpg" alt="Рекомендация специалиста по приёмке в ЖК Большая Академическая 85" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Большая Академическая 85</strong><span>ПИК · Приёмка · Никитин Александр</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Сигнальный 16" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Если кому актуально, приёмку проводил Александр Никитин из Эксперт Новострой. Мне всё понравилось: объяснил, показал, рассказал, сделал акт и фотофиксацию.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Сигнальный 16" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Если кому актуально, приёмку проводил Александр Никитин из Эксперт Новострой. Мне всё понравилось: объяснил, показал, рассказал, сделал акт и фотофиксацию.">
       <img src="assets/reviews/review-chat-15.jpg" alt="Рекомендация приёмщика Александра Никитина в ЖК Сигнальный 16" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Сигнальный 16</strong><span>ПИК · Приёмка · Никитин Александр</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Героев" data-developer="Главстрой Саввино" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Недавно принимали квартиру со специалистом от Эксперт Новострой. Менеджеры всегда на связи. Специалист приехал вовремя, быстро и чётко провёл приёмку, сразу подготовил акт, а на следующий день прислал фотоотчёт недостатков.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Героев" data-developer="Главстрой Саввино" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Недавно принимали квартиру со специалистом от Эксперт Новострой. Менеджеры всегда на связи. Специалист приехал вовремя, быстро и чётко провёл приёмку, сразу подготовил акт, а на следующий день прислал фотоотчёт недостатков.">
       <img src="assets/reviews/review-chat-16.jpg" alt="Отзыв о приёмке квартиры в ЖК Героев" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Героев</strong><span>Главстрой Саввино · Приёмка · Даушев Вадим</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Деснаречье" data-developer="А101" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Принимали квартиру со специалистом из Эксперт Новострой, рекомендую однозначно.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Деснаречье" data-developer="А101" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Принимали квартиру со специалистом из Эксперт Новострой, рекомендую однозначно.">
       <img src="assets/reviews/review-chat-17.jpg" alt="Рекомендация специалиста по приёмке в ЖК Деснаречье" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Деснаречье</strong><span>А101 · Приёмка · Дыньков Дмитрий</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Ильинойс" data-developer="ООО СЗ Оферта" data-service="Приёмка" data-specialist="Дмитрий Дыньков" data-client-text="Принимала квартиру, помогал специалист Дмитрий Дыньков. Он нашёл то, на что я даже не обратила внимания: стены чуть-чуть вразбежку, плохую герметизацию ванной, несколько плиток под замену. Всё объяснил, показал и сам оформил фотографии.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Ильинойс" data-developer="ООО СЗ Оферта" data-service="Приёмка" data-specialist="Дмитрий Дыньков" data-client-text="Принимала квартиру, помогал специалист Дмитрий Дыньков. Он нашёл то, на что я даже не обратила внимания: стены чуть-чуть вразбежку, плохую герметизацию ванной, несколько плиток под замену. Всё объяснил, показал и сам оформил фотографии.">
       <img src="assets/reviews/review-chat-18.jpg" alt="Отзыв о приёмке квартиры в ЖК Ильинойс" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Ильинойс</strong><span>ООО СЗ Оферта · Приёмка · Дмитрий Дыньков</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Новое Видное" data-developer="Самолёт" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Мы впервые принимали квартиру, нам посоветовали Эксперт Новострой. Предоставили акт осмотра с фотографиями. Эксперт каждый метр рассматривал и фиксировал все дефекты, отчёт получился на 67 страниц с фотографиями.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Новое Видное" data-developer="Самолёт" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Мы впервые принимали квартиру, нам посоветовали Эксперт Новострой. Предоставили акт осмотра с фотографиями. Эксперт каждый метр рассматривал и фиксировал все дефекты, отчёт получился на 67 страниц с фотографиями.">
       <img src="assets/reviews/review-chat-19.jpg" alt="Отзыв о приёмке квартиры в ЖК Новое Видное" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Новое Видное</strong><span>Самолёт · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Первый Дубровский" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Принимали квартиру с Эксперт Новострой удалённо. Замечания присылали в видео, их удобно переносить в форму ПИК. Сервис очень удобный, есть и юристы по взысканиям.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Первый Дубровский" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Принимали квартиру с Эксперт Новострой удалённо. Замечания присылали в видео, их удобно переносить в форму ПИК. Сервис очень удобный, есть и юристы по взысканиям.">
       <img src="assets/reviews/review-chat-20.jpg" alt="Отзыв о дистанционной приёмке в ЖК Первый Дубровский" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Первый Дубровский</strong><span>ПИК · Приёмка · Даушев Вадим</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Юнино" data-developer="ПИК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Нам было важно, чтобы квартиру осмотрели без нас, так как живём в другом городе. Сделали быстро и полностью онлайн: подробный отчёт, удобная форма для замечаний в ПИК и полное видео квартиры. Приёмщик — Андрей Васильев.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Юнино" data-developer="ПИК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Нам было важно, чтобы квартиру осмотрели без нас, так как живём в другом городе. Сделали быстро и полностью онлайн: подробный отчёт, удобная форма для замечаний в ПИК и полное видео квартиры. Приёмщик — Андрей Васильев.">
       <img src="assets/reviews/review-chat-21.jpg" alt="Отзыв о дистанционной приёмке в ЖК Юнино" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Юнино</strong><span>ПИК · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Принимали с компанией Эксперт Новострой. Всё чётко и по делу, быстро согласовывают время и предоставили акт с замечаниями, который удобно копировать в личный кабинет ПИК.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="Принимали с компанией Эксперт Новострой. Всё чётко и по делу, быстро согласовывают время и предоставили акт с замечаниями, который удобно копировать в личный кабинет ПИК.">
       <img src="assets/reviews/review-chat-22.jpg" alt="Рекомендация Эксперт Новострой в чате ЖК Люблинский Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Люблинский Парк</strong><span>ПИК · Приёмка · Никитин Александр</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Вчера с ними принимали квартиру. Владимир смотрел больше по недостаткам для суда, критичные вещи проверил хорошо и подсказал, где заслонки на вытяжку в ванной и кухне.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Вчера с ними принимали квартиру. Владимир смотрел больше по недостаткам для суда, критичные вещи проверил хорошо и подсказал, где заслонки на вытяжку в ванной и кухне.">
       <img src="assets/reviews/review-chat-23.jpg" alt="Отзыв о приёмке квартиры в чате ЖК Люблинский Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Люблинский Парк</strong><span>ПИК · Приёмка · Политов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Ярославская" data-developer="Реновация" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Советую эксперта: сама бы не увидела недостатки. Критичные вещи — вздыбившийся ламинат, протечка, две неработающие розетки, негерметичная ванная — эксперт подтвердил, что всё проверено.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Ярославская" data-developer="Реновация" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Советую эксперта: сама бы не увидела недостатки. Критичные вещи — вздыбившийся ламинат, протечка, две неработающие розетки, негерметичная ванная — эксперт подтвердил, что всё проверено.">
       <img src="assets/reviews/review-chat-24.jpg" alt="Отзыв об эксперте по приёмке в чате ЖК Ярославская" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Ярославская</strong><span>Реновация · Приёмка · Политов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Соколов Владимир" data-client-text="Делала через Эксперт Новострой. Хороший рейтинг, много положительных отзывов, специалиста нашли и согласовали за один день. Цены сравнивала, здесь осталась довольна.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Люблинский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Соколов Владимир" data-client-text="Делала через Эксперт Новострой. Хороший рейтинг, много положительных отзывов, специалиста нашли и согласовали за один день. Цены сравнивала, здесь осталась довольна.">
       <img src="assets/reviews/review-chat-25.jpg" alt="Сообщение о выборе специалиста для приёмки в ЖК Люблинский Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Люблинский Парк</strong><span>ПИК · Приёмка · Соколов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Большая Академическая 85" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="У меня был Никитин Александр. Буквально излазил каждый угол с фонариком, зафиксировал 83 недочёта: проблемы с розетками, водой, просадкой ламината и отклонением стен. Часть замечаний планировали предъявить застройщику.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Большая Академическая 85" data-developer="ПИК" data-service="Приёмка" data-specialist="Никитин Александр" data-client-text="У меня был Никитин Александр. Буквально излазил каждый угол с фонариком, зафиксировал 83 недочёта: проблемы с розетками, водой, просадкой ламината и отклонением стен. Часть замечаний планировали предъявить застройщику.">
       <img src="assets/reviews/review-chat-26.jpg" alt="Отзыв о работе специалиста Александра Никитина в ЖК Большая Академическая 85" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Большая Академическая 85</strong><span>ПИК · Приёмка · Никитин Александр</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Яуза Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Вадим Даушев принимал мою студию в Яузе Парк, 24,5 м². Выявил 54 недостатка.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Яуза Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Даушев Вадим" data-client-text="Вадим Даушев принимал мою студию в Яузе Парк, 24,5 м². Выявил 54 недостатка.">
       <img src="assets/reviews/review-chat-37.jpg" alt="Видеоотзыв о приёмке студии в ЖК Яуза Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Яуза Парк</strong><span>ПИК · Приёмка · Даушев Вадим</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Первый Дубровский" data-developer="ПИК" data-service="Приёмка" data-specialist="Липартелиани Михаил" data-client-text="Рекомендую приёмщиков. У нас был Михаил: очень быстро работает, акт прислал тоже быстро. Реализована удобная система копирования в личный кабинет ПИК и инструкция.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Первый Дубровский" data-developer="ПИК" data-service="Приёмка" data-specialist="Липартелиани Михаил" data-client-text="Рекомендую приёмщиков. У нас был Михаил: очень быстро работает, акт прислал тоже быстро. Реализована удобная система копирования в личный кабинет ПИК и инструкция.">
       <img src="assets/reviews/review-chat-27.jpg" alt="Рекомендация приёмщика Михаила в ЖК Первый Дубровский" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Первый Дубровский</strong><span>ПИК · Приёмка · Липартелиани Михаил</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Дмитровское небо" data-developer="ЛСР" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Вчера принимали квартиру с Эксперт Новострой. Приёмщик выделил недостатки там, куда я бы не посмотрела. Всё понравилось, сразу прислали акт с замечаниями.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Дмитровское небо" data-developer="ЛСР" data-service="Приёмка" data-specialist="Дыньков Дмитрий" data-client-text="Вчера принимали квартиру с Эксперт Новострой. Приёмщик выделил недостатки там, куда я бы не посмотрела. Всё понравилось, сразу прислали акт с замечаниями.">
       <img src="assets/reviews/review-chat-28.jpg" alt="Отзыв о приёмке квартиры в ЖК Дмитровское небо" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Дмитровское небо</strong><span>ЛСР · Приёмка · Дыньков Дмитрий</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Остафьево" data-developer="Самолёт" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Пригласили специалиста из Эксперт Новострой. Очень быстро увидел много недоделок, проверил места, куда мы не заглядывали, и грамотно составил акт с пунктами о некачественной отделке и установке.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Остафьево" data-developer="Самолёт" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Пригласили специалиста из Эксперт Новострой. Очень быстро увидел много недоделок, проверил места, куда мы не заглядывали, и грамотно составил акт с пунктами о некачественной отделке и установке.">
       <img src="assets/reviews/review-chat-29.jpg" alt="Рекомендация специалиста по приёмке в ЖК Остафьево" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Остафьево</strong><span>Самолёт · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Зеленоград Ривьера" data-developer="СтройИнновация" data-service="Приёмка" data-specialist="Дмитрий Дыньков" data-client-text="Обращались в Эксперт Новострой. Приёмщик Дмитрий Дыньков — всё быстро и по существу. По итогу сформировал отчёт с фотографиями, по которому удобно проверять устранение недостатков застройщиком.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Зеленоград Ривьера" data-developer="СтройИнновация" data-service="Приёмка" data-specialist="Дмитрий Дыньков" data-client-text="Обращались в Эксперт Новострой. Приёмщик Дмитрий Дыньков — всё быстро и по существу. По итогу сформировал отчёт с фотографиями, по которому удобно проверять устранение недостатков застройщиком.">
       <img src="assets/reviews/review-chat-30.jpg" alt="Отзыв о работе приёмщика Дмитрия Дынькова в ЖК Зеленоград Ривьера" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Зеленоград Ривьера</strong><span>СтройИнновация · Приёмка · Дмитрий Дыньков</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Ильинойс" data-developer="ООО СЗ Оферта" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Хочу порекомендовать приёмку с Эксперт Новострой, с нами принимал Владимир Политов. Приехал без опозданий, осматривал квартиру около полутора часов. Квартира с отделкой, 45,5 м², всего было 67 замечаний. На следующий день прислали акт с фотографиями.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Ильинойс" data-developer="ООО СЗ Оферта" data-service="Приёмка" data-specialist="Политов Владимир" data-client-text="Хочу порекомендовать приёмку с Эксперт Новострой, с нами принимал Владимир Политов. Приехал без опозданий, осматривал квартиру около полутора часов. Квартира с отделкой, 45,5 м², всего было 67 замечаний. На следующий день прислали акт с фотографиями.">
       <img src="assets/reviews/review-chat-31.jpg" alt="Отзыв о приёмке с Владимиром Политовым в ЖК Ильинойс" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Ильинойс</strong><span>ООО СЗ Оферта · Приёмка · Политов Владимир</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Ильинойс" data-developer="ООО СЗ Оферта" data-service="Приёмка" data-specialist="Липартелиани Михаил" data-client-text="Принимал квартиру с Михаилом Липартелиани из Эксперт Новострой. Всё посмотрел, разложил по пунктам и прислал фотографии с недочётами. Без лишних слов, по делу. Рекомендую.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Ильинойс" data-developer="ООО СЗ Оферта" data-service="Приёмка" data-specialist="Липартелиани Михаил" data-client-text="Принимал квартиру с Михаилом Липартелиани из Эксперт Новострой. Всё посмотрел, разложил по пунктам и прислал фотографии с недочётами. Без лишних слов, по делу. Рекомендую.">
       <img src="assets/reviews/review-chat-32.jpg" alt="Отзыв о работе Михаила Липартелиани в ЖК Ильинойс" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Ильинойс</strong><span>ООО СЗ Оферта · Приёмка · Липартелиани Михаил</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Волжский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Александр Никитин" data-client-text="Заказывала приёмку квартиры в Эксперт Новострой, приёмку делал Александр Никитин. Осмотрели очень внимательно, дали фото и пояснения. Есть удобная форма специально для замечаний в ПИК, чтобы заполнять акт на сайте.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Волжский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Александр Никитин" data-client-text="Заказывала приёмку квартиры в Эксперт Новострой, приёмку делал Александр Никитин. Осмотрели очень внимательно, дали фото и пояснения. Есть удобная форма специально для замечаний в ПИК, чтобы заполнять акт на сайте.">
       <img src="assets/reviews/review-chat-33.jpg" alt="Отзыв о приёмке с Александром Никитиным в ЖК Волжский Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Волжский Парк</strong><span>ПИК · Приёмка · Александр Никитин</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Большая Академическая 85" data-developer="ПИК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Если встанет вопрос о приёмщике, рекомендую Андрея Васильева из Эксперт Новострой. Пришёл вовремя, отметил явные и неявные недостатки, проконсультировал по документам. Отчёт по недостаткам — в тот же день, с картинками — на следующий.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Большая Академическая 85" data-developer="ПИК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Если встанет вопрос о приёмщике, рекомендую Андрея Васильева из Эксперт Новострой. Пришёл вовремя, отметил явные и неявные недостатки, проконсультировал по документам. Отчёт по недостаткам — в тот же день, с картинками — на следующий.">
       <img src="assets/reviews/review-chat-34.jpg" alt="Рекомендация Андрея Васильева в чате ЖК Большая Академическая 85" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Большая Академическая 85</strong><span>ПИК · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Движение Говорово" data-developer="ФСК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Имя специалиста: Андрей Васильев. Специализация: приёмка квартир. Принимал с ним апартаменты в первом корпусе, в нашем ЖК он не первый раз. Ответственный, пунктуальный. Рекомендую.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Движение Говорово" data-developer="ФСК" data-service="Приёмка" data-specialist="Васильев Андрей" data-client-text="Имя специалиста: Андрей Васильев. Специализация: приёмка квартир. Принимал с ним апартаменты в первом корпусе, в нашем ЖК он не первый раз. Ответственный, пунктуальный. Рекомендую.">
       <img src="assets/reviews/review-chat-35.jpg" alt="Карточка специалиста по приёмке для ЖК Движение Говорово" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Движение Говорово</strong><span>ФСК · Приёмка · Васильев Андрей</span></span>
-    </button>
-    <button class="chat-card" type="button" data-complex="ЖК Волжский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Липартелиани Михаил" data-client-text="Если кому интересно про приёмщика: делала с Эксперт Новострой. Очень круто всё сделали. Прислали удобный файл для заполнения приложения ПИК, все отчёты с фотографиями, я очень довольна.">
+    </article>
+    <article class="chat-card" tabindex="0" data-complex="ЖК Волжский Парк" data-developer="ПИК" data-service="Приёмка" data-specialist="Липартелиани Михаил" data-client-text="Если кому интересно про приёмщика: делала с Эксперт Новострой. Очень круто всё сделали. Прислали удобный файл для заполнения приложения ПИК, все отчёты с фотографиями, я очень довольна.">
       <img src="assets/reviews/review-chat-36.jpg" alt="Отзыв о приёмке в ЖК Волжский Парк" loading="lazy">
       <span class="chat-card-caption"><strong>ЖК Волжский Парк</strong><span>ПИК · Приёмка · Липартелиани Михаил</span></span>
-    </button>
+    </article>
   </div>
+  <button class="story-scroll story-scroll-next chat-scroll" id="galleryNext" type="button" aria-controls="chatGallery" aria-label="Следующие сообщения">›</button>
+  </div>
+  <button class="gallery-load-more" id="chatLoadMore" type="button">Показать ещё 12 сообщений</button>
 </div></section>
 
 <section class="section gray"><div class="en-wide">
   <div class="section-head"><div><span class="eyebrow">Следующий шаг</span><h2>Услуги, о которых пишут клиенты</h2></div></div>
   <div class="directions">
-    <article class="direction"><div class="icon-holder"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-6 8 6v11H4Z"/><path d="M9 20v-6h6v6"/></svg></div><h3>Приёмка квартиры</h3><p>Технический осмотр новостройки, фиксация недостатков и понятный результат проверки.</p><a href="/priemka-kvartiry/">Подробнее о приёмке →</a></article>
-    <article class="direction"><div class="icon-holder"><svg viewBox="0 0 24 24"><path d="M4 7h16v12H4z"/><path d="m7 15 3-3 2 2 3-4 2 2"/><path d="M8 4h8"/></svg></div><h3>Дистанционная приёмка</h3><p>Формат для собственников, которые не могут лично присутствовать на объекте.</p><a href="/distancionnaya-priyomka/">Как проходит дистанционно →</a></article>
-    <article class="direction"><div class="icon-holder"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg></div><h3>Юридическое сопровождение</h3><p>Помощь после технической проверки, когда вопрос требует документов и правовой оценки.</p><a href="/yuridicheskie-uslugi/">Юридические услуги →</a></article>
+    <article class="direction"><img class="direction-image" src="assets/next-step/next-step-priemka.jpg" alt="Специалист проверяет окно в новой квартире" loading="lazy" decoding="async"><h3>Приёмка квартиры</h3><p>Технический осмотр новостройки, фиксация недостатков и понятный результат проверки.</p><a href="/priemka-kvartiry/">Подробнее о приёмке →</a></article>
+    <article class="direction"><img class="direction-image" src="assets/next-step/next-step-distancionnaya.jpg" alt="Собственники обсуждают квартиру со специалистом по видеосвязи" loading="lazy" decoding="async"><h3>Дистанционная приёмка</h3><p>Формат для собственников, которые не могут лично присутствовать на объекте.</p><a href="/distancionnaya-priyomka/">Как проходит дистанционно →</a></article>
+    <article class="direction"><img class="direction-image" src="assets/next-step/next-step-yuridicheskoe.jpg" alt="Юрист работает с документами по квартире" loading="lazy" decoding="async"><h3>Юридическое сопровождение</h3><p>Помощь после технической проверки, когда вопрос требует документов и правовой оценки.</p><a href="/yuridicheskie-uslugi/">Юридические услуги →</a></article>
+    <article class="direction"><img class="direction-image" src="assets/next-step/next-step-neustoika.jpg" alt="Ключи и календарь для расчёта просрочки передачи квартиры" loading="lazy" decoding="async"><h3>Неустойка за просрочку передачи квартиры</h3><p>Проверка срока по ДДУ, расчёт суммы и правовая помощь при задержке передачи квартиры.</p><a href="/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/">Подробнее о неустойке →</a></article>
+    <article class="direction"><img class="direction-image" src="assets/next-step/next-step-nedostatki.jpg" alt="Специалист фиксирует строительный дефект в квартире" loading="lazy" decoding="async"><h3>Компенсация за строительные недостатки</h3><p>Техническая фиксация дефектов и правовая работа для взыскания компенсации с застройщика.</p><a href="/yuridicheskie-uslugi/vzyskanie-kompensatsii/">Подробнее о компенсации →</a></article>
+    <article class="direction"><img class="direction-image" src="assets/next-step/next-step-ekspertiza.jpg" alt="Инженер проводит техническую экспертизу помещения" loading="lazy" decoding="async"><h3>Строительно-техническая экспертиза</h3><p>Проверка качества строительства и подготовка экспертного заключения по объекту.</p><a href="/stroitelnaya-ekspertiza/">Подробнее об экспертизе →</a></article>
   </div>
 </div></section>
 
@@ -601,7 +628,7 @@
 
 <section class="cta-section" id="leave-review"><div class="final-cta"><div class="cta-grid">
   <div class="cta-copy"><span class="eyebrow cta-eyebrow">Ваш опыт</span><h2>Хотите поделиться впечатлением о нашей работе?</h2><p>Расскажите, какая услуга была оказана и что оказалось для вас особенно полезным. Отзыв поможет другим собственникам выбрать следующий шаг.</p><div class="cta-points"><div class="cta-point">Можно оставить короткое сообщение.</div><div class="cta-point">Укажите ЖК или специалиста, если считаете это важным.</div><div class="cta-point">Также можно опубликовать отзыв напрямую на Яндекс Картах.</div></div></div>
-  <form class="review-form" id="reviewForm" action="#" method="post"><div class="form-grid"><div class="field"><label for="review-name">Ваше имя</label><input id="review-name" name="name" type="text" placeholder="Как к вам обращаться"></div><div class="field"><label for="review-service">Услуга</label><select id="review-service" name="service"><option>Приёмка квартиры</option><option>Дистанционная приёмка</option><option>Оценка для банка</option><option>Техническая экспертиза</option><option>Юридические услуги</option><option>Другое</option></select></div><div class="field wide"><label for="review-object">ЖК / адрес объекта</label><input id="review-object" name="object" type="text" placeholder="По желанию"></div><div class="field wide"><label for="review-text">Ваш отзыв</label><textarea id="review-text" name="review" placeholder="Расскажите, как прошла работа" required></textarea></div></div><div class="form-bottom"><button class="btn btn-primary" type="submit">Отправить отзыв</button><a class="btn btn-secondary" href="https://yandex.com/maps/org/expert_novostroy/150227447728/reviews/" target="_blank" rel="nofollow noopener">Оставить на Яндексе</a><span class="form-status" id="formStatus" aria-live="polite"></span></div><div class="consent">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных.</div></form>
+  <form class="review-form" id="reviewForm" action="#" method="post"><div class="form-grid"><div class="field"><label for="review-name">Ваше имя</label><input id="review-name" name="name" type="text" placeholder="Как к вам обращаться"></div><div class="field"><label for="review-service">Услуга</label><select id="review-service" name="service"><option>Приёмка квартиры</option><option>Дистанционная приёмка</option><option>Оценка для банка</option><option>Строительная экспертиза</option><option>Компенсация за недостатки</option><option>Неустойка по ДДУ</option></select></div><div class="field wide"><label for="review-object">ЖК / адрес объекта</label><input id="review-object" name="object" type="text" placeholder="По желанию"></div><div class="field wide"><label for="review-text">Ваш отзыв</label><textarea id="review-text" name="review" placeholder="Расскажите, как прошла работа" required></textarea></div></div><div class="form-bottom"><button class="btn btn-primary" type="submit">Отправить отзыв</button><a class="btn btn-secondary" href="https://yandex.com/maps/org/expert_novostroy/150227447728/reviews/" target="_blank" rel="nofollow noopener">Оставить на Яндексе</a><span class="form-status" id="formStatus" aria-live="polite"></span></div><div class="consent">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и обработкой персональных данных.</div></form>
 </div></div></section>
 </main>
 
@@ -622,18 +649,35 @@
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр сообщения клиента"><button class="lightbox-close" type="button" aria-label="Закрыть">×</button><button class="lightbox-nav lightbox-prev" type="button" aria-label="Предыдущее сообщение">‹</button><div class="lightbox-dialog"><img src="" alt=""><div class="lightbox-copy" id="lightboxDetails"><span class="lightbox-label">Жилой комплекс</span><strong class="lightbox-value" id="lightboxComplex">Жилой комплекс уточняется</strong><span class="lightbox-label">Застройщик</span><strong class="lightbox-value" id="lightboxDeveloper">Застройщик уточняется</strong><span class="lightbox-label">Услуга</span><strong class="lightbox-value" id="lightboxService">Услуга уточняется</strong><span class="lightbox-label">Специалист</span><strong class="lightbox-value" id="lightboxSpecialist">Специалист уточняется</strong><span class="lightbox-label">Текст клиента</span><p class="lightbox-client-text" id="lightboxText">Расшифровка текста будет добавлена после согласования карточки.</p></div></div><button class="lightbox-nav lightbox-next" type="button" aria-label="Следующее сообщение">›</button></div>
+<div class="story-lightbox" id="storyLightbox" role="dialog" aria-modal="true" aria-label="Полная история клиента"><button class="story-lightbox-close" type="button" aria-label="Закрыть">×</button><button class="story-lightbox-nav story-lightbox-prev" type="button" aria-label="Предыдущая история">‹</button><div class="story-lightbox-dialog"><div class="story-lightbox-head"><div><h2 class="story-lightbox-title" id="storyLightboxTitle">История клиента</h2><div class="story-lightbox-reviewer"><strong id="storyLightboxClient">Имя клиента</strong><span id="storyLightboxDate">Дата отзыва</span><span class="story-stars" id="storyLightboxRating" aria-label="5 из 5">★★★★★</span></div></div></div><div class="story-meta" id="storyLightboxMeta"></div><div class="story-facts" id="storyLightboxFacts"></div><p class="story-text" id="storyLightboxText"></p></div><button class="story-lightbox-nav story-lightbox-next" type="button" aria-label="Следующая история">›</button></div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр сообщения клиента"><button class="lightbox-close" type="button" aria-label="Закрыть">×</button><button class="lightbox-nav lightbox-prev" type="button" aria-label="Предыдущее сообщение">‹</button><div class="lightbox-dialog"><img src="" alt=""><div class="lightbox-copy" id="lightboxDetails"><span class="lightbox-label">Жилой комплекс</span><a class="lightbox-value" id="lightboxComplex" href="/zhk/">Жилой комплекс уточняется</a><span class="lightbox-label">Застройщик</span><a class="lightbox-value" id="lightboxDeveloper" href="/zastroyshchiki/">Застройщик уточняется</a><span class="lightbox-label">Услуга</span><a class="lightbox-value" id="lightboxService" href="/uslugi/">Услуга уточняется</a><span class="lightbox-label">Специалист</span><a class="lightbox-value" id="lightboxSpecialist" href="/kompaniya/experts/">Специалист уточняется</a><span class="lightbox-label">Отзыв клиента</span><p class="lightbox-client-text" id="lightboxText">Расшифровка текста будет добавлена после согласования карточки.</p></div></div><button class="lightbox-nav lightbox-next" type="button" aria-label="Следующее сообщение">›</button></div>
 <script>
 const fixed=document.getElementById('headerfixed');function updateFixedHeader(){if(!fixed)return;const visible=window.scrollY>160;fixed.classList.toggle('show',visible);fixed.setAttribute('aria-hidden',String(!visible))}window.addEventListener('scroll',updateFixedHeader,{passive:true});updateFixedHeader();
 const burger=document.getElementById('mobileBurger'),mobileMenu=document.getElementById('mobileMenu');burger&&burger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');burger.setAttribute('aria-expanded',String(open))});mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
 const faqButtons=[...document.querySelectorAll('.faq-button')];function setFaqState(button,expanded,animate=true){const panel=document.getElementById(button.getAttribute('aria-controls'));if(!panel)return;button.setAttribute('aria-expanded',String(expanded));if(!animate){panel.style.height=expanded?'auto':'0px';return}if(expanded){panel.style.height='0px';requestAnimationFrame(()=>{panel.style.height=panel.scrollHeight+'px'})}else{panel.style.height=panel.scrollHeight+'px';requestAnimationFrame(()=>{panel.style.height='0px'})}}faqButtons.forEach(button=>{setFaqState(button,button.getAttribute('aria-expanded')==='true',false);button.addEventListener('click',()=>setFaqState(button,button.getAttribute('aria-expanded')!=='true'));const panel=document.getElementById(button.getAttribute('aria-controls'));panel.addEventListener('transitionend',event=>{if(event.propertyName==='height'&&button.getAttribute('aria-expanded')==='true')panel.style.height='auto'})});
-const storyFilters=[...document.querySelectorAll('[data-story-filter]')],storyGrid=document.getElementById('storyGrid'),storyEmpty=document.getElementById('storyEmpty');function applyStoryFilters(){const selected=Object.fromEntries(storyFilters.map(filter=>[filter.dataset.storyFilter,filter.value]));let visible=0;const storyCards=[...storyGrid.querySelectorAll('.story-card')];storyCards.forEach(card=>{const matches=Object.entries(selected).every(([key,value])=>value==='all'||card.dataset[key]===value);card.hidden=!matches;if(matches)visible+=1});storyEmpty.hidden=visible>0}storyFilters.forEach(filter=>filter.addEventListener('change',applyStoryFilters));document.getElementById('storyFilterReset').addEventListener('click',()=>{storyFilters.forEach(filter=>{filter.value='all'});applyStoryFilters()});new MutationObserver(applyStoryFilters).observe(storyGrid,{childList:true});applyStoryFilters();
-const gallery=document.getElementById('chatGallery'),cards=[...document.querySelectorAll('.chat-card')],galleryPosition=document.getElementById('galleryPosition');function galleryStep(){return cards.length>1?cards[1].offsetLeft-cards[0].offsetLeft:360}function updateGalleryPosition(){galleryPosition.textContent=String(Math.min(cards.length,Math.round(gallery.scrollLeft/galleryStep())+1))}document.getElementById('galleryPrev').addEventListener('click',()=>gallery.scrollBy({left:-galleryStep(),behavior:'smooth'}));document.getElementById('galleryNext').addEventListener('click',()=>gallery.scrollBy({left:galleryStep(),behavior:'smooth'}));gallery.addEventListener('scroll',updateGalleryPosition,{passive:true});
-const lightbox=document.getElementById('lightbox'),lightboxImage=lightbox.querySelector('img'),lightboxComplex=document.getElementById('lightboxComplex'),lightboxDeveloper=document.getElementById('lightboxDeveloper'),lightboxService=document.getElementById('lightboxService'),lightboxSpecialist=document.getElementById('lightboxSpecialist'),lightboxText=document.getElementById('lightboxText');let current=0;function showReview(index){current=(index+cards.length)%cards.length;const card=cards[current],source=card.querySelector('img');lightboxImage.src=source.src;lightboxImage.alt=source.alt;lightboxComplex.textContent=card.dataset.complex||'Жилой комплекс уточняется';lightboxDeveloper.textContent=card.dataset.developer||'Застройщик уточняется';lightboxService.textContent=card.dataset.service||'Услуга уточняется';lightboxSpecialist.textContent=card.dataset.specialist||'Специалист уточняется';lightboxText.textContent=card.dataset.clientText||'Расшифровка текста будет добавлена после согласования карточки.';lightbox.classList.add('open');document.body.classList.add('modal-open')}function closeReview(){lightbox.classList.remove('open');document.body.classList.remove('modal-open')}cards.forEach((card,index)=>card.addEventListener('click',()=>showReview(index)));lightbox.querySelector('.lightbox-close').addEventListener('click',closeReview);lightbox.querySelector('.lightbox-prev').addEventListener('click',()=>showReview(current-1));lightbox.querySelector('.lightbox-next').addEventListener('click',()=>showReview(current+1));lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeReview()});document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('open'))return;if(e.key==='Escape')closeReview();if(e.key==='ArrowLeft')showReview(current-1);if(e.key==='ArrowRight')showReview(current+1)});
+const storyCards=[...document.querySelectorAll('.story-card')],storyLightbox=document.getElementById('storyLightbox'),storyLightboxTitle=document.getElementById('storyLightboxTitle'),storyLightboxClient=document.getElementById('storyLightboxClient'),storyLightboxDate=document.getElementById('storyLightboxDate'),storyLightboxRating=document.getElementById('storyLightboxRating'),storyLightboxMeta=document.getElementById('storyLightboxMeta'),storyLightboxFacts=document.getElementById('storyLightboxFacts'),storyLightboxText=document.getElementById('storyLightboxText');const demoClientNames=['Анна К.','Илья С.','Мария П.','Алексей В.','Екатерина Р.','Денис М.','Ольга Т.','Никита Л.','Светлана А.','Роман Н.','Дарья В.','Михаил Е.'],demoReviewDates=['12.03.2025','26.03.2025','08.04.2025','21.04.2025','07.05.2025','19.05.2025','03.06.2025','18.06.2025','02.07.2025','16.07.2025','29.07.2025','11.08.2025'];let storyCurrent=0;function openStoryReview(index){storyCurrent=(index+storyCards.length)%storyCards.length;const card=storyCards[storyCurrent];storyLightboxTitle.textContent=card.querySelector('h3')?.textContent||'История клиента';storyLightboxClient.textContent=card.dataset.client||'Имя клиента';storyLightboxDate.textContent=card.dataset.reviewDate||'Дата отзыва';storyLightboxRating.textContent='★'.repeat(Number(card.dataset.rating)||5);storyLightboxRating.setAttribute('aria-label',(Number(card.dataset.rating)||5)+' из 5');storyLightboxMeta.innerHTML=card.querySelector('.story-meta')?.innerHTML||'';storyLightboxFacts.innerHTML=card.querySelector('.story-facts')?.innerHTML||'';storyLightboxText.textContent=card.querySelector('.story-text')?.textContent||'';storyLightbox.classList.add('open');document.body.classList.add('modal-open')}function closeStoryReview(){storyLightbox.classList.remove('open');document.body.classList.remove('modal-open')}const expertiseBudgets=['480 378 руб.','365 700 руб.','512 400 руб.','298 900 руб.','640 200 руб.','427 500 руб.'],defectsRecovered=['340 500 руб.','365 700 руб.','420 900 руб.','510 600 руб.'],penaltyRecovered=['950 650 руб.','624 300 руб.','1 120 800 руб.','438 900 руб.','392 600 руб.','714 500 руб.','1 050 000 руб.','680 400 руб.','318 700 руб.','825 900 руб.'];let expertiseIndex=0,defectsIndex=0,penaltyIndex=0;storyCards.forEach((card,index)=>{const facts=[...card.querySelectorAll('.story-facts>div')];if(card.dataset.service==='expertise'){facts[2].querySelector('span').textContent='Сумма сметы';facts[2].querySelector('strong').textContent=expertiseBudgets[expertiseIndex++]}if(card.dataset.service==='defects'){facts[2].querySelector('span').textContent='Взыскали';facts[2].querySelector('strong').textContent=defectsRecovered[defectsIndex++]}if(card.dataset.service==='penalty'){facts[2].querySelector('span').textContent='Взыскали';facts[2].querySelector('strong').textContent=penaltyRecovered[penaltyIndex++]}card.dataset.client=demoClientNames[index%demoClientNames.length];card.dataset.reviewDate=demoReviewDates[index%demoReviewDates.length];card.dataset.rating='5';const button=document.createElement('button');button.className='story-view';button.type='button';button.textContent='Смотреть отзыв';button.addEventListener('click',()=>openStoryReview(index));card.append(button)});storyLightbox.querySelector('.story-lightbox-close').addEventListener('click',closeStoryReview);storyLightbox.querySelector('.story-lightbox-prev').addEventListener('click',()=>openStoryReview(storyCurrent-1));storyLightbox.querySelector('.story-lightbox-next').addEventListener('click',()=>openStoryReview(storyCurrent+1));storyLightbox.addEventListener('click',event=>{if(event.target===storyLightbox)closeStoryReview()});document.addEventListener('keydown',event=>{if(!storyLightbox.classList.contains('open'))return;if(event.key==='Escape')closeStoryReview();if(event.key==='ArrowLeft')openStoryReview(storyCurrent-1);if(event.key==='ArrowRight')openStoryReview(storyCurrent+1)});
+const storyFilters=[...document.querySelectorAll('[data-story-filter]')],storyGrid=document.getElementById('storyGrid'),storyEmpty=document.getElementById('storyEmpty'),storyLoadMore=document.getElementById('storyLoadMore'),storyPageSize=12;let storyVisibleLimit=storyPageSize;
+function storyMatchesComplex(card,query){const normalized=(query||'').trim().toLocaleLowerCase('ru-RU').replace(/^жк\s+/,'');if(!normalized||normalized==='все жк')return true;const label=card.querySelector('.story-meta>div:first-child a')?.textContent?.trim().toLocaleLowerCase('ru-RU')||'';const key=(card.dataset.complex||'').toLocaleLowerCase('ru-RU');return label.includes(normalized)||key.includes(normalized)}
+function applyStoryFilters(){const selected=Object.fromEntries(storyFilters.map(filter=>[filter.dataset.storyFilter,filter.value]));let matched=0,visible=0;storyCards.forEach(card=>{const matches=Object.entries(selected).every(([key,value])=>key==='complex'?storyMatchesComplex(card,value):value==='all'||card.dataset[key]===value);if(matches){matched+=1;const pageHidden=matched>storyVisibleLimit;card.hidden=pageHidden;if(!pageHidden)visible+=1}else card.hidden=true});storyEmpty.hidden=matched>0;if(storyLoadMore){const remaining=Math.max(0,matched-visible);storyLoadMore.hidden=remaining===0;storyLoadMore.textContent='Показать ещё '+(remaining>storyPageSize?storyPageSize:remaining)+' историй'}}
+function resetStoryPage(){storyVisibleLimit=storyPageSize;applyStoryFilters()}
+storyFilters.forEach(filter=>filter.addEventListener(filter.dataset.storyFilter==='complex'?'input':'change',resetStoryPage));document.getElementById('storyFilterReset').addEventListener('click',()=>{storyFilters.forEach(filter=>{filter.value=filter.dataset.storyFilter==='complex'?'':'all'});resetStoryPage()});storyLoadMore&&storyLoadMore.addEventListener('click',()=>{storyVisibleLimit+=storyPageSize;applyStoryFilters()});new MutationObserver(applyStoryFilters).observe(storyGrid,{childList:true});resetStoryPage();
+const gallery=document.getElementById('chatGallery'),cards=[...document.querySelectorAll('.chat-card')],galleryPosition=document.getElementById('galleryPosition'),galleryTotal=document.getElementById('galleryTotal'),chatLoadMore=document.getElementById('chatLoadMore'),chatPageSize=12,chatCarousel=document.querySelector('.chat-carousel'),galleryPrev=document.getElementById('galleryPrev'),galleryNext=document.getElementById('galleryNext');let chatVisibleLimit=chatPageSize;function visibleGalleryCards(){return cards.filter(card=>!card.hidden)}function galleryStep(){const visible=visibleGalleryCards();return visible.length>1?visible[1].offsetLeft-visible[0].offsetLeft:360}function updateGalleryPosition(){const visible=visibleGalleryCards();if(galleryPosition)galleryPosition.textContent=String(Math.min(visible.length,Math.round(gallery.scrollLeft/galleryStep())+1))}function updateChatCarousel(){if(!chatCarousel||!galleryPrev||!galleryNext)return;const max=Math.max(0,gallery.scrollWidth-gallery.clientWidth);chatCarousel.classList.toggle('has-overflow',max>4);galleryPrev.disabled=gallery.scrollLeft<=4;galleryNext.disabled=gallery.scrollLeft>=max-4}function updateChatPagination(){cards.forEach((card,index)=>{card.hidden=index>=chatVisibleLimit});const remaining=Math.max(0,cards.length-chatVisibleLimit);if(chatLoadMore){chatLoadMore.hidden=remaining===0;chatLoadMore.textContent='Показать ещё '+(remaining>chatPageSize?chatPageSize:remaining)+' сообщений'}if(galleryTotal)galleryTotal.textContent=String(Math.min(chatVisibleLimit,cards.length));gallery.scrollLeft=0;updateGalleryPosition();updateChatCarousel()}galleryPrev&&galleryPrev.addEventListener('click',()=>gallery.scrollBy({left:-galleryStep(),behavior:'smooth'}));galleryNext&&galleryNext.addEventListener('click',()=>gallery.scrollBy({left:galleryStep(),behavior:'smooth'}));gallery.addEventListener('scroll',()=>{updateGalleryPosition();updateChatCarousel()},{passive:true});chatLoadMore&&chatLoadMore.addEventListener('click',()=>{chatVisibleLimit=Math.min(cards.length,chatVisibleLimit+chatPageSize);updateChatPagination()});if(window.ResizeObserver)new ResizeObserver(updateChatCarousel).observe(gallery);window.addEventListener('resize',updateChatCarousel,{passive:true});updateChatPagination();
+const lightbox=document.getElementById('lightbox'),lightboxImage=lightbox.querySelector('img'),lightboxComplex=document.getElementById('lightboxComplex'),lightboxDeveloper=document.getElementById('lightboxDeveloper'),lightboxService=document.getElementById('lightboxService'),lightboxSpecialist=document.getElementById('lightboxSpecialist'),lightboxText=document.getElementById('lightboxText');let current=0;function showReview(index){current=(index+cards.length)%cards.length;const card=cards[current],source=card.querySelector('img');lightboxImage.src=source.src;lightboxImage.alt=source.alt;lightboxComplex.href=chatComplexLinks[card.dataset.complex]||'/zhk/';lightboxComplex.textContent=card.dataset.complex||'Жилой комплекс уточняется';lightboxDeveloper.href=chatDeveloperLinks[card.dataset.developer]||'/zastroyshchiki/';lightboxDeveloper.textContent=card.dataset.developer||'Застройщик уточняется';lightboxService.href=chatServiceLinks[card.dataset.service]||'/uslugi/';lightboxService.textContent=card.dataset.service||'Услуга уточняется';lightboxSpecialist.href=chatSpecialistLinks[card.dataset.specialist]||'/kompaniya/experts/';lightboxSpecialist.textContent=card.dataset.specialist||'Специалист уточняется';lightboxText.textContent=card.dataset.clientText||'Расшифровка текста будет добавлена после согласования карточки.';lightbox.classList.add('open');document.body.classList.add('modal-open')}function closeReview(){lightbox.classList.remove('open');document.body.classList.remove('modal-open')}cards.forEach((card,index)=>card.addEventListener('click',()=>showReview(index)));lightbox.querySelector('.lightbox-close').addEventListener('click',closeReview);lightbox.querySelector('.lightbox-prev').addEventListener('click',()=>showReview(current-1));lightbox.querySelector('.lightbox-next').addEventListener('click',()=>showReview(current+1));lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeReview()});document.addEventListener('keydown',e=>{if(!lightbox.classList.contains('open'))return;if(e.key==='Escape')closeReview();if(e.key==='ArrowLeft')showReview(current-1);if(e.key==='ArrowRight')showReview(current+1)});
 document.getElementById('reviewForm').addEventListener('submit',event=>{event.preventDefault();document.getElementById('formStatus').textContent='Спасибо! Форма подготовлена для подключения к CRM.'});
 </script>
 <script>
+const reviewLegalSpecialists=[{value:'khristyuk',name:'Христюк Дмитрий',href:'/kompaniya/yuristy/khristyuk-dmitriy/'},{value:'melnik-polina',name:'Мельник Полина',href:'/kompaniya/yuristy/melnik-polina/'},{value:'melnikov-nikita',name:'Мельников Никита',href:'/kompaniya/yuristy/melnikov-nikita/'},{value:'latysheva-polina',name:'Латышева Полина',href:'/kompaniya/yuristy/latysheva-polina/'},{value:'savvateev-oleg',name:'Савватеев Олег',href:'/kompaniya/yuristy/savvateev-oleg/'},{value:'ozherelyeva-oksana',name:'Ожерельева Оксана',href:'/kompaniya/yuristy/ozherelyeva-oksana/'},{value:'yurikov-anatoliy',name:'Юриков Анатолий',href:'/kompaniya/yuristy/yurikov-anatoliy/'}];let reviewLegalIndex=0;storyCards.filter(card=>card.dataset.service==='defects'||card.dataset.service==='penalty').forEach(card=>{const specialist=reviewLegalSpecialists[reviewLegalIndex++%reviewLegalSpecialists.length];card.dataset.specialist=specialist.value;const link=card.querySelector('.story-meta>div:last-child a');if(link){link.textContent=specialist.name;link.href=specialist.href}});if(typeof applyStoryFilters==='function')applyStoryFilters();
+</script>
+<script>
+const chatComplexLinks={'ЖК Юнино':'/zhk/unino/','ЖК Пятницкие Луга':'/zhk/pyatnitskie-luga/','ЖК Яуза Парк':'/zhk/yauza-park/','ЖК Сигнальный 16':'/zhk/signalniy-16/','ЖК Квартал на воде':'/zhk/kvartal-na-vode/','ЖК Люблинский Парк':'/zhk/lyublinskiy-park/','ЖК Первый Дубровский':'/zhk/perviy-dubrovskiy/','ЖК Движение Говорово':'/zhk/dvizhenie-govorovo/','ЖК Большая Академическая 85':'/zhk/bolshaya-akademicheskaya-85/','ЖК Ильинойс':'/zhk/ilinoys/','ЖК Новое Видное':'/zhk/novoe-vidnoe/','ЖК Дмитровское небо':'/zhk/dmitrovskoe-nebo/','ЖК Остафьево':'/zhk/ostafyevo/','ЖК Зеленоград Ривьера':'/zhk/zelenograd-rivera/','ЖК Ярославская':'/zhk/yaroslavskaya/'},chatDeveloperLinks={'ПИК':'/zastroyshchiki/pik/','Самолёт':'/zastroyshchiki/samolet/','ФСК':'/zastroyshchiki/fsk/'},chatServiceLinks={'Приёмка':'/priemka-kvartiry/'},chatSpecialistLinks={'Васильев Андрей':'/kompaniya/experts/vasilev-andrey/','Политов Владимир':'/kompaniya/experts/politov-vladimir/','Даушев Вадим':'/kompaniya/experts/daushev-vadim/','Никитин Александр':'/kompaniya/experts/nikitin-aleksandr/','Александр Никитин':'/kompaniya/experts/nikitin-aleksandr/','Липартелиани Михаил':'/kompaniya/experts/liparteliani-mikhail/','Дыньков Дмитрий':'/kompaniya/experts/dmitriy-dinkov/','Дмитрий Дыньков':'/kompaniya/experts/dmitriy-dinkov/','Соколов Владимир':'/kompaniya/experts/sokolov-vladimir/'};cards.forEach((card,index)=>card.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();showReview(index)}}));
+chatServiceLinks['Приёмка квартиры']='/priemka-kvartiry/';cards.forEach(card=>{if(card.dataset.service==='Приёмка')card.dataset.service='Приёмка квартиры';const serviceLine=card.querySelector('.chat-card-caption span');if(serviceLine)serviceLine.textContent=serviceLine.textContent.replace('Приёмка','Приёмка квартиры')});
+</script>
+<script>
 const storyCarouselUi=document.querySelector('.story-carousel'),storyGridUi=document.getElementById('storyGrid'),storyPrevUi=document.getElementById('storyPrev'),storyNextUi=document.getElementById('storyNext');if(storyCarouselUi&&storyGridUi&&storyPrevUi&&storyNextUi){const visibleStoryCards=()=>[...storyGridUi.querySelectorAll('.story-card:not([hidden])')];const storyStepUi=()=>{const visible=visibleStoryCards();if(visible.length>1)return visible[1].offsetLeft-visible[0].offsetLeft;const card=visible[0];const gap=parseFloat(getComputedStyle(storyGridUi).gap)||18;return card?card.getBoundingClientRect().width+gap:storyGridUi.clientWidth*.85};const updateStoryCarousel=()=>{const max=Math.max(0,storyGridUi.scrollWidth-storyGridUi.clientWidth);storyCarouselUi.classList.toggle('has-overflow',max>4);storyPrevUi.disabled=storyGridUi.scrollLeft<=4;storyNextUi.disabled=storyGridUi.scrollLeft>=max-4};storyPrevUi.addEventListener('click',()=>storyGridUi.scrollBy({left:-storyStepUi(),behavior:'smooth'}));storyNextUi.addEventListener('click',()=>storyGridUi.scrollBy({left:storyStepUi(),behavior:'smooth'}));storyGridUi.addEventListener('scroll',updateStoryCarousel,{passive:true});document.querySelectorAll('[data-story-filter]').forEach(filter=>filter.addEventListener('change',()=>requestAnimationFrame(updateStoryCarousel)));new MutationObserver(()=>requestAnimationFrame(updateStoryCarousel)).observe(storyGridUi,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});if(window.ResizeObserver)new ResizeObserver(updateStoryCarousel).observe(storyGridUi);window.addEventListener('resize',updateStoryCarousel,{passive:true});requestAnimationFrame(updateStoryCarousel)}
+</script>
+<script>
+const queryComplexForReviews=new URLSearchParams(window.location.search).get('complex');
+if(queryComplexForReviews){const reviewsComplexFilter=document.querySelector('[data-story-filter="complex"]');if(reviewsComplexFilter){reviewsComplexFilter.value=queryComplexForReviews;reviewsComplexFilter.dispatchEvent(new Event('input',{bubbles:true}))}}
 </script>
 </body>
 </html>
