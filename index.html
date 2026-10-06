@@ -60,6 +60,48 @@
     .view-tab { padding: 10px 14px 12px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); font-size: 14px; font-weight: 700; cursor: pointer; }
     .view-tab:hover { color: var(--text); }
     .view-tab.active { border-bottom-color: var(--accent); color: var(--text); }
+    .architecture-overview { margin-bottom: 20px; padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(135deg, #fff, #f7fbfd); }
+    .architecture-overview h2 { margin-bottom: 6px; font-size: 23px; }
+    .architecture-overview-copy { margin: 0 0 16px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .architecture-types { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .architecture-type { min-height: 92px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .architecture-type strong { display: block; margin-bottom: 5px; font-size: 13px; }
+    .architecture-type span { display: block; color: var(--muted); font-size: 11px; line-height: 1.35; }
+    .type-pill { display: inline-block; margin-bottom: 8px; padding: 4px 7px; border-radius: 999px; background: #edf3f8; color: var(--deep); font-size: 10px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+    .v2-section { margin-bottom: 18px; padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+    .v2-section h3 { margin: 0 0 6px; font-size: 20px; }
+    .v2-section-copy { margin: 0 0 16px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .v2-menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .v2-menu-card { padding: 14px; border: 1px solid var(--line); border-radius: 16px; background: #fbfcfd; }
+    .v2-menu-label { margin-bottom: 10px; color: var(--deep); font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .v2-menu-row { display: flex; flex-wrap: wrap; gap: 7px; }
+    .v2-pill { padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-size: 11px; font-weight: 700; }
+    .v2-pill.main { border-color: #ffd79b; background: #fff2df; color: #9a5a00; }
+    .v2-pill.top { border-color: #d4e1ec; background: #e9f0f7; }
+    .v2-pill.cta { border-color: #ffa828; background: #ffa828; color: #fff; }
+    .v2-branch-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .v2-branch { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    .v2-branch-head { padding: 13px; border-bottom: 1px solid var(--line); background: linear-gradient(135deg, #f7fbfd, #edf7fb); }
+    .v2-branch-head strong { display: block; font-size: 15px; }
+    .v2-branch-head span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.3; }
+    .v2-branch-body { display: grid; gap: 7px; padding: 10px; }
+    .v2-branch-node { padding: 9px 10px; border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: 10px; background: #fff; }
+    .v2-branch-node.main { border-left-color: var(--orange); background: #fffaf3; }
+    .v2-branch-node.new { border-left-color: #63a978; }
+    .v2-branch-node.footer { border-left-color: #b6c0c8; background: #fafbfc; }
+    .v2-branch-node strong { display: block; font-size: 12px; line-height: 1.25; }
+    .v2-branch-node small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.35; }
+    .v2-branch-node .url { display: block; margin-top: 4px; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9px; overflow-wrap: anywhere; }
+    .v2-timeline { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+    .v2-step { position: relative; min-height: 92px; padding: 11px 10px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .v2-step:not(:last-child)::after { position: absolute; top: 36px; right: -8px; color: #9aa7b2; content: "→"; font-weight: 900; z-index: 1; }
+    .v2-step strong { display: block; font-size: 11px; }
+    .v2-step small { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.3; }
+    .v2-matrix { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .v2-matrix-card { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fbfcfd; }
+    .v2-matrix-card strong { display: block; margin-bottom: 5px; color: var(--deep); font-size: 14px; }
+    .v2-matrix-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
+    .v2-url-heading { margin: 0 0 12px; font-size: 18px; }
     .v2-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
     .v2-intro h2 { margin-bottom: 6px; }
     .v2-source { flex: 0 0 auto; padding: 8px 11px; border: 1px solid var(--line); border-radius: 10px; background: #f7f9fa; color: var(--muted); font-size: 11px; line-height: 1.35; }
@@ -123,6 +165,14 @@
       .notes-grid { grid-template-columns: 1fr; }
       .v2-intro { flex-direction: column; gap: 10px; }
       .v2-source { align-self: flex-start; }
+      .architecture-types, .v2-menu-grid, .v2-branch-grid, .v2-matrix { grid-template-columns: 1fr; }
+      .v2-timeline { grid-template-columns: 1fr; }
+      .v2-step:not(:last-child)::after { display: none; }
+    }
+    @media (min-width: 601px) and (max-width: 1050px) {
+      .architecture-types, .v2-branch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .v2-timeline { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .v2-step:nth-child(4)::after { display: none; }
     }
   </style>
 </head>
@@ -142,6 +192,20 @@
     </nav>
 
     <section class="map-view" id="mapV1">
+      <section class="architecture-overview" aria-labelledby="v1-overview-title">
+        <h2 id="v1-overview-title">Как устроена текущая карта v.1</h2>
+        <p class="architecture-overview-copy">Это действующая архитектура по первому MASTER и оригинальному сайту. Дерево ниже показывает текущую иерархию URL; цвет узла показывает рабочий статус, а тип страницы — её роль в структуре.</p>
+        <div class="architecture-types">
+          <article class="architecture-type"><span class="type-pill">Hub</span><strong>Хабы</strong><span>Услуги, База знаний, Результаты — собирают связанные разделы.</span></article>
+          <article class="architecture-type"><span class="type-pill">Pillar</span><strong>Основные услуги</strong><span>Приёмка квартиры и Юридические услуги — главные коммерческие ветки.</span></article>
+          <article class="architecture-type"><span class="type-pill">Service</span><strong>Услуги и инструменты</strong><span>Дистанционная приёмка, оценка, тепловизор, неустойка, калькулятор.</span></article>
+          <article class="architecture-type"><span class="type-pill">Scenario</span><strong>Сценарные лендинги</strong><span>Приёмка завтра, приглашение на приёмку, задержка ключей и другие ситуации.</span></article>
+          <article class="architecture-type"><span class="type-pill">Entity</span><strong>Сущности и справочники</strong><span>ЖК, застройщики, дефекты, глоссарий, нормативы и города.</span></article>
+          <article class="architecture-type"><span class="type-pill">Proof</span><strong>Результаты и отзывы</strong><span>Кейсы приёмки, судебные решения и социальное доказательство.</span></article>
+          <article class="architecture-type"><span class="type-pill">Trust</span><strong>Компания и контакты</strong><span>Компания, команда, оборудование, Почему мы и Контакты.</span></article>
+          <article class="architecture-type"><span class="type-pill">Supporting</span><strong>Поддерживающие страницы</strong><span>Цены, спецпредложения, блог, справочник и документы.</span></article>
+        </div>
+      </section>
       <section class="filters" id="filters" aria-label="Фильтр карты по статусу"></section>
 
       <section class="panel">
@@ -158,6 +222,41 @@
         </div>
         <div class="v2-source">Источник: Expert_Novostroy_МАСТЕР_ТЗ_сайта_2026-10_v2.xlsx<br>Лист 02_Карта_сайта · 06.10.2026</div>
       </div>
+      <section class="v2-section">
+        <h3>1. Что меняется в шапке</h3>
+        <p class="v2-section-copy">В новой версии меню маршрутизирует по задаче клиента: основные коммерческие ветки остаются в MAIN, supporting-разделы уходят в mega-menu, trust-навигация — в верхнюю панель.</p>
+        <div class="v2-menu-grid">
+          <div class="v2-menu-card">
+            <div class="v2-menu-label">Сейчас · v.1</div>
+            <div class="v2-menu-row"><span class="v2-pill">Услуги</span><span class="v2-pill">Цены</span><span class="v2-pill">Акции</span><span class="v2-pill">Результаты</span><span class="v2-pill">Отзывы</span><span class="v2-pill">Статьи</span><span class="v2-pill">Компания</span></div>
+          </div>
+          <div class="v2-menu-card">
+            <div class="v2-menu-label">Целевая шапка · v.2</div>
+            <div class="v2-menu-row"><span class="v2-pill top">О компании</span><span class="v2-pill top">Эксперты</span><span class="v2-pill top">Отзывы</span><span class="v2-pill top">Контакты</span></div>
+            <div class="v2-menu-row" style="margin-top:8px"><span class="v2-pill main">Приёмка ▾</span><span class="v2-pill main">Экспертиза ▾</span><span class="v2-pill main">Споры с застройщиком ▾</span><span class="v2-pill main">Цены</span><span class="v2-pill main">Результаты ▾</span><span class="v2-pill main">База знаний ▾</span><span class="v2-pill">Телефон</span><span class="v2-pill cta">Опишите ситуацию</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="v2-section">
+        <h3>2. Целевые коммерческие ветки</h3>
+        <p class="v2-section-copy">Pillar-страницы задают основные направления. Вложенные карточки показывают supporting-услуги, новые сущности и страницы, которые не должны конкурировать с основными ветками.</p>
+        <div class="v2-branch-grid">
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Приёмка</strong><span>Traffic engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Приёмка квартиры</strong><span class="url">/uslugi/priemka-kvartiry/</span></div><div class="v2-branch-node"><strong>Дистанционная приёмка</strong><span class="url">/uslugi/distancionnaya-priyomka/</span></div><div class="v2-branch-node"><strong>Повторная, коммерческие помещения, кладовые</strong><small>Сначала карточки/anchors, отдельный URL только после семантики</small></div><div class="v2-branch-node footer"><strong>Оценка · тепловизор · стяжка · AutoCAD</strong><small>Дополнительные опции внутри mega-menu</small></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Экспертиза</strong><span>Proof / high-ticket engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main new"><strong>Строительная экспертиза</strong><span class="url">/uslugi/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node new"><strong>Примеры экспертиз</strong><span class="url">/articles/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node new"><strong>Дефекты</strong><span class="url">/defekty/</span></div><div class="v2-branch-node new"><strong>Нормативы</strong><span class="url">/normativy/</span></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Споры с застройщиком</strong><span>Profit engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Все ситуации</strong><span class="url">/uslugi/yuridicheskie-uslugi/</span></div><div class="v2-branch-node"><strong>Неустойка по ДДУ</strong><span class="url">.../neustoyka-za-prosrochku-peredachi-kvartiry/</span></div><div class="v2-branch-node"><strong>Компенсация за недостатки</strong><span class="url">.../vzyskanie-kompensatsii-za-stroitelnye-nedostatki/</span></div><div class="v2-branch-node"><strong>Судебные решения</strong><span class="url">/articles/sudebnye-resheniya/</span></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Цены</strong><span>Commercial support · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Единый прайс и калькуляторы</strong><span class="url">/ceny/</span></div><div class="v2-branch-node"><strong>Приёмка · Экспертиза · Legal</strong><small>Стоимость и модели оплаты раскрываются внутри общего прайса</small></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Результаты</strong><span>Proof hub · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Все результаты</strong><span class="url">/articles/</span></div><div class="v2-branch-node"><strong>Приёмка квартир</strong><span class="url">/articles/priemka-kvartir/</span></div><div class="v2-branch-node new"><strong>Строительная экспертиза</strong><span class="url">/articles/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node"><strong>Судебные решения</strong><span class="url">/articles/sudebnye-resheniya/</span></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>База знаний</strong><span>Authority / AI-GEO engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main new"><strong>Главная БЗ</strong><span class="url">/baza-znaniy/</span></div><div class="v2-branch-node new"><strong>До ключей · Приёмка · Недостатки · Споры</strong><small>Маршруты по ситуации клиента</small></div><div class="v2-branch-node new"><strong>Документы · навигатор услуг</strong><small>Когда нужна → что получите → цена/модель → куда перейти</small></div><div class="v2-branch-node new"><strong>ЖК · застройщики · дефекты · нормы · глоссарий</strong><small>Сущности подключаются после накопления фактуры</small></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Компания / trust</strong><span>TOPBAR + footer</span></div><div class="v2-branch-body"><div class="v2-branch-node"><strong>О компании</strong><span class="url">/company/</span></div><div class="v2-branch-node new"><strong>Эксперты</strong><span class="url">/company/experts/</span></div><div class="v2-branch-node"><strong>Отзывы · Контакты</strong><span class="url">/company/reviews/ · /contacts/</span></div><div class="v2-branch-node footer"><strong>История · лицензии · оборудование · реквизиты</strong><small>Внутренняя навигация Company / footer</small></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Supporting / legacy</strong><span>Не конкурирует с MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node footer"><strong>Акции · Вместе дешевле · Приведи друга</strong><span class="url">/sales/ · /vmeste/ · /privedi-druga/</span></div><div class="v2-branch-node footer"><strong>Статьи / поток обновлений</strong><span class="url">/news/</span></div><div class="v2-branch-node footer"><strong>Оферта</strong><span class="url">/oferta/</span></div><div class="v2-branch-node footer"><strong>FAQ — P0 аудит</strong><span class="url">/info/faq/</span></div></div></article>
+        </div>
+      </section>
+      <section class="v2-section">
+        <h3>3. Путь клиента и логика SEO / GEO / AI</h3>
+        <p class="v2-section-copy">Архитектура связывает коммерческие сущности, ситуацию клиента и доказательства, чтобы пользователь мог перейти от проблемы к следующему шагу.</p>
+        <div class="v2-timeline"><div class="v2-step"><strong>Жду ключи</strong><small>ДДУ, сроки, подготовка</small></div><div class="v2-step"><strong>Есть просрочка</strong><small>Неустойка и расчёт</small></div><div class="v2-step"><strong>Пригласили</strong><small>Приёмка / дистанционный формат</small></div><div class="v2-step"><strong>Нашли дефекты</strong><small>Фиксация и повторная</small></div><div class="v2-step"><strong>Дефект спорный</strong><small>Строительная экспертиза</small></div><div class="v2-step"><strong>Не устраняют</strong><small>Претензия и legal</small></div><div class="v2-step"><strong>Нужен результат</strong><small>Решение, кейс, отзыв</small></div></div>
+        <div class="v2-matrix" style="margin-top:14px"><div class="v2-matrix-card"><strong>WHAT</strong><p>Приёмка · Экспертиза · Споры · Документы — коммерческие сущности и поисковый интент.</p></div><div class="v2-matrix-card"><strong>WHEN</strong><p>Жду ключи · просрочка · приглашение · дефекты · спор — человеческая логика выбора.</p></div><div class="v2-matrix-card"><strong>ENTITY</strong><p>ЖК · застройщик · город · дефект · норма · эксперт · документ — слой GEO/AI и доверия.</p></div></div>
+      </section>
       <div class="v2-legend" aria-label="Легенда новой карты">
         <span class="v2-legend-item"><i class="v2-swatch published"></i>опубликовано</span>
         <span class="v2-legend-item"><i class="v2-swatch review"></i>к согласованию</span>
@@ -166,6 +265,7 @@
         <span class="v2-legend-item"><i class="v2-swatch migration"></i>целевой URL отличается от текущего</span>
       </div>
       <section class="panel">
+        <h3 class="v2-url-heading">URL-карта и готовность страниц</h3>
         <div id="architectureV2"></div>
         <div class="error" id="errorV2" hidden>Не удалось загрузить карту v.2.</div>
       </section>
@@ -233,7 +333,7 @@
       const tag = page.preview ? "a" : "div";
       const link = page.preview ? ` href="${escapeHtml(href(page))}"` : "";
       const migration = page.currentUrl && page.currentUrl !== page.url ? " migration" : "";
-      const details = [page.action, page.currentUrl && page.currentUrl !== page.url ? `Текущий URL: ${page.currentUrl}` : ""].filter(Boolean).join(" · ");
+      const details = [page.type, page.action, page.currentUrl && page.currentUrl !== page.url ? `Текущий URL: ${page.currentUrl}` : ""].filter(Boolean).join(" · ");
       const title = details ? ` title="${escapeHtml(details)}"` : "";
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}${migration}"${link}${title}>
         <span class="node-title">${escapeHtml(page.title)}</span>
