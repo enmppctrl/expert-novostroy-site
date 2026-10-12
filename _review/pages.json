@@ -659,6 +659,518 @@
       "header": "Footer legal",
       "index": "Index",
       "priority": "P0"
+    },
+    {
+      "title": "Приёмка квартиры в Химках",
+      "url": "/priemka-kvartiry-himki/",
+      "type": "GEO-услуга",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/priemka-kvartiry-himki/"
+    },
+    {
+      "title": "Приёмка завтра",
+      "url": "/priemka-zavtra/",
+      "type": "Сценарный лендинг",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "upcoming",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/priemka-zavtra/"
+    },
+    {
+      "title": "Получили приглашение на приёмку",
+      "url": "/poluchil-priglashenie-na-priemku/",
+      "type": "Сценарный лендинг",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "upcoming",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/poluchil-priglashenie-na-priemku/"
+    },
+    {
+      "title": "Повторная приёмка",
+      "url": "/povtornaya-priyomka/",
+      "type": "Услуга",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/povtornaya-priyomka/"
+    },
+    {
+      "title": "Приёмка по доверенности",
+      "url": "/priemka-po-doverennosti/",
+      "type": "Услуга",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/priemka-po-doverennosti/"
+    },
+    {
+      "title": "Пример акта осмотра",
+      "url": "/primer-akta-osmotra/",
+      "type": "Пример документа",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/primer-akta-osmotra/"
+    },
+    {
+      "title": "Пример альбома осмотра",
+      "url": "/primer-alboma-osmotra/",
+      "type": "Пример документа",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/primer-alboma-osmotra/"
+    },
+    {
+      "title": "Пример акта для ПИК",
+      "url": "/primer-akt-dlya-pik/",
+      "type": "Пример документа",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/primer-akt-dlya-pik/"
+    },
+    {
+      "title": "Заключение по тепловизору",
+      "url": "/zaklyuchenie-po-teplovizoru/",
+      "type": "Услуга",
+      "parent": "/uslugi/teplovizionnyy-osmotr/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/zaklyuchenie-po-teplovizoru/"
+    },
+    {
+      "title": "Фотофиксация",
+      "url": "/fotofiksaciya/",
+      "type": "Услуга",
+      "parent": "/uslugi/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/fotofiksaciya/"
+    },
+    {
+      "title": "Калькулятор неустойки по ДДУ",
+      "url": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/",
+      "type": "Инструмент",
+      "parent": "/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/",
+      "status": "published",
+      "updated": "2026-10-12",
+      "preview": "yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/kalkulyator-neustoyki-po-ddy.html",
+      "legacy": true,
+      "currentUrl": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/"
+    },
+    {
+      "title": "Застройщик задерживает ключи",
+      "url": "/zastroyshchik-zaderzhivaet-klyuchi/",
+      "type": "Сценарный лендинг",
+      "parent": "/uslugi/yuridicheskie-uslugi/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/zastroyshchik-zaderzhivaet-klyuchi/"
+    },
+    {
+      "title": "Руководители",
+      "url": "/kompaniya/rukovoditeli/",
+      "type": "Команда",
+      "parent": "/company/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/rukovoditeli/"
+    },
+    {
+      "title": "Атаманов Павел",
+      "url": "/kompaniya/rukovoditeli/atamanov-pavel/",
+      "type": "Руководитель",
+      "parent": "/kompaniya/rukovoditeli/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/rukovoditeli/atamanov-pavel/"
+    },
+    {
+      "title": "Яруткин Владимир",
+      "url": "/kompaniya/rukovoditeli/yarutkin-vladimir/",
+      "type": "Руководитель",
+      "parent": "/kompaniya/rukovoditeli/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/rukovoditeli/yarutkin-vladimir/"
+    },
+    {
+      "title": "Филатов Александр",
+      "url": "/kompaniya/rukovoditeli/filatov-aleksandr/",
+      "type": "Руководитель",
+      "parent": "/kompaniya/rukovoditeli/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/rukovoditeli/filatov-aleksandr/"
+    },
+    {
+      "title": "Семенов Семен",
+      "url": "/kompaniya/rukovoditeli/semenov-semen/",
+      "type": "Руководитель",
+      "parent": "/kompaniya/rukovoditeli/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/rukovoditeli/semenov-semen/"
+    },
+    {
+      "title": "Мишанина Екатерина",
+      "url": "/kompaniya/rukovoditeli/mishanina-ekaterina/",
+      "type": "Руководитель",
+      "parent": "/kompaniya/rukovoditeli/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/rukovoditeli/mishanina-ekaterina/"
+    },
+    {
+      "title": "Юристы",
+      "url": "/kompaniya/yuristy/",
+      "type": "Команда",
+      "parent": "/company/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/"
+    },
+    {
+      "title": "Христюк Дмитрий",
+      "url": "/kompaniya/yuristy/khristyuk-dmitriy/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/khristyuk-dmitriy/"
+    },
+    {
+      "title": "Мельник Полина",
+      "url": "/kompaniya/yuristy/melnik-polina/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/melnik-polina/"
+    },
+    {
+      "title": "Мельников Никита",
+      "url": "/kompaniya/yuristy/melnikov-nikita/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/melnikov-nikita/"
+    },
+    {
+      "title": "Латышева Полина",
+      "url": "/kompaniya/yuristy/latysheva-polina/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/latysheva-polina/"
+    },
+    {
+      "title": "Савватеев Олег",
+      "url": "/kompaniya/yuristy/savvateev-oleg/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/savvateev-oleg/"
+    },
+    {
+      "title": "Ожерельева Оксана",
+      "url": "/kompaniya/yuristy/ozherelyeva-oksana/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/ozherelyeva-oksana/"
+    },
+    {
+      "title": "Юриков Анатолий",
+      "url": "/kompaniya/yuristy/yurikov-anatoliy/",
+      "type": "Юрист",
+      "parent": "/kompaniya/yuristy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/yuristy/yurikov-anatoliy/"
+    },
+    {
+      "title": "Дыньков Дмитрий",
+      "url": "/kompaniya/experts/dmitriy-dinkov/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/dmitriy-dinkov/"
+    },
+    {
+      "title": "Даушев Вадим",
+      "url": "/kompaniya/experts/daushev-vadim/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/daushev-vadim/"
+    },
+    {
+      "title": "Васильев Андрей",
+      "url": "/kompaniya/experts/vasilev-andrey/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/vasilev-andrey/"
+    },
+    {
+      "title": "Никитин Александр",
+      "url": "/kompaniya/experts/nikitin-aleksandr/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/nikitin-aleksandr/"
+    },
+    {
+      "title": "Политов Владимир",
+      "url": "/kompaniya/experts/politov-vladimir/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/politov-vladimir/"
+    },
+    {
+      "title": "Липартелиани Михаил",
+      "url": "/kompaniya/experts/liparteliani-mikhail/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/liparteliani-mikhail/"
+    },
+    {
+      "title": "Соколов Владимир",
+      "url": "/kompaniya/experts/sokolov-vladimir/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/sokolov-vladimir/"
+    },
+    {
+      "title": "Колесник Максим",
+      "url": "/kompaniya/experts/kolesnik-maksim/",
+      "type": "Эксперт",
+      "parent": "/company/experts/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/experts/kolesnik-maksim/"
+    },
+    {
+      "title": "Клиентский сервис",
+      "url": "/kompaniya/klientskiy-servis/",
+      "type": "Команда",
+      "parent": "/company/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/klientskiy-servis/"
+    },
+    {
+      "title": "Документы компании",
+      "url": "/kompaniya/dokumenty/",
+      "type": "Документы",
+      "parent": "/company/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kompaniya/dokumenty/"
+    },
+    {
+      "title": "Почему мы",
+      "url": "/pochemu-my/",
+      "type": "Доверие",
+      "parent": "/company/brands/",
+      "status": "published",
+      "updated": "2026-10-12",
+      "preview": "pochemu-my/pochemu-my.html",
+      "legacy": true,
+      "currentUrl": "/pochemu-my/"
+    },
+    {
+      "title": "Города",
+      "url": "/baza-znaniy/goroda/",
+      "type": "Хаб городов",
+      "parent": "/baza-znaniy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/baza-znaniy/goroda/"
+    },
+    {
+      "title": "Санкт-Петербург",
+      "url": "/baza-znaniy/goroda/sankt-peterburg/",
+      "type": "Город",
+      "parent": "/baza-znaniy/goroda/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/baza-znaniy/goroda/sankt-peterburg/"
+    },
+    {
+      "title": "Казань",
+      "url": "/baza-znaniy/goroda/kazan/",
+      "type": "Город",
+      "parent": "/baza-znaniy/goroda/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/baza-znaniy/goroda/kazan/"
+    },
+    {
+      "title": "Нижний Новгород",
+      "url": "/baza-znaniy/goroda/nizhniy-novgorod/",
+      "type": "Город",
+      "parent": "/baza-znaniy/goroda/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/baza-znaniy/goroda/nizhniy-novgorod/"
+    },
+    {
+      "title": "Кто такой специалист по приёмке",
+      "url": "/kto-takoy-spechialist-po-priemke/",
+      "type": "Статья",
+      "parent": "/news/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/kto-takoy-spechialist-po-priemke/"
+    },
+    {
+      "title": "Справочник приёмки",
+      "url": "/spravochnik-priemki/",
+      "type": "Справочник",
+      "parent": "/baza-znaniy/",
+      "status": "upcoming",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/spravochnik-priemki/"
+    },
+    {
+      "title": "ЖК Кольская 8",
+      "url": "/zhk/kolskaya-8/",
+      "type": "ЖК",
+      "parent": "/zhk/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/zhk/kolskaya-8/"
+    },
+    {
+      "title": "Застройщик ПИК",
+      "url": "/zastroyshchiki/pik/",
+      "type": "Застройщик",
+      "parent": "/zastroyshchiki/",
+      "status": "upcoming",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/zastroyshchiki/pik/"
+    },
+    {
+      "title": "Трещины стен",
+      "url": "/defekty/treshhiny-sten/",
+      "type": "Дефект",
+      "parent": "/defekty/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/defekty/treshhiny-sten/"
+    },
+    {
+      "title": "Кривые окна",
+      "url": "/defekty/krivye-okna/",
+      "type": "Дефект",
+      "parent": "/defekty/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/defekty/krivye-okna/"
+    },
+    {
+      "title": "Плохая вентиляция",
+      "url": "/defekty/plohaya-ventilyaciya/",
+      "type": "Дефект",
+      "parent": "/defekty/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/defekty/plohaya-ventilyaciya/"
+    },
+    {
+      "title": "ФЗ-214",
+      "url": "/fz-214/",
+      "type": "Термин",
+      "parent": "/glossariy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/fz-214/"
+    },
+    {
+      "title": "ДДУ",
+      "url": "/ddu/",
+      "type": "Термин",
+      "parent": "/glossariy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/ddu/"
+    },
+    {
+      "title": "ГОСТ: приёмка квартир",
+      "url": "/gost-priemka-kvartir/",
+      "type": "Норматив",
+      "parent": "/normativy/",
+      "status": "in_progress",
+      "updated": "2026-10-12",
+      "legacy": true,
+      "currentUrl": "/gost-priemka-kvartir/"
     }
   ]
 }
