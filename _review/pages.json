@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "architectureSource": "Expert_Novostroy_МАСТЕР_ТЗ_САЙТА_FINAL_2026-10-06.xlsx",
   "pages": [
     {
@@ -9,7 +9,7 @@
       "type": "Home",
       "parent": null,
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Core",
       "role": "Brand + router",
       "header": "LOGO",
@@ -162,7 +162,7 @@
       "type": "Pillar",
       "parent": "/uslugi/",
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Экспертиза",
       "role": "Proof/high-ticket",
       "header": "MAIN",
@@ -236,14 +236,14 @@
       "type": "Proof hub",
       "parent": "/",
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Proof",
       "role": "Authority",
       "header": "MAIN",
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/rezultaty/",
-      "preview": "rezultaty/rezultaty.html"
+      "preview": "articles/articles.html"
     },
     {
       "title": "Результаты приёмок",
@@ -251,14 +251,14 @@
       "type": "Proof collection",
       "parent": "/articles/",
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Proof",
       "role": "Trust/long-tail",
       "header": "MEGA",
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/rezultaty/priemka-kvartir/",
-      "preview": "rezultaty/priemka-kvartir/priemka-kvartir.html"
+      "preview": "articles/priemka-kvartir/priemka-kvartir.html"
     },
     {
       "title": "Результаты экспертиз",
@@ -279,14 +279,14 @@
       "type": "Кейс приёмки",
       "parent": "/articles/priemka-kvartir/",
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Proof",
       "role": "Trust / long-tail",
       "header": "MEGA",
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/rezultaty/priemka-kvartir/yunino-1001/",
-      "preview": "rezultaty/priemka-kvartir/yunino-1001/yunino-1001.html"
+      "preview": "articles/priemka-kvartir/yunino-1001/yunino-1001.html"
     },
     {
       "title": "Судебные решения",
@@ -294,14 +294,59 @@
       "type": "Proof collection",
       "parent": "/articles/",
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Proof",
       "role": "YMYL trust",
       "header": "MEGA",
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/rezultaty/sudebnye-resheniya/",
-      "preview": "rezultaty/sudebnye-resheniya/sudebnye-resheniya.html"
+      "preview": "articles/sudebnye-resheniya/sudebnye-resheniya.html"
+    },
+    {
+      "title": "Кейс ЖК «Героев»",
+      "url": "/articles/sudebnye-resheniya/geroev-2015/",
+      "type": "Case",
+      "parent": "/articles/sudebnye-resheniya/",
+      "status": "review",
+      "updated": "2026-10-13",
+      "zone": "Proof",
+      "role": "YMYL trust",
+      "header": "MEGA",
+      "index": "Index",
+      "priority": "P1",
+      "currentUrl": "/articles/sudebnye-resheniya/geroev-2015/",
+      "preview": "articles/sudebnye-resheniya/geroev-2015/geroev-2015.html"
+    },
+    {
+      "title": "Кейс ЖК «Румянцево-Парк»",
+      "url": "/articles/sudebnye-resheniya/rumyantsevo-park-rodnikovaya-2016/",
+      "type": "Case",
+      "parent": "/articles/sudebnye-resheniya/",
+      "status": "review",
+      "updated": "2026-10-13",
+      "zone": "Proof",
+      "role": "YMYL trust",
+      "header": "MEGA",
+      "index": "Index",
+      "priority": "P1",
+      "currentUrl": "/articles/sudebnye-resheniya/rumyantsevo-park-rodnikovaya-2016/",
+      "preview": "articles/sudebnye-resheniya/rumyantsevo-park-rodnikovaya-2016/rumyantsevo-park-rodnikovaya-2016.html"
+    },
+    {
+      "title": "Кейс ЖК «Жулебино парк»",
+      "url": "/articles/sudebnye-resheniya/zhulebino-park-2017/",
+      "type": "Case",
+      "parent": "/articles/sudebnye-resheniya/",
+      "status": "review",
+      "updated": "2026-10-13",
+      "zone": "Proof",
+      "role": "YMYL trust",
+      "header": "MEGA",
+      "index": "Index",
+      "priority": "P1",
+      "currentUrl": "/articles/sudebnye-resheniya/zhulebino-park-2017/",
+      "preview": "articles/sudebnye-resheniya/zhulebino-park-2017/zhulebino-park-2017.html"
     },
     {
       "title": "База знаний",
@@ -309,7 +354,7 @@
       "type": "Knowledge hub",
       "parent": "/",
       "status": "review",
-      "updated": "2026-10-12",
+      "updated": "2026-10-13",
       "zone": "Knowledge",
       "role": "Authority / AI",
       "header": "MAIN",
