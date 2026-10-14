@@ -1,27 +1,11 @@
-# Review registry
+# Реестр публичного демо
 
-Файл `pages.json` хранит список страниц для GitHub review-dashboard.
+`pages.json` — источник данных для GitHub review-dashboard в `publish/index.html`.
 
-## Формат записи
+Архитектура и целевые URL приведены к FINAL MASTER от 06.10.2026. Поле `preview` содержит путь к локальной копии страницы внутри этого публичного репозитория.
 
-```json
-{
-  "title": "Контакты",
-  "url": "/kontakty/",
-  "file": "pages/kontakty/kontakty.html",
-  "status": "ready_for_review",
-  "updated": "2026-08-16"
-}
-```
+Используются четыре статуса:
 
-`preview` можно указать явно, если ссылка отличается от пути `file`.
-
-## Статусы
-
-- `in_progress`
-- `ready_for_review`
-- `changes_requested`
-- `approved`
-- `published`
-
-Codex должен обновлять этот файл при изменении review-статуса страницы.
+- `upcoming` — скоро в работу;
+- `review` — к согласованию;
+- `published` — опубликовано.

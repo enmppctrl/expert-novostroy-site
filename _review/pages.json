@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "architectureSource": "Expert_Novostroy_МАСТЕР_ТЗ_САЙТА_FINAL_2026-10-06.xlsx",
   "pages": [
     {
@@ -46,7 +46,7 @@
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/priemka-kvartiry/",
-      "preview": "priemka-kvartiry/priemka-kvartiry.html"
+      "preview": "uslugi/priemka-kvartiry/priemka-kvartiry.html"
     },
     {
       "title": "Дистанционная приёмка",
@@ -61,7 +61,7 @@
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/distancionnaya-priyomka/",
-      "preview": "distancionnaya-priyomka/distancionnaya-priyomka.html"
+      "preview": "uslugi/distancionnaya-priyomka/distancionnaya-priyomka.html"
     },
     {
       "title": "Повторная приёмка",
@@ -107,7 +107,7 @@
       "url": "/uslugi/otsenka/",
       "type": "Service",
       "parent": "/uslugi/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Документы",
       "role": "Cross-sell",
@@ -121,7 +121,7 @@
       "url": "/uslugi/teplovizionnyy-osmotr/",
       "type": "Service",
       "parent": "/uslugi/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Приёмка",
       "role": "Attach rate",
@@ -169,7 +169,7 @@
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/stroitelnaya-ekspertiza/",
-      "preview": "stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html"
+      "preview": "uslugi/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html"
     },
     {
       "title": "Споры с застройщиком",
@@ -184,7 +184,7 @@
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/yuridicheskie-uslugi/",
-      "preview": "yuridicheskie-uslugi/yuridicheskie-uslugi.html"
+      "preview": "uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html"
     },
     {
       "title": "Неустойка по ДДУ",
@@ -199,21 +199,22 @@
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/",
-      "preview": "yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/neustoyka-za-prosrochku-peredachi-kvartiry.html"
+      "preview": "uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/neustoyka-za-prosrochku-peredachi-kvartiry.html"
     },
     {
       "title": "Компенсация за строительные недостатки",
       "url": "/uslugi/yuridicheskie-uslugi/vzyskanie-kompensatsii-za-stroitelnye-nedostatki/",
       "type": "Service pillar",
       "parent": "/uslugi/yuridicheskie-uslugi/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Legal",
       "role": "High-ticket",
       "header": "MEGA",
       "index": "Index",
       "priority": "P0",
-      "currentUrl": "/yuridicheskie-uslugi/vzyskanie-kompensatsii/"
+      "currentUrl": "/yuridicheskie-uslugi/vzyskanie-kompensatsii/",
+      "preview": "uslugi/yuridicheskie-uslugi/vzyskanie-kompensatsii-za-stroitelnye-nedostatki/vzyskanie-kompensatsii-za-stroitelnye-nedostatki.html"
     },
     {
       "title": "Цены",
@@ -447,7 +448,7 @@
       "url": "/defekty/",
       "type": "Entity hub",
       "parent": "/baza-znaniy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Entity",
       "role": "Technical authority",
@@ -461,7 +462,7 @@
       "url": "/normativy/",
       "type": "Reference hub",
       "parent": "/baza-znaniy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Entity",
       "role": "Authority",
@@ -475,7 +476,7 @@
       "url": "/glossariy/",
       "type": "Entity hub",
       "parent": "/baza-znaniy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Entity",
       "role": "Semantic clarity",
@@ -489,7 +490,7 @@
       "url": "/zastroyshchiki/",
       "type": "Entity hub",
       "parent": "/baza-znaniy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Entity",
       "role": "Long-tail",
@@ -503,7 +504,7 @@
       "url": "/zhk/",
       "type": "Entity hub",
       "parent": "/baza-znaniy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Entity",
       "role": "Long-tail",
@@ -517,7 +518,7 @@
       "url": "/priemka-kvartiry-{gorod}/",
       "type": "GEO landing",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "GEO",
       "role": "Local traffic",
@@ -539,14 +540,14 @@
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/kompaniya/",
-      "preview": "kompaniya/kompaniya.html"
+      "preview": "company/company.html"
     },
     {
       "title": "Эксперты",
       "url": "/company/experts/",
       "type": "People hub",
       "parent": "/company/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "zone": "Trust",
       "role": "E-E-A-T",
@@ -568,7 +569,7 @@
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/otzyvy/",
-      "preview": "otzyvy/otzyvy.html"
+      "preview": "company/reviews/reviews.html"
     },
     {
       "title": "Контакты",
@@ -583,7 +584,7 @@
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/kontakty/",
-      "preview": "kontakty/kontakty.html"
+      "preview": "contacts/contacts.html"
     },
     {
       "title": "Документы / лицензии",
@@ -624,7 +625,7 @@
       "index": "Index",
       "priority": "P2",
       "currentUrl": "/kompaniya/oborudovanie/",
-      "preview": "kompaniya/oborudovanie/oborudovanie.html"
+      "preview": "company/brands/brands.html"
     },
     {
       "title": "Реквизиты",
@@ -710,7 +711,7 @@
       "url": "/priemka-kvartiry-himki/",
       "type": "GEO-услуга",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/priemka-kvartiry-himki/"
@@ -740,7 +741,7 @@
       "url": "/povtornaya-priyomka/",
       "type": "Услуга",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/povtornaya-priyomka/"
@@ -750,7 +751,7 @@
       "url": "/priemka-po-doverennosti/",
       "type": "Услуга",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/priemka-po-doverennosti/"
@@ -760,7 +761,7 @@
       "url": "/primer-akta-osmotra/",
       "type": "Пример документа",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/primer-akta-osmotra/"
@@ -770,7 +771,7 @@
       "url": "/primer-alboma-osmotra/",
       "type": "Пример документа",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/primer-alboma-osmotra/"
@@ -780,7 +781,7 @@
       "url": "/primer-akt-dlya-pik/",
       "type": "Пример документа",
       "parent": "/uslugi/priemka-kvartiry/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/primer-akt-dlya-pik/"
@@ -790,7 +791,7 @@
       "url": "/zaklyuchenie-po-teplovizoru/",
       "type": "Услуга",
       "parent": "/uslugi/teplovizionnyy-osmotr/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/zaklyuchenie-po-teplovizoru/"
@@ -800,19 +801,19 @@
       "url": "/fotofiksaciya/",
       "type": "Услуга",
       "parent": "/uslugi/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/fotofiksaciya/"
     },
     {
       "title": "Калькулятор неустойки по ДДУ",
-      "url": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/",
+      "url": "/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/",
       "type": "Инструмент",
       "parent": "/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/",
       "status": "published",
       "updated": "2026-10-12",
-      "preview": "yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/kalkulyator-neustoyki-po-ddy.html",
+      "preview": "uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/kalkulyator-neustoyki-po-ddy.html",
       "legacy": true,
       "currentUrl": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/"
     },
@@ -821,247 +822,247 @@
       "url": "/zastroyshchik-zaderzhivaet-klyuchi/",
       "type": "Сценарный лендинг",
       "parent": "/uslugi/yuridicheskie-uslugi/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/zastroyshchik-zaderzhivaet-klyuchi/"
     },
     {
       "title": "Руководители",
-      "url": "/kompaniya/rukovoditeli/",
+      "url": "/company/rukovoditeli/",
       "type": "Команда",
       "parent": "/company/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/rukovoditeli/"
     },
     {
       "title": "Атаманов Павел",
-      "url": "/kompaniya/rukovoditeli/atamanov-pavel/",
+      "url": "/company/rukovoditeli/atamanov-pavel/",
       "type": "Руководитель",
-      "parent": "/kompaniya/rukovoditeli/",
-      "status": "in_progress",
+      "parent": "/company/rukovoditeli/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/rukovoditeli/atamanov-pavel/"
     },
     {
       "title": "Яруткин Владимир",
-      "url": "/kompaniya/rukovoditeli/yarutkin-vladimir/",
+      "url": "/company/rukovoditeli/yarutkin-vladimir/",
       "type": "Руководитель",
-      "parent": "/kompaniya/rukovoditeli/",
-      "status": "in_progress",
+      "parent": "/company/rukovoditeli/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/rukovoditeli/yarutkin-vladimir/"
     },
     {
       "title": "Филатов Александр",
-      "url": "/kompaniya/rukovoditeli/filatov-aleksandr/",
+      "url": "/company/rukovoditeli/filatov-aleksandr/",
       "type": "Руководитель",
-      "parent": "/kompaniya/rukovoditeli/",
-      "status": "in_progress",
+      "parent": "/company/rukovoditeli/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/rukovoditeli/filatov-aleksandr/"
     },
     {
       "title": "Семенов Семен",
-      "url": "/kompaniya/rukovoditeli/semenov-semen/",
+      "url": "/company/rukovoditeli/semenov-semen/",
       "type": "Руководитель",
-      "parent": "/kompaniya/rukovoditeli/",
-      "status": "in_progress",
+      "parent": "/company/rukovoditeli/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/rukovoditeli/semenov-semen/"
     },
     {
       "title": "Мишанина Екатерина",
-      "url": "/kompaniya/rukovoditeli/mishanina-ekaterina/",
+      "url": "/company/rukovoditeli/mishanina-ekaterina/",
       "type": "Руководитель",
-      "parent": "/kompaniya/rukovoditeli/",
-      "status": "in_progress",
+      "parent": "/company/rukovoditeli/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/rukovoditeli/mishanina-ekaterina/"
     },
     {
       "title": "Юристы",
-      "url": "/kompaniya/yuristy/",
+      "url": "/company/yuristy/",
       "type": "Команда",
       "parent": "/company/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/"
     },
     {
       "title": "Христюк Дмитрий",
-      "url": "/kompaniya/yuristy/khristyuk-dmitriy/",
+      "url": "/company/yuristy/khristyuk-dmitriy/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/khristyuk-dmitriy/"
     },
     {
       "title": "Мельник Полина",
-      "url": "/kompaniya/yuristy/melnik-polina/",
+      "url": "/company/yuristy/melnik-polina/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/melnik-polina/"
     },
     {
       "title": "Мельников Никита",
-      "url": "/kompaniya/yuristy/melnikov-nikita/",
+      "url": "/company/yuristy/melnikov-nikita/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/melnikov-nikita/"
     },
     {
       "title": "Латышева Полина",
-      "url": "/kompaniya/yuristy/latysheva-polina/",
+      "url": "/company/yuristy/latysheva-polina/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/latysheva-polina/"
     },
     {
       "title": "Савватеев Олег",
-      "url": "/kompaniya/yuristy/savvateev-oleg/",
+      "url": "/company/yuristy/savvateev-oleg/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/savvateev-oleg/"
     },
     {
       "title": "Ожерельева Оксана",
-      "url": "/kompaniya/yuristy/ozherelyeva-oksana/",
+      "url": "/company/yuristy/ozherelyeva-oksana/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/ozherelyeva-oksana/"
     },
     {
       "title": "Юриков Анатолий",
-      "url": "/kompaniya/yuristy/yurikov-anatoliy/",
+      "url": "/company/yuristy/yurikov-anatoliy/",
       "type": "Юрист",
-      "parent": "/kompaniya/yuristy/",
-      "status": "in_progress",
+      "parent": "/company/yuristy/",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/yurikov-anatoliy/"
     },
     {
       "title": "Дыньков Дмитрий",
-      "url": "/kompaniya/experts/dmitriy-dinkov/",
+      "url": "/company/experts/dmitriy-dinkov/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/dmitriy-dinkov/"
     },
     {
       "title": "Даушев Вадим",
-      "url": "/kompaniya/experts/daushev-vadim/",
+      "url": "/company/experts/daushev-vadim/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/daushev-vadim/"
     },
     {
       "title": "Васильев Андрей",
-      "url": "/kompaniya/experts/vasilev-andrey/",
+      "url": "/company/experts/vasilev-andrey/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/vasilev-andrey/"
     },
     {
       "title": "Никитин Александр",
-      "url": "/kompaniya/experts/nikitin-aleksandr/",
+      "url": "/company/experts/nikitin-aleksandr/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/nikitin-aleksandr/"
     },
     {
       "title": "Политов Владимир",
-      "url": "/kompaniya/experts/politov-vladimir/",
+      "url": "/company/experts/politov-vladimir/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/politov-vladimir/"
     },
     {
       "title": "Липартелиани Михаил",
-      "url": "/kompaniya/experts/liparteliani-mikhail/",
+      "url": "/company/experts/liparteliani-mikhail/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/liparteliani-mikhail/"
     },
     {
       "title": "Соколов Владимир",
-      "url": "/kompaniya/experts/sokolov-vladimir/",
+      "url": "/company/experts/sokolov-vladimir/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/sokolov-vladimir/"
     },
     {
       "title": "Колесник Максим",
-      "url": "/kompaniya/experts/kolesnik-maksim/",
+      "url": "/company/experts/kolesnik-maksim/",
       "type": "Эксперт",
       "parent": "/company/experts/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/experts/kolesnik-maksim/"
     },
     {
       "title": "Клиентский сервис",
-      "url": "/kompaniya/klientskiy-servis/",
+      "url": "/company/klientskiy-servis/",
       "type": "Команда",
       "parent": "/company/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/klientskiy-servis/"
     },
     {
       "title": "Документы компании",
-      "url": "/kompaniya/dokumenty/",
+      "url": "/company/dokumenty/",
       "type": "Документы",
       "parent": "/company/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kompaniya/dokumenty/"
@@ -1082,7 +1083,7 @@
       "url": "/baza-znaniy/goroda/",
       "type": "Хаб городов",
       "parent": "/baza-znaniy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/baza-znaniy/goroda/"
@@ -1092,7 +1093,7 @@
       "url": "/baza-znaniy/goroda/sankt-peterburg/",
       "type": "Город",
       "parent": "/baza-znaniy/goroda/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/baza-znaniy/goroda/sankt-peterburg/"
@@ -1102,7 +1103,7 @@
       "url": "/baza-znaniy/goroda/kazan/",
       "type": "Город",
       "parent": "/baza-znaniy/goroda/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/baza-znaniy/goroda/kazan/"
@@ -1112,7 +1113,7 @@
       "url": "/baza-znaniy/goroda/nizhniy-novgorod/",
       "type": "Город",
       "parent": "/baza-znaniy/goroda/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/baza-znaniy/goroda/nizhniy-novgorod/"
@@ -1122,7 +1123,7 @@
       "url": "/kto-takoy-spechialist-po-priemke/",
       "type": "Статья",
       "parent": "/news/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/kto-takoy-spechialist-po-priemke/"
@@ -1142,7 +1143,7 @@
       "url": "/zhk/kolskaya-8/",
       "type": "ЖК",
       "parent": "/zhk/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/zhk/kolskaya-8/"
@@ -1162,7 +1163,7 @@
       "url": "/defekty/treshhiny-sten/",
       "type": "Дефект",
       "parent": "/defekty/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/defekty/treshhiny-sten/"
@@ -1172,7 +1173,7 @@
       "url": "/defekty/krivye-okna/",
       "type": "Дефект",
       "parent": "/defekty/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/defekty/krivye-okna/"
@@ -1182,7 +1183,7 @@
       "url": "/defekty/plohaya-ventilyaciya/",
       "type": "Дефект",
       "parent": "/defekty/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/defekty/plohaya-ventilyaciya/"
@@ -1192,7 +1193,7 @@
       "url": "/fz-214/",
       "type": "Термин",
       "parent": "/glossariy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/fz-214/"
@@ -1202,7 +1203,7 @@
       "url": "/ddu/",
       "type": "Термин",
       "parent": "/glossariy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/ddu/"
@@ -1212,7 +1213,7 @@
       "url": "/gost-priemka-kvartir/",
       "type": "Норматив",
       "parent": "/normativy/",
-      "status": "in_progress",
+      "status": "upcoming",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/gost-priemka-kvartir/"

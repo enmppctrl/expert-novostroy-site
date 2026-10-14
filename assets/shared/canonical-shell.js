@@ -1,0 +1,26 @@
+(() => {
+  const fixed = document.getElementById('headerfixed');
+  const updateFixed = () => { if (fixed) fixed.classList.toggle('show', window.scrollY > 160); };
+  window.addEventListener('scroll', updateFixed, { passive: true });
+  updateFixed();
+  const burger = document.getElementById('mobileBurger');
+  const menu = document.getElementById('mobileMenu');
+  const backdrop = document.getElementById('mobileMenuBackdrop');
+  const setMenu = open => {
+    if (!menu) return;
+    menu.classList.toggle('open', open);
+    backdrop?.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    burger?.setAttribute('aria-expanded', String(open));
+  };
+  burger?.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+  backdrop?.addEventListener('click', () => setMenu(false));
+  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  document.querySelectorAll('.nav-toggle').forEach(toggle => toggle.addEventListener('click', () => {
+    const item = toggle.closest('.nav-item');
+    const open = item?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(Boolean(open)));
+  }));
+})();
