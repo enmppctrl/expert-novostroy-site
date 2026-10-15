@@ -1495,7 +1495,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    background: url('/local/templates/stroy-v1/images/loader.png') no-repeat 100% / contain;
+    background: url('/expert-novostroy-site/local/templates/stroy-v1/images/loader.png') no-repeat 100% / contain;
 }
 
 .loader {

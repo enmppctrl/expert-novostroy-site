@@ -22,42 +22,45 @@
       "url": "/uslugi/",
       "type": "Hub",
       "parent": "/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Core",
       "role": "UX router",
       "header": "MEGA-UTILITY",
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/uslugi/",
-      "preview": "uslugi/uslugi.html"
+      "preview": "uslugi/uslugi.html",
+      "status": "published"
     },
     {
       "title": "Приёмка квартиры",
       "url": "/uslugi/priemka-kvartiry/",
       "type": "Pillar",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Приёмка",
       "role": "Traffic engine",
       "header": "MAIN",
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/priemka-kvartiry/",
-      "preview": "uslugi/priemka-kvartiry/priemka-kvartiry.html"
+      "preview": "uslugi/priemka-kvartiry/priemka-kvartiry.html",
+      "status": "published"
     },
     {
       "title": "Дистанционная приёмка",
       "url": "/uslugi/distancionnaya-priyomka/",
       "type": "Service",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Приёмка",
       "role": "High-ticket format",
       "header": "MEGA",
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/distancionnaya-priyomka/",
-      "preview": "uslugi/distancionnaya-priyomka/distancionnaya-priyomka.html"
+      "preview": "uslugi/distancionnaya-priyomka/distancionnaya-priyomka.html",
+      "status": "published"
     },
     {
       "title": "Повторная приёмка",
@@ -165,28 +168,30 @@
       "url": "/uslugi/yuridicheskie-uslugi/",
       "type": "Hub/Pillar",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Legal",
       "role": "Profit engine",
       "header": "MAIN",
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/yuridicheskie-uslugi/",
-      "preview": "uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html"
+      "preview": "uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html",
+      "status": "published"
     },
     {
       "title": "Неустойка по ДДУ",
       "url": "/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/",
       "type": "Service pillar",
       "parent": "/uslugi/yuridicheskie-uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Legal",
       "role": "Early high-value",
       "header": "MEGA",
       "index": "Index",
       "priority": "P0",
       "currentUrl": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/",
-      "preview": "uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/neustoyka-za-prosrochku-peredachi-kvartiry.html"
+      "preview": "uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/neustoyka-za-prosrochku-peredachi-kvartiry.html",
+      "status": "published"
     },
     {
       "title": "Компенсация за строительные недостатки",
@@ -208,14 +213,15 @@
       "url": "/ceny/",
       "type": "Commercial hub",
       "parent": "/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Commercial",
       "role": "CR support",
       "header": "MAIN",
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/ceny/",
-      "preview": "ceny/ceny.html"
+      "preview": "ceny/ceny.html",
+      "status": "published"
     },
     {
       "title": "Результаты",
@@ -271,7 +277,9 @@
       "header": "MEGA",
       "index": "Index",
       "priority": "P1",
-      "preview": "articles/stroitelnaya-ekspertiza/yunino-3001/yunino-3001.html"
+      "preview": "articles/stroitelnaya-ekspertiza/yunino-3001/yunino-3001.html",
+      "status": "review",
+      "updated": "2026-10-15"
     },
     {
       "title": "Кейс приёмки квартиры в ЖК «Юнино»",
@@ -497,14 +505,15 @@
       "url": "/company/",
       "type": "Trust hub",
       "parent": "/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Trust",
       "role": "E-E-A-T",
       "header": "TOPBAR",
       "index": "Index",
       "priority": "P1",
       "currentUrl": "/kompaniya/",
-      "preview": "company/company.html"
+      "preview": "company/company.html",
+      "status": "published"
     },
     {
       "title": "Эксперты",
@@ -578,14 +587,15 @@
       "url": "/company/brands/",
       "type": "Trust content",
       "parent": "/company/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "zone": "Trust",
       "role": "Experience",
       "header": "Company/footer",
       "index": "Index",
       "priority": "P2",
       "currentUrl": "/kompaniya/oborudovanie/",
-      "preview": "company/brands/brands.html"
+      "preview": "company/brands/brands.html",
+      "status": "published"
     },
     {
       "title": "Реквизиты",
@@ -756,10 +766,11 @@
       "url": "/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/",
       "type": "Инструмент",
       "parent": "/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "preview": "uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/kalkulyator.html",
       "legacy": true,
-      "currentUrl": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/"
+      "currentUrl": "/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/kalkulyator/",
+      "status": "published"
     },
     {
       "title": "Застройщик задерживает ключи",
@@ -991,10 +1002,11 @@
       "url": "/pochemu-my/",
       "type": "Доверие",
       "parent": "/company/brands/",
-      "updated": "2026-10-12",
+      "updated": "2026-10-15",
       "preview": "pochemu-my/pochemu-my.html",
       "legacy": true,
-      "currentUrl": "/pochemu-my/"
+      "currentUrl": "/pochemu-my/",
+      "status": "published"
     },
     {
       "title": "Города",
