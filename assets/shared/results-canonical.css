@@ -1,0 +1,93 @@
+/* Единый канонический хедер и внешняя сетка для страниц результатов. */
+:root{--gutter:32px}
+.site-header .header-meta-shell .header-meta{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:clamp(14px,1.5vw,26px)}
+.header-meta-left,.header-meta-right{min-width:0}
+.header-meta-left{gap:17px}
+.header-meta-right{justify-content:flex-end;gap:clamp(12px,1.2vw,23px)}
+.meta-social{flex:0 0 auto;gap:12px}
+.meta-social a{width:24px;height:24px;border-radius:0;opacity:1}
+.meta-social a:hover{opacity:1}
+.meta-social img{width:24px;height:24px}
+.meta-region{gap:8px}
+.meta-page-links{display:flex;align-items:center;gap:clamp(14px,1.45vw,27px);margin-right:clamp(4px,.8vw,14px)}
+.meta-page-links a{color:#24282c;font-size:13px;font-weight:700;text-transform:uppercase;white-space:nowrap;transition:color .18s ease}
+.meta-page-links a:hover{color:var(--deep)}
+.meta-yandex{width:192px;min-width:192px;height:50px;margin-right:auto;display:block;flex:0 0 auto;transition:transform .18s ease}
+.meta-yandex:hover{transform:translateY(-1px)}
+.meta-yandex img{display:block;width:192px;height:50px;object-fit:contain}
+.header-main{padding-inline:var(--gutter)}
+.headerfixed .header-main{padding-inline:var(--gutter)}
+.desktop-header .header-main{height:80px!important;min-height:80px!important;grid-template-columns:minmax(350px,370px) minmax(0,1fr) auto!important}
+.desktop-header .header-brand{gap:12px}
+.desktop-header .logo img{width:140px!important;height:47px!important}
+.desktop-header .header-descriptor{display:grid;width:190px;max-width:190px;padding-left:14px;font-size:13px;line-height:1.35}
+.desktop-header .header-descriptor span{white-space:nowrap}
+
+/* На широком экране контент и хедер начинаются на одной вертикальной оси. */
+.wide{width:100%;max-width:var(--wide);margin-inline:auto;padding-inline:var(--gutter)}
+.case-header > .wide > .case-header-grid,
+.hero-section > .wide > .hero-shell{width:100%;max-width:none;margin-inline:0}
+
+@media(max-width:1400px){
+  .header-meta-right{gap:10px}
+  .meta-page-links{gap:12px;margin-right:0}
+  .meta-social{gap:6px}
+  .meta-social a,.meta-social img{width:22px;height:22px}
+  .meta-contact{display:flex;gap:6px}
+  .meta-contact a{font-size:14px}
+  .meta-order{font-size:10px}
+}
+@media(max-width:1320px){
+  .desktop-header .header-main{grid-template-columns:minmax(330px,340px) minmax(0,1fr) auto!important;gap:16px}
+  .desktop-header .header-brand{gap:10px}
+  .desktop-header .logo img{width:130px!important;height:44px!important}
+  .desktop-header .header-descriptor{width:190px;max-width:190px;padding-left:12px;font-size:12px;line-height:1.35}
+}
+@media(max-width:1200px){
+  .header-meta-left .meta-region{display:none}
+}
+@media(max-width:1180px){
+  .site-header .header-meta-shell .header-meta{gap:12px}
+  .header-meta-left{gap:12px}
+  .header-meta-right{gap:11px}
+  .meta-social{gap:6px}
+  .meta-social a,.meta-social img{width:22px;height:22px}
+  .meta-page-links{gap:12px;margin-right:0}
+  .account-link{gap:5px;font-size:11px}
+  .meta-contact{display:flex;gap:6px}
+  .meta-contact a{font-size:15px}
+  .meta-order{font-size:10px}
+  .desktop-header .header-main{grid-template-columns:minmax(314px,320px) minmax(0,1fr) auto!important;gap:10px}
+  .desktop-header .header-brand{gap:8px}
+  .desktop-header .logo img{width:122px!important;height:41px!important}
+  .desktop-header .header-descriptor{font-size:11.5px;width:185px;max-width:185px;padding-left:10px}
+}
+@media(max-width:1080px){
+  .meta-order{display:none}
+}
+@media(max-width:1500px){
+  .site-header .header-meta-shell .header-meta{gap:12px}
+  .header-meta-left{gap:10px}
+  .header-meta-right{gap:12px}
+  .meta-social{gap:5px}
+  .meta-social a,.meta-social img{width:20px;height:20px}
+  .meta-region{font-size:11px}
+  .meta-page-links{gap:10px;margin-right:0}
+  .meta-page-links a{font-size:11px}
+  .meta-yandex{width:160px;min-width:160px;height:42px}
+  .meta-yandex img{width:160px;height:42px}
+  .meta-contact a{font-size:14px}
+  .meta-order{font-size:10px}
+  .account-link{gap:0;font-size:0}
+}
+@media(max-width:720px){
+  .case-object,.object-panel,.report-object{min-width:0}
+  .case-object .object-fact,
+  .object-panel .object-fact,
+  .report-object .report-fact{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .case-object .object-fact dd,
+  .object-panel .object-fact strong,
+  .report-object .report-fact strong{min-width:0;overflow-wrap:anywhere}
+  .expert-inline>div,.report-specialist-copy{min-width:0}
+  .expert-inline p,.report-specialist-copy p{overflow-wrap:anywhere}
+}
