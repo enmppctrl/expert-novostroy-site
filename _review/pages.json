@@ -723,7 +723,8 @@
       "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
       "legacy": true,
-      "currentUrl": "/primer-akta-osmotra/"
+      "currentUrl": "/primer-akta-osmotra/",
+      "status": "published"
     },
     {
       "title": "Пример альбома осмотра",
@@ -732,7 +733,8 @@
       "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
       "legacy": true,
-      "currentUrl": "/primer-alboma-osmotra/"
+      "currentUrl": "/primer-alboma-osmotra/",
+      "status": "published"
     },
     {
       "title": "Пример акта для ПИК",
@@ -741,7 +743,8 @@
       "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
       "legacy": true,
-      "currentUrl": "/primer-akt-dlya-pik/"
+      "currentUrl": "/primer-akt-dlya-pik/",
+      "status": "published"
     },
     {
       "title": "Заключение по тепловизору",
