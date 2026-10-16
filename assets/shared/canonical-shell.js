@@ -1,11 +1,13 @@
 (() => {
   const fixed = document.getElementById('headerfixed');
+  const canonicalMobileHeader = document.querySelector('body.canonical-header-page .mobile-header');
   const updateFixed = () => {
     if (fixed) {
       const visible = window.scrollY > 160;
       fixed.classList.toggle('show', visible);
       fixed.setAttribute('aria-hidden', String(!visible));
     }
+    canonicalMobileHeader?.classList.toggle('is-scrolled', window.scrollY > 0);
   };
   window.addEventListener('scroll', updateFixed, { passive: true });
   updateFixed();

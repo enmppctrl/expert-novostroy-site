@@ -65,3 +65,72 @@ nav[aria-label="breadcrumb"] .breadcrumb-item a{color:#5D8AA3;font-weight:500}na
 @media(max-width:992px){body.menu-open{overflow:hidden}.desktop-header,.headerfixed{display:none}.mobile-header{position:sticky;top:0;z-index:1100;display:grid;grid-template-columns:70px 1fr 70px;align-items:center;gap:8px;min-height:70px;padding:10px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #edf1f3;box-shadow:0 3px 7px rgba(0,0,0,.05)}.mobile-header>.mobile-icon-btn{justify-self:start}.mobile-header .logo{min-width:0}.mobile-header .logo img{width:150px;height:50px;margin:auto}.mobile-icons{justify-self:end;display:flex;align-items:center;gap:8px;color:#888}.mobile-icon-btn{width:28px;height:32px;border:0;background:transparent;padding:0;color:#777;display:grid;place-items:center;cursor:pointer}.mobile-icon-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.mobile-menu-backdrop{display:block;position:fixed;inset:70px 0 0;z-index:1075;background:rgba(38,49,61,.36);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}.mobile-menu-backdrop.open{opacity:1;visibility:visible;pointer-events:auto}.mobile-menu{display:block;position:fixed;top:70px;bottom:0;left:0;z-index:1090;width:min(420px,calc(100% - 34px));background:#fff;box-shadow:18px 0 40px rgba(38,49,61,.16);padding:0;overflow-y:auto;transform:translateX(-105%);transition:transform .28s ease}.mobile-menu.open{transform:translateX(0)}.mobile-menu-inner{padding:22px 20px 28px}.mobile-menu-intro{padding:17px 18px;border-radius:18px;background:linear-gradient(135deg,#EEF8FC,#fff);border:1px solid var(--line)}.mobile-menu-intro strong{display:block;font-size:16px;color:var(--heading)}.mobile-menu-intro span{display:block;margin-top:6px;font-size:12px;line-height:1.45;color:var(--body)}.mobile-nav{display:grid;margin-top:13px}.mobile-nav-group{border-bottom:1px solid #EDF2F5;padding:8px 0}.mobile-nav-primary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 2px;font-size:15px;font-weight:700;color:var(--heading)}.mobile-nav-primary span:last-child{color:var(--orange)}.mobile-nav-sub{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;padding:0 0 10px}.mobile-nav-sub a{padding:6px 2px;font-size:12px;line-height:1.35;color:#6E7D89}.mobile-nav-simple{padding:13px 2px;border-bottom:1px solid #EDF2F5;font-size:14px;font-weight:700;color:var(--heading)}.mobile-menu-footer{display:grid;gap:10px;margin-top:20px}.mobile-menu-phone{font-size:18px;font-weight:700;color:#333}.mobile-menu-footer .btn{width:100%;border-radius:4px;background:var(--deep);color:#fff}.mobile-menu-note{font-size:11px;line-height:1.45;color:#87939C}.canonical-breadcrumbs__inner{padding-inline:20px}}
 @media(max-width:720px){.footer-content-top{padding:56px 24px 42px}.footer-nav{flex-direction:column;align-items:flex-start;gap:17px}.footer-contacts{margin-top:25px}.footer-content-bottom{flex-direction:column;gap:20px;padding:16px 24px}}
 @media(prefers-reduced-motion:reduce){.headerfixed,.nav-link:after,.nav-toggle svg,.nav-dropdown,.mobile-menu,.mobile-menu-backdrop,.footer-social img{transition:none!important}}
+/* Shared top rhythm for Header, breadcrumbs, and the first Hero */
+.canonical-header-page .canonical-breadcrumbs,.canonical-header-page .breadcrumbs-section,.canonical-header-page .breadcrumb-shell,body.canonical-header-page>.breadcrumbs{padding-top:24px!important}
+.canonical-header-page section:has(>.wrapper_max_width>nav[aria-label="breadcrumb"]){padding-top:24px!important}
+.canonical-header-page .breadcrumb-shell+main>.hero,.canonical-header-page .breadcrumbs-section+main>.hero-section,body.canonical-header-page>.breadcrumbs+main>.hero,.canonical-header-page .canonical-breadcrumbs+main>.canonical-top-hero{padding-top:0!important}
+.canonical-header-page main>.breadcrumbs-section+.hero-section{padding-top:0!important}
+.canonical-header-page .breadcrumbs-section .wide.breadcrumbs{padding-bottom:0!important}
+
+/* Canonical breadcrumbs: one type scale, spacing system, and SVG chevron */
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:0!important;
+  margin:0!important;
+  padding:0 0 15px!important;
+  list-style:none!important;
+  font-family:Montserrat,Arial,sans-serif!important;
+  font-size:13px!important;
+  font-weight:400!important;
+  line-height:1.43!important;
+  color:#8A96A1!important;
+  letter-spacing:normal!important;
+  text-transform:none!important;
+}
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item{
+  display:flex!important;
+  align-items:center!important;
+  gap:0!important;
+  margin:0!important;
+  padding:0!important;
+  font:400 13px/1.43 Montserrat,Arial,sans-serif!important;
+  color:#8A96A1!important;
+  letter-spacing:normal!important;
+  text-transform:none!important;
+}
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item>a,
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item>span{
+  margin:0!important;
+  padding:0!important;
+  font:500 13px/1.43 Montserrat,Arial,sans-serif!important;
+  color:#5D8AA3!important;
+  letter-spacing:normal!important;
+  text-transform:none!important;
+}
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item.active,
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item[aria-current="page"]{
+  font:400 13px/1.43 Montserrat,Arial,sans-serif!important;
+  color:rgba(33,37,41,.75)!important;
+}
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item.active>*,
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item[aria-current="page"]>*{
+  font:400 13px/1.43 Montserrat,Arial,sans-serif!important;
+  color:rgba(33,37,41,.75)!important;
+}
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item+.breadcrumb-item::before{
+  content:none!important;
+  display:none!important;
+}
+body.canonical-header-page nav[aria-label="breadcrumb"] ol.breadcrumb>.breadcrumb-item:not(:last-child)::after{
+  content:""!important;
+  display:block!important;
+  flex:0 0 8px!important;
+  width:8px!important;
+  height:8px!important;
+  margin:0 5px!important;
+  padding:0!important;
+  border:0!important;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0 1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4Z' fill='%23000'/%3E%3C/svg%3E") center/8px 8px no-repeat!important;
+}
