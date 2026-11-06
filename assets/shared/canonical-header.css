@@ -1,21 +1,39 @@
 body.canonical-header-page .site-header {
   position: relative;
   z-index: 100;
-  width: 100vw;
-  margin-left: calc((100% - 100vw) / 2);
+  width: 100%;
+  margin-left: 0;
   padding-top: 0;
   border: 0;
   background: #EEF8FC;
   box-shadow: none;
 }
 
+body.canonical-header-page .site-header,
+body.canonical-header-page .site-header *,
+body.canonical-header-page .site-header *::before,
+body.canonical-header-page .site-header *::after,
+body.canonical-header-page .headerfixed,
+body.canonical-header-page .headerfixed *,
+body.canonical-header-page .headerfixed *::before,
+body.canonical-header-page .headerfixed *::after,
+body.canonical-header-page .mobile-header,
+body.canonical-header-page .mobile-header *,
+body.canonical-header-page .mobile-header *::before,
+body.canonical-header-page .mobile-header *::after,
+body.canonical-header-page .mobile-menu,
+body.canonical-header-page .mobile-menu *,
+body.canonical-header-page .mobile-menu *::before,
+body.canonical-header-page .mobile-menu *::after {
+  box-sizing: border-box;
+}
+
 body.canonical-header-page .canonical-header-panel {
   position: relative;
   z-index: 100;
   box-sizing: border-box;
-  width: min(1700px, calc(100vw - 64px));
-  margin: 0;
-  margin-left: calc((100% - min(1700px, calc(100vw - 64px))) / 2);
+  width: min(1700px, calc(100% - 64px));
+  margin: 0 auto;
   overflow: visible;
   border: 1px solid #DCEAF1;
   border-top: 0;
@@ -451,6 +469,7 @@ body.canonical-header-page .site-header .btn-header {
   height: 48px !important;
   min-height: 48px !important;
   padding: 0 19px !important;
+  flex: 0 0 auto !important;
 }
 
 body.canonical-header-page .headerfixed .btn-header {
@@ -458,6 +477,7 @@ body.canonical-header-page .headerfixed .btn-header {
   height: 46px !important;
   min-height: 46px !important;
   padding: 0 17px !important;
+  flex: 0 0 auto !important;
 }
 
 body.canonical-header-page .mobile-menu-footer .btn {

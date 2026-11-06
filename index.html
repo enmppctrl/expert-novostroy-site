@@ -16,20 +16,12 @@
       --review-bg: #e8f3ff;
       --review-border: #76aee0;
       --review-text: #245f96;
-      --revision-bg: #fff0e8;
-      --revision-border: #e79a6b;
-      --revision-text: #a84d20;
-      --upcoming-bg: #f1ebff;
-      --upcoming-border: #b9a2ea;
-      --upcoming-text: #6546a3;
       --approved-bg: #e6f6eb;
       --approved-border: #74c28e;
       --approved-text: #23733d;
       --published-bg: #dfff72;
       --published-border: #a5c928;
       --published-text: #3e5800;
-      --work-bg: #f0f3f5;
-      --work-text: #596673;
       --shadow: 0 12px 34px rgba(35, 52, 67, .08);
       --radius: 18px;
     }
@@ -42,18 +34,15 @@
     h1 { margin-bottom: 8px; font-size: clamp(32px, 4vw, 50px); line-height: 1.04; }
     h2 { font-size: clamp(25px, 2.5vw, 34px); }
     .subtitle, .updated, .section-copy { color: var(--muted); font-size: 14px; line-height: 1.55; }
-    .filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+    .filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
     .filter-card { min-height: 54px; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 16px; background: var(--panel); color: var(--text); text-align: left; cursor: pointer; box-shadow: var(--shadow); transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease; }
     .filter-card:hover { transform: translateY(-2px); }
     .filter-card:focus-visible { outline: 3px solid rgba(93, 138, 163, .28); outline-offset: 2px; }
     .filter-card strong { display: inline-block; flex: 0 0 auto; margin: 0; font-size: 26px; line-height: 1; }
     .filter-card span { color: var(--muted); font-size: 13px; font-weight: 700; line-height: 1.15; }
-    .filter-card[data-filter="in_progress"] { background: var(--work-bg); }
-    .filter-card[data-filter="upcoming"] { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
     .filter-card[data-filter="review"] { border-color: var(--review-border); background: var(--review-bg); }
     .filter-card[data-filter="published"] { border-color: var(--published-border); background: var(--published-bg); }
     .filter-card.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(93, 138, 163, .16), var(--shadow); }
-    .filter-card[data-filter="upcoming"].active { border-color: var(--upcoming-text); }
     .filter-card[data-filter="review"].active { border-color: var(--review-text); }
     .filter-card[data-filter="published"].active { border-color: var(--published-text); }
     .view-tabs { display: flex; gap: 8px; margin: 4px 0 20px; border-bottom: 1px solid var(--line); }
@@ -128,8 +117,6 @@
     a.node:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
     .node.review { border-color: var(--review-border); background: var(--review-bg); }
     .node.approved { border-color: var(--approved-border); background: var(--approved-bg); }
-    .node.upcoming { border-color: var(--upcoming-border); background: var(--upcoming-bg); }
-    .node.needs_revision { border-color: var(--revision-border); background: var(--revision-bg); }
     .node.published { border-color: var(--published-border); background: var(--published-bg); }
     .node-title, .node-url { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .node-title { font-size: 12px; line-height: 14px; font-weight: 700; }
@@ -138,6 +125,9 @@
     .children:before { position: absolute; top: 0; bottom: 7px; left: 0; width: 1px; background: #cbd5dc; content: ""; }
     .children > .tree-branch { position: relative; }
     .children > .tree-branch:before { position: absolute; top: 20px; left: -12px; width: 12px; height: 1px; background: #cbd5dc; content: ""; }
+    .children-collapsible { margin: 7px 0 0 10px; padding-left: 12px; border-left: 1px solid #cbd5dc; }
+    .children-collapsible > summary { width: max-content; max-width: 220px; padding: 6px 9px; border: 1px solid var(--line); border-radius: 9px; background: #f7fafb; color: var(--muted); font-size: 11px; font-weight: 700; cursor: pointer; }
+    .children-collapsible[open] > summary { margin-bottom: 7px; }
     .error { padding: 30px 20px; text-align: center; color: #a33737; }
     footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
     @media (max-width: 900px) {
@@ -219,12 +209,12 @@
         <p class="v2-section-copy">Pillar-страницы задают основные направления. Вложенные карточки показывают supporting-услуги, новые сущности и страницы, которые не должны конкурировать с основными ветками.</p>
         <div class="v2-branch-grid">
           <article class="v2-branch"><div class="v2-branch-head"><strong>Приёмка</strong><span>Traffic engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Приёмка квартиры</strong><span class="url">/uslugi/priemka-kvartiry/</span></div><div class="v2-branch-node"><strong>Дистанционная приёмка</strong><span class="url">/uslugi/distancionnaya-priyomka/</span></div><div class="v2-branch-node"><strong>Повторная, коммерческие помещения, кладовые</strong><small>Сначала карточки/anchors, отдельный URL только после семантики</small></div><div class="v2-branch-node footer"><strong>Оценка · тепловизор · стяжка · AutoCAD</strong><small>Дополнительные опции внутри mega-menu</small></div></div></article>
-          <article class="v2-branch"><div class="v2-branch-head"><strong>Экспертиза</strong><span>Proof / high-ticket engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main new"><strong>Строительная экспертиза</strong><span class="url">/uslugi/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node new"><strong>Примеры экспертиз</strong><span class="url">/articles/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node new"><strong>Дефекты</strong><span class="url">/defekty/</span></div><div class="v2-branch-node new"><strong>Нормативы</strong><span class="url">/normativy/</span></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Экспертиза</strong><span>Proof / high-ticket engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main new"><strong>Строительная экспертиза</strong><span class="url">/uslugi/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node new"><strong>Примеры экспертиз</strong><span class="url">/articles/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node new"><strong>Дефекты</strong><span class="url">/baza-znaniy/defekty/</span></div><div class="v2-branch-node new"><strong>Нормативы</strong><span class="url">/baza-znaniy/normativy/</span></div></div></article>
           <article class="v2-branch"><div class="v2-branch-head"><strong>Споры с застройщиком</strong><span>Profit engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Все ситуации</strong><span class="url">/uslugi/yuridicheskie-uslugi/</span></div><div class="v2-branch-node"><strong>Неустойка по ДДУ</strong><span class="url">.../neustoyka-za-prosrochku-peredachi-kvartiry/</span></div><div class="v2-branch-node"><strong>Компенсация за недостатки</strong><span class="url">.../vzyskanie-kompensatsii-za-stroitelnye-nedostatki/</span></div><div class="v2-branch-node"><strong>Судебные решения</strong><span class="url">/articles/sudebnye-resheniya/</span></div></div></article>
           <article class="v2-branch"><div class="v2-branch-head"><strong>Цены</strong><span>Commercial support · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Единый прайс и калькуляторы</strong><span class="url">/ceny/</span></div><div class="v2-branch-node"><strong>Приёмка · Экспертиза · Legal</strong><small>Стоимость и модели оплаты раскрываются внутри общего прайса</small></div></div></article>
           <article class="v2-branch"><div class="v2-branch-head"><strong>Результаты</strong><span>Proof hub · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main"><strong>Все результаты</strong><span class="url">/articles/</span></div><div class="v2-branch-node"><strong>Приёмка квартир</strong><span class="url">/articles/priemka-kvartir/</span></div><div class="v2-branch-node new"><strong>Строительная экспертиза</strong><span class="url">/articles/stroitelnaya-ekspertiza/</span></div><div class="v2-branch-node"><strong>Судебные решения</strong><span class="url">/articles/sudebnye-resheniya/</span></div></div></article>
           <article class="v2-branch"><div class="v2-branch-head"><strong>База знаний</strong><span>Authority / AI-GEO engine · MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node main new"><strong>Главная БЗ</strong><span class="url">/baza-znaniy/</span></div><div class="v2-branch-node new"><strong>До ключей · Приёмка · Недостатки · Споры</strong><small>Маршруты по ситуации клиента</small></div><div class="v2-branch-node new"><strong>Документы · навигатор услуг</strong><small>Когда нужна → что получите → цена/модель → куда перейти</small></div><div class="v2-branch-node new"><strong>ЖК · застройщики · дефекты · нормы · глоссарий</strong><small>Сущности подключаются после накопления фактуры</small></div></div></article>
-          <article class="v2-branch"><div class="v2-branch-head"><strong>Компания / trust</strong><span>TOPBAR + footer</span></div><div class="v2-branch-body"><div class="v2-branch-node"><strong>О компании</strong><span class="url">/company/</span></div><div class="v2-branch-node new"><strong>Эксперты</strong><span class="url">/company/experts/</span></div><div class="v2-branch-node"><strong>Отзывы · Контакты</strong><span class="url">/company/reviews/ · /contacts/</span></div><div class="v2-branch-node footer"><strong>История · лицензии · оборудование · реквизиты</strong><small>Внутренняя навигация Company / footer</small></div></div></article>
+          <article class="v2-branch"><div class="v2-branch-head"><strong>Компания / trust</strong><span>TOPBAR + footer</span></div><div class="v2-branch-body"><div class="v2-branch-node"><strong>О компании</strong><span class="url">/company/</span></div><div class="v2-branch-node new"><strong>Руководители · Юристы · Эксперты · Клиентский сервис</strong><span class="url">/company/rukovoditeli/ · /company/yuristy/ · /company/experts/ · /company/klientskiy-servis/</span></div><div class="v2-branch-node"><strong>Отзывы · Контакты</strong><span class="url">/company/reviews/ · /contacts/</span></div><div class="v2-branch-node footer"><strong>Лицензии · оборудование · реквизиты</strong><small>Внутренняя навигация Company / footer</small></div></div></article>
           <article class="v2-branch"><div class="v2-branch-head"><strong>Supporting / legacy</strong><span>Не конкурирует с MAIN</span></div><div class="v2-branch-body"><div class="v2-branch-node footer"><strong>Акции · Вместе дешевле · Приведи друга</strong><span class="url">/sales/ · /vmeste/ · /privedi-druga/</span></div><div class="v2-branch-node footer"><strong>Статьи / поток обновлений</strong><span class="url">/news/</span></div><div class="v2-branch-node footer"><strong>Оферта</strong><span class="url">/oferta/</span></div><div class="v2-branch-node footer"><strong>FAQ — P0 аудит</strong><span class="url">/info/faq/</span></div></div></article>
         </div>
       </section>
@@ -255,7 +245,19 @@
         </article>
         <article class="note-card">
           <h3>Компания</h3>
-          <p>Довести до рабочей архитектуры страницы сотрудников и раздел «Все документы компании», затем проверить кликабельность карточек команды и документальных ссылок.</p>
+          <p>Развивать только сборные разделы: создать страницы руководителей и клиентского сервиса, поддерживать общие страницы юристов и экспертов. Отдельно подготовить «Все документы компании» и проверить ссылки с карточек команды и документов.</p>
+        </article>
+        <article class="note-card">
+          <h3>CRM-формы услуг</h3>
+          <p>Для приёмки, экспертизы и юридических услуг согласовать единый набор обязательных и необязательных полей, тему обращения, источник страницы и передачу выбранной услуги в CRM.</p>
+        </article>
+        <article class="note-card">
+          <h3>Перелинковка</h3>
+          <p>Связать услуги с релевантными разделами базы знаний и результатами; ЖК — с застройщиками, приёмкой и кейсами; отзывы — с услугами; страницы компании — с лицензиями, контактами и отзывами.</p>
+        </article>
+        <article class="note-card">
+          <h3>Акции</h3>
+          <p>На странице «Акции» собрать действующие предложения, а «Вместе дешевле» и «Приведи друга» связать с ней взаимно. Перед публикацией сверять условия по актуальному источнику и события заявок в CRM.</p>
         </article>
         <article class="note-card">
           <h3>Застройщик ПИК</h3>
@@ -299,16 +301,19 @@
       const migration = "";
       const details = [page.type, page.action, page.currentUrl && page.currentUrl !== page.url ? `Текущий URL: ${page.currentUrl}` : ""].filter(Boolean).join(" · ");
       const title = details ? ` title="${escapeHtml(details)}"` : "";
+      const childNodes = children.map(child => nodeMarkup(child, visiblePages)).join("");
+      const childMarkup = children.length > 300
+        ? `<details class="children-collapsible"><summary>Страницы ЖК · ${children.length}</summary><div class="children">${childNodes}</div></details>`
+        : children.length ? `<div class="children">${childNodes}</div>` : "";
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}${migration}"${link}${title}>
         <span class="node-title">${escapeHtml(page.title)}</span>
         <span class="node-url">${escapeHtml(page.url)}</span>
-      </${tag}>${children.length ? `<div class="children">${children.map(child => nodeMarkup(child, visiblePages)).join("")}</div>` : ""}</div>`;
+      </${tag}>${childMarkup}</div>`;
     }
 
     function renderFilters() {
       const options = [
         { value: "all", label: "все страницы" },
-        { value: "upcoming", label: "скоро в работу" },
         { value: "review", label: "к согласованию" },
         { value: "published", label: "опубликовано" }
       ];

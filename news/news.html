@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новости — Эксперт Новострой</title>
+  <meta name="description" content="Новости и статьи Эксперт Новострой о квартирах в новостройках, приёмке, документах и взаимодействии с застройщиками.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://expert-novostroy.ru/news/">
+  <meta name="theme-color" content="#F4F8FB">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Новости — Эксперт Новострой">
+  <meta property="og:description" content="Новости и статьи Эксперт Новострой о квартирах в новостройках, приёмке, документах и взаимодействии с застройщиками.">
+  <meta property="og:url" content="https://expert-novostroy.ru/news/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/shared/canonical-shell.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://expert-novostroy.ru/#organization","name":"Эксперт Новострой","url":"https://expert-novostroy.ru/"},{"@type":"CollectionPage","@id":"https://expert-novostroy.ru/news/#webpage","url":"https://expert-novostroy.ru/news/","name":"Новости","description":"Новости и статьи Эксперт Новострой о квартирах в новостройках, приёмке, документах и взаимодействии с застройщиками.","isPartOf":{"@id":"https://expert-novostroy.ru/#organization"},"inLanguage":"ru-RU"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://expert-novostroy.ru/"},{"@type":"ListItem","position":2,"name":"Новости","item":"https://expert-novostroy.ru/news/"}]}]}</script>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 400;
+    color: #566677;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .news-page {
+    color: #5D6C7C;
+    background: #fff;
+    font-family: Montserrat, Arial, sans-serif;
+  }
+
+  .news-page h1,
+  .news-page h2 {
+    margin: 0;
+  }
+
+  .news-page a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .news-page .en-wide {
+    width: 100%;
+    max-width: 1764px;
+    margin: 0 auto;
+    padding-inline: 32px;
+  }
+
+  .news-archive {
+    padding: 0 0 70px;
+    background: #F4F8FB;
+  }
+
+  .news-archive__heading {
+    padding: 18px 0 26px;
+  }
+
+  .news-page .news-archive__heading h1 {
+    color: #2F3947;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.03;
+    letter-spacing: -.045em;
+  }
+
+  .news-archive__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 34px;
+  }
+
+  .news-page .news-archive__filter {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 17px;
+    border: 1px solid #DCE8F0;
+    border-radius: 999px;
+    background: #fff;
+    color: #5D8AA3;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: color .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .news-page .news-archive__filter:hover,
+  .news-page .news-archive__filter:focus-visible {
+    border-color: #5D8AA3;
+    background: #F4F8FB;
+  }
+
+  .news-page .news-archive__filter.is-active {
+    border-color: #5D8AA3;
+    background: #5D8AA3;
+    color: #fff;
+  }
+
+  .news-archive__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .news-archive__item {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    aspect-ratio: 3 / 2;
+    border: 1px solid #DCE8F0;
+    border-radius: 24px;
+    background: #303B49;
+    box-shadow: 0 12px 30px rgba(66, 76, 92, .1);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+
+  .news-archive__item:hover,
+  .news-archive__item:focus-within {
+    transform: translateY(-3px);
+    border-color: #C7DCE7;
+    box-shadow: 0 16px 34px rgba(66, 76, 92, .18);
+  }
+
+  .news-archive__item-link {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 25px;
+    color: #fff !important;
+  }
+
+  .news-archive__item-link::after {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(34, 47, 61, .28) 0%, rgba(34, 47, 61, .2) 32%, rgba(25, 35, 47, .86) 100%);
+    content: "";
+  }
+
+  .news-archive__image {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .35s ease;
+  }
+
+  .news-archive__item:hover .news-archive__image,
+  .news-archive__item:focus-within .news-archive__image {
+    transform: scale(1.04);
+  }
+
+  .news-page .news-archive__item h2 {
+    position: relative;
+    z-index: 2;
+    max-width: 96%;
+    margin-top: auto;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.28;
+    letter-spacing: -.015em;
+    text-shadow: 0 2px 14px rgba(12, 20, 29, .35);
+  }
+
+  .news-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 34px;
+  }
+
+  .news-page .news-pagination__arrow {
+    display: inline-flex;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DCE8F0;
+    border-radius: 50%;
+    color: #5D8AA3;
+    font-size: 22px;
+    line-height: 1;
+    transition: color .18s ease, background .18s ease, border-color .18s ease;
+  }
+
+  .news-page .news-pagination__arrow:hover,
+  .news-page .news-pagination__arrow:focus-visible {
+    border-color: #5D8AA3;
+    background: #F4F8FB;
+  }
+
+  .news-pagination__arrow.is-disabled {
+    color: #A8B3BC;
+    cursor: default;
+  }
+
+  @media (max-width: 1000px) {
+    .news-archive__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 720px) {
+    .news-page .en-wide {
+      padding-inline: 20px;
+    }
+
+    .news-archive {
+      padding-bottom: 56px;
+    }
+
+    .news-archive__heading {
+      padding: 10px 0 22px;
+    }
+
+    .news-page .news-archive__heading h1 {
+      font-size: 35px;
+      line-height: 1.08;
+    }
+
+    .news-archive__filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin: 0 -20px 26px;
+      padding: 0 20px 5px;
+      scrollbar-width: none;
+    }
+
+    .news-archive__filters::-webkit-scrollbar {
+      display: none;
+    }
+
+    .news-page .news-archive__filter {
+      flex: 0 0 auto;
+      min-height: 40px;
+      padding-inline: 15px;
+      font-size: 13px;
+    }
+
+    .news-archive__grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .news-archive__item {
+      aspect-ratio: 3 / 2;
+      border-radius: 20px;
+    }
+
+    .news-archive__item-link {
+      padding: 21px;
+    }
+
+    .news-page .news-archive__item h2 {
+      font-size: 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .news-archive__item,
+    .news-archive__image,
+    .news-pagination__arrow,
+    .news-archive__filter {
+      transition: none;
+    }
+  }
+</style>
+<link rel="stylesheet" href="../assets/shared/canonical-header.css">
+</head>
+<body class="canonical-header-page">
+  <header class="site-header desktop-header">
+  <div class="canonical-header-panel">
+  <div class="header-meta-shell"><div class="en-wide header-meta"><div class="header-meta-left"><div class="meta-social" aria-label="Социальные сети"><a href="https://max.ru/id730291384501_biz" target="_blank" rel="nofollow noopener" aria-label="MAX"><img src="/expert-novostroy-site/assets/shared/social-icon-max.svg" alt=""></a><a href="https://vk.com/expert.novostroy" target="_blank" rel="nofollow noopener" aria-label="ВКонтакте"><img src="/expert-novostroy-site/assets/shared/social-icon-vk.svg" alt=""></a><a href="https://telegram.me/expert_novostroy" target="_blank" rel="nofollow noopener" aria-label="Telegram"><img src="/expert-novostroy-site/assets/shared/social-icon-telegram.svg" alt=""></a><a href="https://www.youtube.com/channel/UCz4Nv5qYIMy-h5ppZ4tGsdA" target="_blank" rel="nofollow noopener" aria-label="YouTube"><img src="/expert-novostroy-site/assets/shared/social-icon-youtube.svg" alt=""></a><a href="https://wa.me/74951528580" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><img src="/expert-novostroy-site/assets/shared/social-icon-whatsapp.svg" alt=""></a></div><span class="meta-region"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.3 6-12a6 6 0 1 0-12 0c0 6.7 6 12 6 12Z"/><circle cx="12" cy="9" r="2"/></svg>Москва и Московская область</span></div><a class="meta-yandex" href="/expert-novostroy-site/company/reviews/reviews.html"><img src="/expert-novostroy-site/assets/shared/yandex-rating.svg" alt="Рейтинг организации «Эксперт Новострой» на Яндексе — 5.0; отзывы клиентов"></a><div class="header-meta-right"><nav class="meta-page-links" aria-label="О компании и контакты"><a href="/expert-novostroy-site/company/company.html">О компании</a><a href="/expert-novostroy-site/contacts/contacts.html">Контакты</a></nav><span class="meta-contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3l3 5-2.2 2.2a15 15 0 0 0 6 6L16 14l5 3c-.7 2.6-2.4 4-5 4C9.4 19.8 4.2 14.6 3 8c0-2.6 1.4-4.3 4-5Z"/></svg><a href="tel:+74951528580">+7 (495) 152-85-80</a></span><a class="meta-order" href="/expert-novostroy-site/contacts/contacts.html">Заказать звонок</a><a class="account-link" href="https://expert-novostroy.ru/cabinet/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c1-4.6 3.5-7 7.5-7s6.5 2.4 7.5 7"/></svg>Личный кабинет</a></div></div></div>
+  <div class="en-wide header-main"><a class="header-brand" href="/expert-novostroy-site/glavnaya/glavnaya.html"><span class="logo"><img src="/expert-novostroy-site/assets/shared/logo.webp" alt="Эксперт Новострой"></span><span class="header-descriptor"><span>Инженерно-юридическая</span><span>компания по новостройкам</span></span></a><nav class="desktop-nav" aria-label="Основная навигация">
+    <div class="nav-item nav-item-primary has-menu"><a class="nav-link" href="/expert-novostroy-site/uslugi/priemka-kvartiry/priemka-kvartiry.html"><span class="nav-dot" aria-hidden="true"></span>Приёмка</a><button class="nav-toggle" type="button" aria-label="Открыть меню «Приёмка»" aria-expanded="false"><svg viewBox="0 0 10 6" aria-hidden="true"><path d="m1 1 4 4 4-4"/></svg></button><div class="nav-dropdown"><div class="nav-dropdown-card"><div class="nav-dropdown-head"><strong>Приёмка квартиры</strong><span>Проверка квартиры, фиксация недостатков и понятный результат осмотра.</span></div><div class="nav-dropdown-links"><a href="/expert-novostroy-site/uslugi/priemka-kvartiry/priemka-kvartiry.html"><strong>Приёмка квартиры</strong><small>Основная услуга</small></a><a href="/expert-novostroy-site/uslugi/distancionnaya-priyomka/distancionnaya-priyomka.html"><strong>Дистанционная приёмка</strong><small>Без личного присутствия</small></a><a href="/expert-novostroy-site/uslugi/uslugi.html#repeat"><strong>Повторная приёмка</strong><small>Контроль устранения</small></a><a href="https://expert-novostroy.ru/uslugi/otsenka/"><strong>Оценка для банка</strong><small>Для ипотеки и залога</small></a><a class="nav-dropdown-all" href="#calculator">Рассчитать стоимость приёмки →</a></div></div></div></div>
+    <div class="nav-item has-menu"><a class="nav-link" href="/expert-novostroy-site/uslugi/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html">Экспертиза</a><button class="nav-toggle" type="button" aria-label="Открыть меню «Экспертиза»" aria-expanded="false"><svg viewBox="0 0 10 6" aria-hidden="true"><path d="m1 1 4 4 4-4"/></svg></button><div class="nav-dropdown"><div class="nav-dropdown-card"><div class="nav-dropdown-head"><strong>Строительная экспертиза</strong><span>Техническая доказательная база для спорных и значимых недостатков.</span></div><div class="nav-dropdown-links"><a href="/expert-novostroy-site/uslugi/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html"><strong>Строительная экспертиза</strong><small>Состав и порядок работы</small></a><a href="/expert-novostroy-site/articles/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html"><strong>Экспертные материалы</strong><small>Примеры результатов</small></a><a href="/expert-novostroy-site/baza-znaniy/ekspertiza/ekspertiza.html"><strong>Когда нужен эксперт</strong><small>Материалы базы знаний</small></a><a class="nav-dropdown-all" href="/expert-novostroy-site/contacts/contacts.html">Разобрать техническую задачу →</a></div></div></div></div>
+    <div class="nav-item has-menu"><a class="nav-link" href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html"><span class="nav-long">Споры с застройщиком</span><span class="nav-short">Споры</span></a><button class="nav-toggle" type="button" aria-label="Открыть меню «Споры с застройщиком»" aria-expanded="false"><svg viewBox="0 0 10 6" aria-hidden="true"><path d="m1 1 4 4 4-4"/></svg></button><div class="nav-dropdown"><div class="nav-dropdown-card"><div class="nav-dropdown-head"><strong>Споры с застройщиком</strong><span>Юридический этап начинается после изучения документов и обстоятельств.</span></div><div class="nav-dropdown-links"><a href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/neustoyka-za-prosrochku-peredachi-kvartiry.html"><strong>Задержка передачи</strong><small>Проверить сроки по ДДУ</small></a><a href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/vzyskanie-kompensatsii-za-stroitelnye-nedostatki/vzyskanie-kompensatsii-za-stroitelnye-nedostatki.html"><strong>Строительные недостатки</strong><small>Разобрать требования</small></a><a href="/expert-novostroy-site/articles/sudebnye-resheniya/sudebnye-resheniya.html"><strong>Судебные решения</strong><small>Обезличенные материалы</small></a><a class="nav-dropdown-all" href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html">Все юридические направления →</a></div></div></div></div>
+    <div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/ceny/ceny.html">Цены</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/articles/articles.html">Результаты</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/baza-znaniy/baza-znaniy.html">База знаний</a></div>
+  </nav><div class="header-actions"><a class="btn btn-header" href="/expert-novostroy-site/contacts/contacts.html">Подобрать решение</a></div></div>
+  </div>
+</header><div class="headerfixed" id="headerfixed" aria-hidden="true"><div class="en-wide header-main"><a class="logo" href="/expert-novostroy-site/glavnaya/glavnaya.html"><img src="/expert-novostroy-site/assets/shared/logo.webp" alt="Эксперт Новострой"></a><nav class="desktop-nav" aria-label="Навигация при прокрутке"><div class="nav-item nav-item-primary"><a class="nav-link" href="/expert-novostroy-site/uslugi/priemka-kvartiry/priemka-kvartiry.html"><span class="nav-dot" aria-hidden="true"></span>Приёмка</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/uslugi/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html">Экспертиза</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html">Споры</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/ceny/ceny.html">Цены</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/articles/articles.html">Результаты</a></div><div class="nav-item"><a class="nav-link" href="/expert-novostroy-site/baza-znaniy/baza-znaniy.html">База знаний</a></div></nav><div class="header-actions"><a class="btn btn-header" href="/expert-novostroy-site/contacts/contacts.html">Подобрать решение</a></div></div></div><header class="mobile-header"><button class="mobile-icon-btn" id="mobileBurger" type="button" aria-label="Открыть меню" aria-expanded="false"><svg viewBox="0 0 16 8" aria-hidden="true"><path d="M1 1h14M1 7h10"/></svg></button><a class="logo" href="/expert-novostroy-site/glavnaya/glavnaya.html"><img src="/expert-novostroy-site/assets/shared/logo.webp" alt="Эксперт Новострой"></a><div class="mobile-icons"><a class="mobile-icon-btn phone-ico" href="tel:+74951528580" aria-label="Позвонить"><svg viewBox="0 0 14 18" aria-hidden="true"><path d="M4 1l2 4-2 2c1 3 3 5 6 6l2-2 2 2c-.6 2-1.7 3-3.3 3C5.6 15 1.8 10.9 1 5.7 1 3.9 2 2.3 4 1z"/></svg></a><a class="mobile-icon-btn account-ico" href="https://expert-novostroy.ru/cabinet/" aria-label="Личный кабинет"><svg viewBox="0 0 18 19" aria-hidden="true"><circle cx="9" cy="6" r="3.4"/><path d="M3 17c.7-3.4 2.7-5.2 6-5.2s5.3 1.8 6 5.2"/></svg></a></div></header><button class="mobile-menu-backdrop" id="mobileMenuBackdrop" type="button" aria-label="Закрыть меню" tabindex="-1"></button><div class="mobile-menu" id="mobileMenu" aria-hidden="true"><div class="mobile-menu-inner"><div class="mobile-menu-intro"><strong>Эксперт Новострой</strong><span>Инженеры, строительные эксперты и юристы в одной команде.</span></div><nav class="mobile-nav" aria-label="Мобильная навигация"><div class="mobile-nav-group"><a class="mobile-nav-primary" href="/expert-novostroy-site/uslugi/priemka-kvartiry/priemka-kvartiry.html"><span>Приёмка</span><span>→</span></a><div class="mobile-nav-sub"><a href="/expert-novostroy-site/uslugi/distancionnaya-priyomka/distancionnaya-priyomka.html">Дистанционная</a><a href="/expert-novostroy-site/uslugi/uslugi.html#repeat">Повторная</a><a href="https://expert-novostroy.ru/uslugi/otsenka/">Оценка для банка</a><a href="/expert-novostroy-site/ceny/ceny.html#calculator">Калькулятор</a></div></div><div class="mobile-nav-group"><a class="mobile-nav-primary" href="/expert-novostroy-site/uslugi/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html"><span>Экспертиза</span><span>→</span></a><div class="mobile-nav-sub"><a href="/expert-novostroy-site/articles/stroitelnaya-ekspertiza/stroitelnaya-ekspertiza.html">Результаты экспертиз</a><a href="/expert-novostroy-site/baza-znaniy/ekspertiza/ekspertiza.html">Когда нужен эксперт</a></div></div><div class="mobile-nav-group"><a class="mobile-nav-primary" href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/yuridicheskie-uslugi.html"><span>Споры с застройщиком</span><span>→</span></a><div class="mobile-nav-sub"><a href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/neustoyka-za-prosrochku-peredachi-kvartiry/neustoyka-za-prosrochku-peredachi-kvartiry.html">Задержка передачи</a><a href="/expert-novostroy-site/uslugi/yuridicheskie-uslugi/vzyskanie-kompensatsii-za-stroitelnye-nedostatki/vzyskanie-kompensatsii-za-stroitelnye-nedostatki.html">Недостатки квартиры</a></div></div><a class="mobile-nav-simple" href="/expert-novostroy-site/ceny/ceny.html">Цены</a><a class="mobile-nav-simple" href="/expert-novostroy-site/articles/articles.html">Результаты</a><a class="mobile-nav-simple" href="/expert-novostroy-site/baza-znaniy/baza-znaniy.html">База знаний</a><a class="mobile-nav-simple" href="/expert-novostroy-site/company/company.html">О компании</a><a class="mobile-nav-simple" href="/expert-novostroy-site/company/reviews/reviews.html">Отзывы</a><a class="mobile-nav-simple" href="/expert-novostroy-site/contacts/contacts.html">Контакты</a></nav><div class="mobile-menu-footer"><a class="mobile-menu-phone" href="tel:+74951528580">+7 (495) 152-85-80</a><a class="btn" href="/expert-novostroy-site/contacts/contacts.html">Подобрать решение</a><span class="mobile-menu-note">Call-центр: ежедневно с 09:00 до 21:00</span></div></div></div>
+
+  <section class="canonical-breadcrumbs">
+    <div class="canonical-breadcrumbs__inner">
+      <nav aria-label="breadcrumb"><ol class="breadcrumb st-pb-4"><li class="breadcrumb-item"><a href="/expert-novostroy-site/glavnaya/glavnaya.html">Главная</a></li><li class="breadcrumb-item active" aria-current="page">Новости</li></ol></nav>
+    </div>
+  </section>
+
+  <main class="news-page">
+  <section class="news-archive" aria-labelledby="news-title">
+    <div class="en-wide">
+      <div class="news-archive__heading">
+        <h1 id="news-title">Новости</h1>
+      </div>
+
+      <nav class="news-archive__filters" aria-label="Фильтр по году публикации">
+        <a class="news-archive__filter is-active" href="/expert-novostroy-site/news/news.html" aria-current="page">За все время</a>
+        <a class="news-archive__filter" href="/expert-novostroy-site/news/news.html?year=2026">2026</a>
+        <a class="news-archive__filter" href="/expert-novostroy-site/news/news.html?year=2025">2025</a>
+        <a class="news-archive__filter" href="/expert-novostroy-site/news/news.html?year=2024">2024</a>
+        <a class="news-archive__filter" href="/expert-novostroy-site/news/news.html?year=2023">2023</a>
+        <a class="news-archive__filter" href="/expert-novostroy-site/news/news.html?year=2022">2022</a>
+      </nav>
+
+      <div class="news-archive__grid">
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="/expert-novostroy-site/news/1822285/1822285.html">
+            <img class="news-archive__image" src="assets/pik-prosto-obnaglel.jpg" alt="" loading="lazy" decoding="async">
+            <h2>ПИК ПРОСТО ОБНАГЛЕЛ</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1804293/">
+            <img class="news-archive__image" src="assets/standarty-otdelki.jpg" alt="" loading="lazy" decoding="async">
+            <h2>Застройщики ПИК, ФСК и А101 внедряют собственные стандарты отделки</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1774637/">
+            <img class="news-archive__image" src="assets/dop-soglasheniya-pik.jpg" alt="" loading="lazy" decoding="async">
+            <h2>Не подписывайте доп.соглашения от ПИК</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1766497/">
+            <img class="news-archive__image" src="assets/pik-dokumenty-app.jpg" alt="" loading="lazy" decoding="async">
+            <h2>ПИК подсовывает дольщикам &quot;ловушку&quot; в документах при подписании АПП</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1757723/">
+            <img class="news-archive__image" src="assets/rve-zos.png" alt="" loading="lazy" decoding="async">
+            <h2>Что такое РВЭ и ЗОС и что должен знать дольщик</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1684586/">
+            <img class="news-archive__image" src="assets/dop-soglashenie-srokov.jpg" alt="" loading="lazy" decoding="async">
+            <h2>Нужно ли подписывать доп.соглашение о переносе сроков сдачи квартиры?</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1682812/">
+            <img class="news-archive__image" src="assets/zastroyshchik-ne-ispravlyaet-nedostatki.jpg" alt="" loading="lazy" decoding="async">
+            <h2>Застройщик не хочет исправлять недостатки. Что делать?</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1682529/">
+            <img class="news-archive__image" src="assets/prosrochka-sdachi-kvartiry.jpg" alt="" loading="lazy" decoding="async">
+            <h2>Можно ли подать в суд за просрочку сдачи квартиры после отмены моратория</h2>
+          </a>
+        </article>
+        <article class="news-archive__item">
+          <a class="news-archive__item-link" href="https://expert-novostroy.ru/news/1660493/">
+            <img class="news-archive__image" src="assets/menshaya-ploshchad-kvartiry.jpg" alt="" loading="lazy" decoding="async">
+            <h2>Застройщик передал квартиру меньшей площади. Что делать?</h2>
+          </a>
+        </article>
+      </div>
+
+      <nav class="news-pagination" aria-label="Страницы статей">
+        <span class="news-pagination__arrow is-disabled" aria-disabled="true" aria-label="Предыдущая страница">←</span>
+        <a class="news-pagination__arrow" href="/expert-novostroy-site/news/news.html?PAGEN_2=2&amp;SIZEN_2=9" aria-label="Следующая страница">→</a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+  <footer class="site-footer">
+  <div class="en-wide">
+    <div class="footer-content-top">
+      <div><nav class="footer-nav" aria-label="Навигация в подвале"><a href="/expert-novostroy-site/company/company.html">Компания</a><a href="/expert-novostroy-site/contacts/contacts.html">Контакты</a><a href="/expert-novostroy-site/index.html">Карта сайта</a><a href="/expert-novostroy-site/info/faq/faq.html">Вопрос / Ответ</a><a href="/expert-novostroy-site/oferta/oferta.html">Оферта</a></nav><div class="footer-social" aria-label="Социальные сети"><a href="https://max.ru/id730291384501_biz" target="_blank" rel="nofollow noopener" aria-label="MAX"><img src="/expert-novostroy-site/assets/shared/MAX.svg" alt=""></a><a href="https://vk.com/expert.novostroy" target="_blank" rel="nofollow noopener" aria-label="ВКонтакте"><img src="/expert-novostroy-site/assets/shared/vk.svg" alt=""></a><a href="https://telegram.me/expert_novostroy" target="_blank" rel="nofollow noopener" aria-label="Telegram"><img src="/expert-novostroy-site/assets/shared/telegram.svg" alt=""></a><a href="https://www.youtube.com/channel/UCz4Nv5qYIMy-h5ppZ4tGsdA" target="_blank" rel="nofollow noopener" aria-label="YouTube"><img src="/expert-novostroy-site/assets/shared/youtube.svg" alt=""></a><a href="https://wa.me/74951528580" target="_blank" rel="nofollow noopener" aria-label="WhatsApp"><img src="/expert-novostroy-site/assets/shared/whatsapp.svg" alt=""></a></div></div>
+      <div class="footer-contacts"><div class="footer-contact-row"><span class="footer-contact-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 2.5 7.3 6 5.8 8c1.1 3 3.2 5.1 6.2 6.2l2-1.5 3.5 2.3c-.7 2-2.2 3-4.3 2.6C7.6 16.5 3.5 12.4 2.4 6.8 2 4.7 3 3.2 5 2.5Z"/></svg></span><a class="footer-phone" href="tel:+74951528580">+74951528580</a></div><div class="footer-contact-row"><span class="footer-contact-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="m3 6 7 5 7-5"/></svg></span><a class="footer-email" href="mailto:info@expert-novostroy.ru">info@expert-novostroy.ru</a></div><div class="footer-contact-row"><span class="footer-contact-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.4 6-10a6 6 0 1 0-12 0c0 4.6 6 10 6 10Z"/><circle cx="10" cy="8" r="2"/></svg></span><div class="footer-address">129626, Москва,<br>проспект Мира, дом 106, офис 401</div></div></div>
+    </div>
+    <div class="footer-content-bottom"><span>© 2017–2026 Эксперт Новострой</span><a href="https://expert-novostroy.ru/include/licenses_detail.php">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<script src="../assets/shared/canonical-shell.js" defer></script>
+</body>
+</html>
+
