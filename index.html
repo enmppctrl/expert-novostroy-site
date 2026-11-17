@@ -303,7 +303,7 @@
       const title = details ? ` title="${escapeHtml(details)}"` : "";
       const childNodes = children.map(child => nodeMarkup(child, visiblePages)).join("");
       const childMarkup = children.length > 300
-        ? `<details class="children-collapsible"><summary>Страницы ЖК · ${children.length}</summary><div class="children">${childNodes}</div></details>`
+        ? `<details class="children-collapsible"><summary>Дочерние страницы · ${children.length}</summary><div class="children">${childNodes}</div></details>`
         : children.length ? `<div class="children">${childNodes}</div>` : "";
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}${migration}"${link}${title}>
         <span class="node-title">${escapeHtml(page.title)}</span>
