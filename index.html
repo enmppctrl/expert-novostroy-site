@@ -16,9 +16,9 @@
       --review-bg: #e8f3ff;
       --review-border: #76aee0;
       --review-text: #245f96;
-      --ready-bg: #f0e5bd;
-      --ready-border: #c9b367;
-      --ready-text: #5c4d20;
+      --ready-bg: #fff2b8;
+      --ready-border: #e4c95c;
+      --ready-text: #5c4a12;
       --approved-bg: #e6f6eb;
       --approved-border: #74c28e;
       --approved-text: #23733d;
@@ -293,6 +293,11 @@
   <script>
     let allPages = [];
     let activeFilter = "all";
+    const collapsiblePageUrls = new Set([
+      "/articles/priemka-kvartir/",
+      "/articles/sudebnye-resheniya/",
+      "/baza-znaniy/zhk/"
+    ]);
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>'"]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char]);
@@ -308,7 +313,7 @@
       const details = [page.type, page.action, page.currentUrl && page.currentUrl !== page.url ? `Текущий URL: ${page.currentUrl}` : ""].filter(Boolean).join(" · ");
       const title = details ? ` title="${escapeHtml(details)}"` : "";
       const childNodes = children.map(child => nodeMarkup(child, visiblePages)).join("");
-      const childMarkup = children.length > 5
+      const childMarkup = collapsiblePageUrls.has(page.url) && children.length > 0
         ? `<details class="children-collapsible"><summary>Дочерние страницы · ${children.length}</summary><div class="children">${childNodes}</div></details>`
         : children.length ? `<div class="children">${childNodes}</div>` : "";
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}${migration}"${link}${title}>
