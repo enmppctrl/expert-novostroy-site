@@ -168,6 +168,21 @@
       "preview": "uslugi/yuridicheskie-uslugi/vzyskanie-kompensatsii-za-stroitelnye-nedostatki/vzyskanie-kompensatsii-za-stroitelnye-nedostatki.html"
     },
     {
+      "title": "Цены",
+      "url": "/ceny/",
+      "type": "Commercial hub",
+      "parent": "/",
+      "updated": "2026-11-06",
+      "zone": "Commercial",
+      "role": "CR support",
+      "header": "MAIN",
+      "index": "Index",
+      "priority": "P1",
+      "currentUrl": "/ceny/",
+      "preview": "ceny/ceny.html",
+      "status": "published"
+    },
+    {
       "title": "Результаты",
       "url": "/articles/",
       "type": "Proof hub",
@@ -181,21 +196,6 @@
       "priority": "P0",
       "currentUrl": "/rezultaty/",
       "preview": "articles/articles.html"
-    },
-    {
-      "title": "База знаний",
-      "url": "/baza-znaniy/",
-      "type": "Knowledge hub",
-      "parent": "/",
-      "status": "review",
-      "updated": "2026-11-06",
-      "zone": "Knowledge",
-      "role": "Authority / AI",
-      "header": "MAIN",
-      "index": "Index",
-      "priority": "P0",
-      "currentUrl": "/baza-znaniy/",
-      "preview": "baza-znaniy/baza-znaniy.html"
     },
     {
       "title": "Результаты приёмок",
@@ -271,19 +271,19 @@
       "preview": "articles/sudebnye-resheniya/sudebnye-resheniya.html"
     },
     {
-      "title": "О компании",
-      "url": "/company/",
-      "type": "Trust hub",
+      "title": "База знаний",
+      "url": "/baza-znaniy/",
+      "type": "Knowledge hub",
       "parent": "/",
-      "updated": "2026-11-21",
-      "zone": "Trust",
-      "role": "E-E-A-T",
-      "header": "TOPBAR",
+      "status": "review",
+      "updated": "2026-11-06",
+      "zone": "Knowledge",
+      "role": "Authority / AI",
+      "header": "MAIN",
       "index": "Index",
-      "priority": "P1",
-      "currentUrl": "/kompaniya/",
-      "preview": "company/company.html",
-      "status": "published"
+      "priority": "P0",
+      "currentUrl": "/baza-znaniy/",
+      "preview": "baza-znaniy/baza-znaniy.html"
     },
     {
       "title": "До ключей и ДДУ",
@@ -356,19 +356,19 @@
       "preview": "baza-znaniy/dokumenty/dokumenty.html"
     },
     {
-      "title": "Новости",
-      "url": "/news/",
-      "type": "Content stream",
+      "title": "О компании",
+      "url": "/company/",
+      "type": "Trust hub",
       "parent": "/",
-      "updated": "2026-11-06",
-      "zone": "Knowledge",
-      "role": "Freshness",
-      "header": "FOOTER/BZ",
+      "updated": "2026-11-21",
+      "zone": "Trust",
+      "role": "E-E-A-T",
+      "header": "TOPBAR",
       "index": "Index",
-      "priority": "P2",
-      "currentUrl": "/blog/",
-      "status": "review",
-      "preview": "news/news.html"
+      "priority": "P1",
+      "currentUrl": "/kompaniya/",
+      "preview": "company/company.html",
+      "status": "published"
     },
     {
       "title": "Дефекты",
@@ -401,19 +401,19 @@
       "preview": "baza-znaniy/normativy/normativy.html"
     },
     {
-      "title": "Цены",
-      "url": "/ceny/",
-      "type": "Commercial hub",
+      "title": "Новости",
+      "url": "/news/",
+      "type": "Content stream",
       "parent": "/",
       "updated": "2026-11-06",
-      "zone": "Commercial",
-      "role": "CR support",
-      "header": "MAIN",
+      "zone": "Knowledge",
+      "role": "Freshness",
+      "header": "FOOTER/BZ",
       "index": "Index",
-      "priority": "P1",
-      "currentUrl": "/ceny/",
-      "preview": "ceny/ceny.html",
-      "status": "published"
+      "priority": "P2",
+      "currentUrl": "/blog/",
+      "status": "review",
+      "preview": "news/news.html"
     },
     {
       "title": "Застройщики",
@@ -544,21 +544,10 @@
       "priority": "P1"
     },
     {
-      "title": "Почему мы",
-      "url": "/pochemu-my/",
-      "type": "Доверие",
-      "parent": "/",
-      "updated": "2026-11-06",
-      "preview": "pochemu-my/pochemu-my.html",
-      "legacy": true,
-      "currentUrl": "/pochemu-my/",
-      "status": "published"
-    },
-    {
       "title": "Вместе дешевле",
       "url": "/vmeste/",
       "type": "Promotion",
-      "parent": "/sales/",
+      "parent": "/",
       "updated": "2026-11-21",
       "zone": "Marketing",
       "role": "Group conversion",
@@ -572,7 +561,7 @@
       "title": "Приведи друга",
       "url": "/privedi-druga/",
       "type": "Promotion",
-      "parent": "/sales/",
+      "parent": "/",
       "updated": "2026-11-21",
       "zone": "Marketing",
       "role": "Referral",
@@ -581,6 +570,17 @@
       "priority": "P3",
       "status": "published",
       "preview": "privedi-druga/privedi-druga.html"
+    },
+    {
+      "title": "Почему мы",
+      "url": "/pochemu-my/",
+      "type": "Доверие",
+      "parent": "/",
+      "updated": "2026-11-06",
+      "preview": "pochemu-my/pochemu-my.html",
+      "legacy": true,
+      "currentUrl": "/pochemu-my/",
+      "status": "published"
     },
     {
       "title": "Приёмка завтра",

@@ -115,6 +115,7 @@
     .architecture-scroll-top::-webkit-scrollbar-track, .architecture-scroll::-webkit-scrollbar-track { border-radius: 8px; background: #e7edf1; }
     .architecture-scroll-top::-webkit-scrollbar-thumb, .architecture-scroll::-webkit-scrollbar-thumb { border-radius: 8px; background: var(--accent); }
     .architecture-grid { display: flex; align-items: flex-start; gap: 60px; width: max-content; min-width: 100%; }
+    .standalone-column { display: grid; justify-items: start; gap: 7px; width: max-content; margin-top: 16px; }
     .tree-branch { flex: 0 0 auto; width: max-content; max-width: 240px; }
     .node { display: block; width: max-content; min-width: 120px; max-width: 220px; height: 40px; padding: 5px 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
     .node.migration { position: relative; border-style: dashed; }
@@ -347,10 +348,19 @@
       const visibleUrls = new Set(visiblePages.map(page => page.url));
       const root = visiblePages.find(page => page.url === "/");
       const topLevel = visiblePages.filter(page => page.url !== "/" && (activeFilter === "all" ? page.parent === "/" : (page.parent === "/" || !page.parent || !visibleUrls.has(page.parent))));
+      const directionOrder = ["/uslugi/", "/ceny/", "/articles/", "/baza-znaniy/", "/company/", "/news/"];
+      const standaloneOrder = ["/contacts/", "/sales/", "/vmeste/", "/privedi-druga/", "/pochemu-my/", "/priemka-zavtra/", "/poluchil-priglashenie-na-priemku/", "/zastroyshchik-zaderzhivaet-klyuchi/", "/glossariy/", "/oferta/", "/info/faq/", "/sitemap/"];
+      const topLevelByUrl = new Map(topLevel.map(page => [page.url, page]));
+      const directionPages = directionOrder.map(url => topLevelByUrl.get(url)).filter(Boolean);
+      const standaloneUrls = new Set(standaloneOrder);
+      const standalonePages = standaloneOrder.map(url => topLevelByUrl.get(url)).filter(Boolean);
+      const remainingPages = topLevel.filter(page => !directionOrder.includes(page.url) && !standaloneUrls.has(page.url));
+      const verticalPages = [...standalonePages, ...remainingPages];
       document.querySelector("#architecture").innerHTML = `
         ${root ? `<div class="architecture-root">${nodeMarkup(root, visiblePages, false)}</div>` : ""}
         <div class="architecture-scroll-top" id="architectureScrollTop" tabindex="0" aria-label="Горизонтальная прокрутка карты"><div class="architecture-scroll-top-track" id="architectureScrollTopTrack"></div></div>
-        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${topLevel.map(page => nodeMarkup(page, visiblePages)).join("")}</div></div>`;
+        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${directionPages.map(page => nodeMarkup(page, visiblePages)).join("")}</div></div>
+        ${verticalPages.length ? `<div class="standalone-column">${verticalPages.map(page => nodeMarkup(page, visiblePages)).join("")}</div>` : ""}`;
 
       const topScroll = document.querySelector("#architectureScrollTop");
       const bottomScroll = document.querySelector("#architectureScroll");
