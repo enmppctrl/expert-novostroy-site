@@ -115,7 +115,7 @@
     .architecture-scroll-top::-webkit-scrollbar-track, .architecture-scroll::-webkit-scrollbar-track { border-radius: 8px; background: #e7edf1; }
     .architecture-scroll-top::-webkit-scrollbar-thumb, .architecture-scroll::-webkit-scrollbar-thumb { border-radius: 8px; background: var(--accent); }
     .architecture-grid { display: flex; align-items: flex-start; gap: 60px; width: max-content; min-width: 100%; }
-    .standalone-column { display: grid; justify-items: start; gap: 7px; width: max-content; margin-top: 16px; }
+    .standalone-column { display: grid; justify-items: start; gap: 7px; width: max-content; margin-top: 7px; }
     .tree-branch { flex: 0 0 auto; width: max-content; max-width: 240px; }
     .node { display: block; width: max-content; min-width: 120px; max-width: 220px; height: 40px; padding: 5px 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: inherit; text-decoration: none; transition: transform .16s ease, box-shadow .16s ease; }
     .node.migration { position: relative; border-style: dashed; }
@@ -304,7 +304,7 @@
 
     function href(page) { return page.preview || ""; }
 
-    function nodeMarkup(page, visiblePages, includeChildren = true) {
+    function nodeMarkup(page, visiblePages, includeChildren = true, extraMarkup = "") {
       const children = includeChildren ? visiblePages.filter(item => item.parent === page.url) : [];
       const tag = page.preview ? "a" : "div";
       const link = page.preview ? ` href="${escapeHtml(href(page))}"` : "";
@@ -318,7 +318,7 @@
       return `<div class="tree-branch"><${tag} class="node ${escapeHtml(page.status)}${migration}"${link}${title}>
         <span class="node-title">${escapeHtml(page.title)}</span>
         <span class="node-url">${escapeHtml(page.url)}</span>
-      </${tag}>${childMarkup}</div>`;
+      </${tag}>${childMarkup}${extraMarkup}</div>`;
     }
 
     function renderFilters() {
@@ -356,11 +356,11 @@
       const standalonePages = standaloneOrder.map(url => topLevelByUrl.get(url)).filter(Boolean);
       const remainingPages = topLevel.filter(page => !directionOrder.includes(page.url) && !standaloneUrls.has(page.url));
       const verticalPages = [...standalonePages, ...remainingPages];
+      const standaloneMarkup = verticalPages.map(page => nodeMarkup(page, visiblePages)).join("");
       document.querySelector("#architecture").innerHTML = `
         ${root ? `<div class="architecture-root">${nodeMarkup(root, visiblePages, false)}</div>` : ""}
         <div class="architecture-scroll-top" id="architectureScrollTop" tabindex="0" aria-label="Горизонтальная прокрутка карты"><div class="architecture-scroll-top-track" id="architectureScrollTopTrack"></div></div>
-        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${directionPages.map(page => nodeMarkup(page, visiblePages)).join("")}</div></div>
-        ${verticalPages.length ? `<div class="standalone-column">${verticalPages.map(page => nodeMarkup(page, visiblePages)).join("")}</div>` : ""}`;
+        <div class="architecture-scroll" id="architectureScroll"><div class="architecture-grid" id="architectureGrid">${directionPages.map(page => nodeMarkup(page, visiblePages, true, page.url === "/ceny/" && standaloneMarkup ? `<div class="standalone-column">${standaloneMarkup}</div>` : "")).join("")}</div></div>`;
 
       const topScroll = document.querySelector("#architectureScrollTop");
       const bottomScroll = document.querySelector("#architectureScroll");
