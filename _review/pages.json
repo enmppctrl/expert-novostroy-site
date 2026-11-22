@@ -704,7 +704,7 @@
     },
     {
       "title": "Пример акта осмотра",
-      "url": "/primer-akta-osmotra/",
+      "url": "/uslugi/priemka-kvartiry/primer-akta-osmotra/",
       "type": "Пример документа",
       "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
@@ -714,7 +714,7 @@
     },
     {
       "title": "Пример альбома осмотра",
-      "url": "/primer-alboma-osmotra/",
+      "url": "/uslugi/priemka-kvartiry/primer-alboma-osmotra/",
       "type": "Пример документа",
       "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
@@ -724,7 +724,7 @@
     },
     {
       "title": "Пример акта для ПИК",
-      "url": "/primer-akt-dlya-pik/",
+      "url": "/uslugi/priemka-kvartiry/primer-akta-dlya-pik/",
       "type": "Пример документа",
       "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
