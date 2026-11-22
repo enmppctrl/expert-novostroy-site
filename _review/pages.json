@@ -473,19 +473,6 @@
       "preview": "baza-znaniy/zastroyshchiki/zastroyshchiki.html"
     },
     {
-      "title": "Приёмка в городе",
-      "url": "/priemka-kvartiry-{gorod}/",
-      "type": "GEO landing",
-      "parent": "/uslugi/priemka-kvartiry/",
-      "updated": "2026-10-12",
-      "zone": "GEO",
-      "role": "Local traffic",
-      "header": "NO global header",
-      "index": "Index",
-      "priority": "P1",
-      "currentUrl": "/priemka-kvartiry-{город}/"
-    },
-    {
       "title": "О компании",
       "url": "/company/",
       "type": "Trust hub",
@@ -673,7 +660,7 @@
       "title": "Химки",
       "url": "/priemka-kvartiry-himki/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "updated": "2026-10-12",
       "legacy": true,
       "currentUrl": "/priemka-kvartiry-himki/",
@@ -17188,7 +17175,7 @@
       "title": "Москва",
       "url": "/priemka-kvartiry-moskva/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-moskva/",
       "preview": null
     },
@@ -17196,7 +17183,7 @@
       "title": "Новая Москва",
       "url": "/priemka-kvartiry-novaya-moskva/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-novaya-moskva/",
       "preview": null
     },
@@ -17204,7 +17191,7 @@
       "title": "Балашиха",
       "url": "/priemka-kvartiry-balashiha/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-balashiha/",
       "preview": null
     },
@@ -17212,7 +17199,7 @@
       "title": "Красногорск",
       "url": "/priemka-kvartiry-krasnogorsk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-krasnogorsk/",
       "preview": null
     },
@@ -17220,7 +17207,7 @@
       "title": "Одинцово",
       "url": "/priemka-kvartiry-odintsovo/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-odintsovo/",
       "preview": null
     },
@@ -17228,7 +17215,7 @@
       "title": "Люберцы",
       "url": "/priemka-kvartiry-lyubertsy/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-lyubertsy/",
       "preview": null
     },
@@ -17236,7 +17223,7 @@
       "title": "Мытищи",
       "url": "/priemka-kvartiry-mytishchi/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-mytishchi/",
       "preview": null
     },
@@ -17244,7 +17231,7 @@
       "title": "Подольск",
       "url": "/priemka-kvartiry-podolsk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-podolsk/",
       "preview": null
     },
@@ -17252,7 +17239,7 @@
       "title": "Видное",
       "url": "/priemka-kvartiry-vidnoe/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-vidnoe/",
       "preview": null
     },
@@ -17260,7 +17247,7 @@
       "title": "Домодедово",
       "url": "/priemka-kvartiry-domodedovo/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-domodedovo/",
       "preview": null
     },
@@ -17268,7 +17255,7 @@
       "title": "Реутов",
       "url": "/priemka-kvartiry-reutov/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-reutov/",
       "preview": null
     },
@@ -17276,7 +17263,7 @@
       "title": "Королёв",
       "url": "/priemka-kvartiry-korolyov/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-korolyov/",
       "preview": null
     },
@@ -17284,7 +17271,7 @@
       "title": "Долгопрудный",
       "url": "/priemka-kvartiry-dolgoprudny/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-dolgoprudny/",
       "preview": null
     },
@@ -17292,7 +17279,7 @@
       "title": "Лобня",
       "url": "/priemka-kvartiry-lobnya/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-lobnya/",
       "preview": null
     },
@@ -17300,7 +17287,7 @@
       "title": "Котельники",
       "url": "/priemka-kvartiry-kotelniki/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-kotelniki/",
       "preview": null
     },
@@ -17308,7 +17295,7 @@
       "title": "Дзержинский",
       "url": "/priemka-kvartiry-dzerzhinskiy/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-dzerzhinskiy/",
       "preview": null
     },
@@ -17316,7 +17303,7 @@
       "title": "Жуковский",
       "url": "/priemka-kvartiry-zhukovskiy/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-zhukovskiy/",
       "preview": null
     },
@@ -17324,7 +17311,7 @@
       "title": "Раменское",
       "url": "/priemka-kvartiry-ramenskoe/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-ramenskoe/",
       "preview": null
     },
@@ -17332,7 +17319,7 @@
       "title": "Пушкино",
       "url": "/priemka-kvartiry-pushkino/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-pushkino/",
       "preview": null
     },
@@ -17340,7 +17327,7 @@
       "title": "Истра",
       "url": "/priemka-kvartiry-istra/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-istra/",
       "preview": null
     },
@@ -17348,7 +17335,7 @@
       "title": "Дедовск",
       "url": "/priemka-kvartiry-dedovsk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-dedovsk/",
       "preview": null
     },
@@ -17356,7 +17343,7 @@
       "title": "Наро-Фоминск",
       "url": "/priemka-kvartiry-naro-fominsk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-naro-fominsk/",
       "preview": null
     },
@@ -17364,7 +17351,7 @@
       "title": "Апрелевка",
       "url": "/priemka-kvartiry-aprelevka/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-aprelevka/",
       "preview": null
     },
@@ -17372,7 +17359,7 @@
       "title": "Голицыно",
       "url": "/priemka-kvartiry-golitsyno/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-golitsyno/",
       "preview": null
     },
@@ -17380,7 +17367,7 @@
       "title": "Звенигород",
       "url": "/priemka-kvartiry-zvenigorod/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-zvenigorod/",
       "preview": null
     },
@@ -17388,7 +17375,7 @@
       "title": "Кубинка",
       "url": "/priemka-kvartiry-kubinka/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-kubinka/",
       "preview": null
     },
@@ -17396,7 +17383,7 @@
       "title": "Лыткарино",
       "url": "/priemka-kvartiry-lytkarino/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-lytkarino/",
       "preview": null
     },
@@ -17404,7 +17391,7 @@
       "title": "Бронницы",
       "url": "/priemka-kvartiry-bronnitsy/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-bronnitsy/",
       "preview": null
     },
@@ -17412,7 +17399,7 @@
       "title": "Ногинск",
       "url": "/priemka-kvartiry-noginsk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-noginsk/",
       "preview": null
     },
@@ -17420,7 +17407,7 @@
       "title": "Электросталь",
       "url": "/priemka-kvartiry-elektrostal/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-elektrostal/",
       "preview": null
     },
@@ -17428,7 +17415,7 @@
       "title": "Павловский Посад",
       "url": "/priemka-kvartiry-pavlovskiy-posad/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-pavlovskiy-posad/",
       "preview": null
     },
@@ -17436,7 +17423,7 @@
       "title": "Дмитров",
       "url": "/priemka-kvartiry-dmitrov/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-dmitrov/",
       "preview": null
     },
@@ -17444,7 +17431,7 @@
       "title": "Клин",
       "url": "/priemka-kvartiry-klin/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-klin/",
       "preview": null
     },
@@ -17452,7 +17439,7 @@
       "title": "Коломна",
       "url": "/priemka-kvartiry-kolomna/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-kolomna/",
       "preview": null
     },
@@ -17460,7 +17447,7 @@
       "title": "Воскресенск",
       "url": "/priemka-kvartiry-voskresensk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-voskresensk/",
       "preview": null
     },
@@ -17468,7 +17455,7 @@
       "title": "Орехово-Зуево",
       "url": "/priemka-kvartiry-orekhovo-zuevo/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-orekhovo-zuevo/",
       "preview": null
     },
@@ -17476,7 +17463,7 @@
       "title": "Серпухов",
       "url": "/priemka-kvartiry-serpukhov/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-serpukhov/",
       "preview": null
     },
@@ -17484,7 +17471,7 @@
       "title": "Чехов",
       "url": "/priemka-kvartiry-chekhov/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-chekhov/",
       "preview": null
     },
@@ -17492,7 +17479,7 @@
       "title": "Можайск",
       "url": "/priemka-kvartiry-mozhaysk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-mozhaysk/",
       "preview": null
     },
@@ -17500,7 +17487,7 @@
       "title": "Руза",
       "url": "/priemka-kvartiry-ruza/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-ruza/",
       "preview": null
     },
@@ -17508,7 +17495,7 @@
       "title": "Солнечногорск",
       "url": "/priemka-kvartiry-solnechnogorsk/",
       "type": "GEO",
-      "parent": "/baza-znaniy/goroda/",
+      "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-solnechnogorsk/",
       "preview": null
     }
