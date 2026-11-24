@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-11-22",
+  "updated": "2026-11-25",
   "architectureSource": "Expert_Novostroy_МАСТЕР_ТЗ_САЙТА_FINAL_2026-10-06.xlsx",
   "pages": [
     {
@@ -776,15 +776,6 @@
       "index": "Index",
       "priority": "P0",
       "preview": "info/faq/faq.html"
-    },
-    {
-      "title": "Города",
-      "url": "/baza-znaniy/goroda/",
-      "type": "Хаб городов",
-      "parent": "/baza-znaniy/",
-      "updated": "2026-10-12",
-      "legacy": true,
-      "currentUrl": "/baza-znaniy/goroda/"
     },
     {
       "title": "Кто такой специалист по приёмке",
@@ -17422,50 +17413,6 @@
       "preview": null
     },
     {
-      "title": "Москва",
-      "url": "/baza-znaniy/goroda/#moskva",
-      "type": "City anchor",
-      "parent": "/baza-znaniy/goroda/",
-      "zone": "GEO",
-      "role": "City navigation anchor",
-      "header": "BZ / section",
-      "index": "No separate index",
-      "priority": "P2"
-    },
-    {
-      "title": "Санкт-Петербург",
-      "url": "/baza-znaniy/goroda/#sankt-peterburg",
-      "type": "City anchor",
-      "parent": "/baza-znaniy/goroda/",
-      "zone": "GEO",
-      "role": "City navigation anchor",
-      "header": "BZ / section",
-      "index": "No separate index",
-      "priority": "P2"
-    },
-    {
-      "title": "Казань",
-      "url": "/baza-znaniy/goroda/#kazan",
-      "type": "City anchor",
-      "parent": "/baza-znaniy/goroda/",
-      "zone": "GEO",
-      "role": "City navigation anchor",
-      "header": "BZ / section",
-      "index": "No separate index",
-      "priority": "P2"
-    },
-    {
-      "title": "Нижний Новгород",
-      "url": "/baza-znaniy/goroda/#nizhniy-novgorod",
-      "type": "City anchor",
-      "parent": "/baza-znaniy/goroda/",
-      "zone": "GEO",
-      "role": "City navigation anchor",
-      "header": "BZ / section",
-      "index": "No separate index",
-      "priority": "P2"
-    },
-    {
       "title": "Карта сайта",
       "url": "/sitemap/",
       "type": "Navigation",
@@ -17476,6 +17423,30 @@
       "header": "Footer",
       "index": "Index",
       "priority": "P2",
+      "preview": null
+    },
+    {
+      "title": "Санкт-Петербург",
+      "url": "/priemka-kvartiry-sankt-peterburg/",
+      "type": "GEO",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "currentUrl": "/priemka-kvartiry-sankt-peterburg/",
+      "preview": null
+    },
+    {
+      "title": "Казань",
+      "url": "/priemka-kvartiry-kazan/",
+      "type": "GEO",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "currentUrl": "/priemka-kvartiry-kazan/",
+      "preview": null
+    },
+    {
+      "title": "Нижний Новгород",
+      "url": "/priemka-kvartiry-nizhniy-novgorod/",
+      "type": "GEO",
+      "parent": "/uslugi/priemka-kvartiry/",
+      "currentUrl": "/priemka-kvartiry-nizhniy-novgorod/",
       "preview": null
     }
   ]
