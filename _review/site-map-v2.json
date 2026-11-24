@@ -1,7 +1,7 @@
 {
   "source": "Expert_Novostroy_МАСТЕР_ТЗ_сайта_2026-10_v2.xlsx",
   "sourceSheet": "02_Карта_сайта",
-  "updated": "2026-10-06",
+  "updated": "2026-11-25",
   "note": "Сравнительная карта по новому мастер-ТЗ. Текущий MASTER-план и рабочие URL не изменяются.",
   "pages": [
     {"id":"S-001","title":"Главная","url":"/","parent":null,"status":"review","action":"Пересобрать контент","currentUrl":"/"},
@@ -20,7 +20,7 @@
     {"id":"S-021","title":"Судебные решения","url":"/articles/sudebnye-resheniya/","parent":"/articles/","status":"review","action":"Усилить фильтрами и legal links","currentUrl":"/rezultaty/sudebnye-resheniya/"},
     {"id":"S-022","title":"Кейсы строительной экспертизы","url":"/articles/stroitelnaya-ekspertiza/","parent":"/articles/","status":"upcoming","action":"Создать"},
     {"id":"S-023","title":"База знаний","url":"/baza-znaniy/","parent":"/","status":"review","action":"Создать"},
-    {"id":"S-024","title":"Статьи / обновления","url":"/news/","parent":"/baza-znaniy/","status":"upcoming","action":"Сохранить как content stream","currentUrl":"/blog/"},
+    {"id":"S-024","title":"Блог","url":"/baza-znaniy/blog/","parent":"/baza-znaniy/","status":"upcoming","action":"Разместить ленту публикаций внутри Базы знаний"},
     {"id":"S-025","title":"Дефекты","url":"/defekty/","parent":"/baza-znaniy/","status":"upcoming","action":"Создать после шаблона и достаточной фактуры"},
     {"id":"S-026","title":"Нормативы","url":"/normativy/","parent":"/baza-znaniy/","status":"upcoming","action":"Создать"},
     {"id":"S-027","title":"Глоссарий","url":"/glossariy/","parent":"/baza-znaniy/","status":"upcoming","action":"Создать"},

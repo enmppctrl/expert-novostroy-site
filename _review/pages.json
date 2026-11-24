@@ -286,6 +286,20 @@
       "preview": "baza-znaniy/baza-znaniy.html"
     },
     {
+      "title": "Блог",
+      "url": "/baza-znaniy/blog/",
+      "type": "Content stream",
+      "parent": "/baza-znaniy/",
+      "updated": "2026-11-25",
+      "zone": "Knowledge",
+      "role": "Freshness",
+      "header": "FOOTER/BZ",
+      "index": "Index",
+      "priority": "P2",
+      "status": "review",
+      "preview": "baza-znaniy/blog/blog.html"
+    },
+    {
       "title": "До ключей и ДДУ",
       "url": "/baza-znaniy/do-klyuchey/",
       "type": "Category",
@@ -399,21 +413,6 @@
       "priority": "P1",
       "currentUrl": "/baza-znaniy/normativy/",
       "preview": "baza-znaniy/normativy/normativy.html"
-    },
-    {
-      "title": "Новости",
-      "url": "/news/",
-      "type": "Content stream",
-      "parent": "/",
-      "updated": "2026-11-06",
-      "zone": "Knowledge",
-      "role": "Freshness",
-      "header": "FOOTER/BZ",
-      "index": "Index",
-      "priority": "P2",
-      "currentUrl": "/blog/",
-      "status": "review",
-      "preview": "news/news.html"
     },
     {
       "title": "Застройщики",
@@ -855,13 +854,12 @@
       "currentUrl": "/gost-priemka-kvartir/"
     },
     {
-      "title": "Новость 1822285",
-      "url": "/news/1822285/",
+      "title": "Блог 1822285",
+      "url": "/baza-znaniy/blog/1822285/",
       "type": "Article",
-      "parent": "/news/",
-      "updated": "2026-11-06",
-      "currentUrl": "/news/1822285/",
-      "preview": "news/1822285/1822285.html",
+      "parent": "/baza-znaniy/blog/",
+      "updated": "2026-11-25",
+      "preview": "baza-znaniy/blog/1822285/1822285.html",
       "status": "review"
     },
     {
