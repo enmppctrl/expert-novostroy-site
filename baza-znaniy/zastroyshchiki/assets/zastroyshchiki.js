@@ -1,15 +1,15 @@
 (() => {
   const input = document.getElementById('developer-directory-search');
+  const citySelect = document.getElementById('developer-city-select');
+  const resetButton = document.getElementById('developer-directory-reset');
   const status = document.getElementById('developer-directory-status');
   const emptyState = document.getElementById('developer-directory-empty');
-  const cityNav = document.querySelector('.developer-city-filter-list');
-  const letterGroups = Array.from(document.querySelectorAll('[data-letter-section]'));
-  const companies = Array.from(document.querySelectorAll('[data-developer]'));
-  const totalComplexes = document.querySelectorAll('[data-complex]').length;
+  const allList = document.getElementById('developer-directory-all');
+  const companies = Array.from(document.querySelectorAll('#developer-directory-list [data-developer]'));
+  const totalComplexes = document.querySelectorAll('#developer-directory-list [data-complex]').length;
   const totalCompanies = companies.length;
-
-  if (!input || !status || !emptyState || !letterGroups.length) return;
-
+  let selectedDeveloper = '';
+  if (!input || !citySelect || !resetButton || !status || !emptyState || !allList || !companies.length) return;
   const normalize = value => String(value || '').toLocaleLowerCase('ru-RU').replace(/ё/g, 'е').trim();
   const plural = (count, forms) => {
     const mod10 = count % 10;
@@ -19,27 +19,31 @@
     return forms[2];
   };
   const formatNumber = count => new Intl.NumberFormat('ru-RU').format(count);
-  const cityLinks = Array.from(cityNav?.querySelectorAll('[data-city-filter]') || []);
-  const cityNames = new Map(cityLinks.map(link => [link.dataset.cityFilter, link.textContent.trim()]));
-  const searchParams = new URLSearchParams(window.location.search);
-  const requestedCity = searchParams.get('city') || '';
-  const requestedQuery = searchParams.get('q') || '';
-  if (requestedQuery) input.value = requestedQuery;
-  const activeCity = cityNames.has(requestedCity) ? requestedCity : '';
-  const activeCityName = cityNames.get(activeCity) || '';
-  const cityFilter = document.getElementById('developer-city-filter');
-
-  cityLinks.forEach(link => {
-    if (link.dataset.cityFilter === activeCity && activeCity) {
-      link.classList.add('is-active');
-      link.setAttribute('aria-current', 'page');
-      if (cityFilter) cityFilter.open = true;
-    }
+  const directory = companies.map(element => {
+    const name = normalize(element.querySelector('.developer-directory-name')?.textContent || '');
+    return {
+      element,
+      id: element.id,
+      name,
+      projects: Array.from(element.querySelectorAll('[data-complex]')).map(project => ({
+        element: project,
+        city: project.dataset.city || '',
+        searchable: normalize((project.textContent || '') + ' ' + name + ' ' + (project.dataset.cityLabel || ''))
+      }))
+    };
   });
-
-  const openTarget = () => {
-    const id = decodeURIComponent(window.location.hash.slice(1));
-    const target = id ? document.getElementById(id) : null;
+  let inputTimer = 0;
+  const matchesQuery = (text, query) => {
+    if (Array.from(query).length > 3) return text.includes(query);
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp('(^|[^a-zа-я0-9])' + escaped + '($|[^a-zа-я0-9])', 'i').test(text);
+  };
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('q')) input.value = params.get('q');
+  if (params.get('city') && Array.from(citySelect.options).some(option => option.value === params.get('city'))) citySelect.value = params.get('city');
+  const openHashTarget = () => {
+    if (!window.location.hash) return;
+    const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
     if (!target) return;
     let node = target;
     while (node && node !== document.body) {
@@ -48,92 +52,106 @@
     }
     target.scrollIntoView({ block: 'start' });
   };
-
-  if (window.location.hash) window.requestAnimationFrame(openTarget);
-  window.addEventListener('hashchange', () => window.requestAnimationFrame(openTarget));
-
   const filterDirectory = () => {
     const query = normalize(input.value);
-    const filtering = Boolean(query || activeCity);
+    const city = citySelect.value;
+    const active = Boolean(query || city);
     let visibleCompanies = 0;
     let visibleComplexes = 0;
-
-    companies.forEach(company => {
-      const companyName = normalize(company.querySelector('.developer-directory-name')?.textContent || '');
-      const companyMatches = Boolean(query && companyName.includes(query));
-      const projects = Array.from(company.querySelectorAll('[data-complex]'));
-      let matchingProjects = 0;
-
-      projects.forEach(project => {
-        const cityMatches = !activeCity || project.dataset.city === activeCity;
-        const searchable = normalize(`${project.textContent || ''} ${project.dataset.search || ''}`);
-        const textMatches = !query || searchable.includes(query);
-        const matches = cityMatches && (companyMatches || textMatches);
-        project.classList.toggle('is-hidden', !matches);
-        if (matches) matchingProjects += 1;
+    directory.forEach(entry => {
+      const company = entry.element;
+      const companyMatches = selectedDeveloper ? entry.id === selectedDeveloper : Boolean(query && entry.name.includes(query));
+      const projects = entry.projects;
+      let matched = 0;
+      projects.forEach(projectEntry => {
+        const project = projectEntry.element;
+        const cityMatches = !city || projectEntry.city === city;
+        const textMatches = selectedDeveloper ? entry.id === selectedDeveloper : !query || companyMatches || matchesQuery(projectEntry.searchable, query);
+        const visible = cityMatches && textMatches;
+        project.classList.toggle('is-hidden', !visible);
+        if (visible) matched++;
       });
-
-      const matches = matchingProjects > 0;
-      company.classList.toggle('is-hidden', !matches);
-      if (matches) {
-        visibleCompanies += 1;
-        visibleComplexes += matchingProjects;
+      const visible = matched > 0;
+      company.classList.toggle('is-hidden', !visible);
+      if (visible) {
+        visibleCompanies++;
+        visibleComplexes += matched;
       }
-
-      if (filtering && matches && company.dataset.filterOpened !== 'true') {
-        company.open = true;
-        company.dataset.filterOpened = 'true';
-      } else if (!filtering && company.dataset.filterOpened === 'true') {
-        company.open = false;
-        delete company.dataset.filterOpened;
+      const count = company.querySelector('.developer-directory-count');
+      if (count) {
+        const total = Number(company.dataset.totalComplexes || projects.length || 1);
+        count.textContent = active && matched < total ? formatNumber(matched) + ' из ' + formatNumber(total) + ' ЖК' : formatNumber(total) + ' ЖК';
       }
     });
-
-    letterGroups.forEach(group => {
-      const hasVisibleCompanies = Array.from(group.querySelectorAll('[data-developer]'))
-        .some(company => !company.classList.contains('is-hidden'));
-      group.classList.toggle('is-hidden', !hasVisibleCompanies);
-      if (filtering && hasVisibleCompanies && group.dataset.filterOpened !== 'true') {
-        group.open = true;
-        group.dataset.filterOpened = 'true';
-      } else if (!filtering && group.dataset.filterOpened === 'true') {
-        group.open = false;
-        delete group.dataset.filterOpened;
-      }
-    });
-
-    emptyState.hidden = visibleCompanies !== 0;
-    if (activeCity && query) {
-      status.textContent = visibleComplexes
-        ? `В городе ${activeCityName} найдено ${formatNumber(visibleComplexes)} ${plural(visibleComplexes, ['ЖК', 'ЖК', 'ЖК'])} · ${formatNumber(visibleCompanies)} ${plural(visibleCompanies, ['застройщик', 'застройщика', 'застройщиков'])}`
-        : `В городе ${activeCityName} ничего не найдено по этому запросу`;
-    } else if (activeCity) {
-      status.textContent = visibleComplexes
-        ? `В городе ${activeCityName} найдено ${formatNumber(visibleComplexes)} ЖК · ${formatNumber(visibleCompanies)} ${plural(visibleCompanies, ['застройщик', 'застройщика', 'застройщиков'])}`
-        : `ЖК в городе ${activeCityName}`;
-    } else if (query) {
-      status.textContent = visibleComplexes
-        ? `Найдено ${formatNumber(visibleComplexes)} ЖК · ${formatNumber(visibleCompanies)} ${plural(visibleCompanies, ['застройщик', 'застройщика', 'застройщиков'])}`
-        : 'По этому запросу ничего не найдено';
-    } else {
-      status.textContent = `Всего ${formatNumber(totalComplexes)} ЖК · ${formatNumber(totalCompanies)} ${plural(totalCompanies, ['застройщик', 'застройщика', 'застройщиков'])}`;
+    if (query && !selectedDeveloper && visibleComplexes <= 20) {
+      companies.forEach(company => {
+        if (!company.classList.contains('is-hidden') && company.matches('details')) company.open = true;
+      });
     }
+    if (active) allList.open = true;
+    emptyState.hidden = visibleComplexes > 0;
+    if (query && city) status.textContent = visibleComplexes ? 'Найдено ' + formatNumber(visibleComplexes) + ' ЖК · ' + formatNumber(visibleCompanies) + ' ' + plural(visibleCompanies, ['застройщик','застройщика','застройщиков']) : 'В этом городе ничего не найдено по этому запросу';
+    else if (query) status.textContent = visibleComplexes ? 'Найдено ' + formatNumber(visibleComplexes) + ' ЖК · ' + formatNumber(visibleCompanies) + ' ' + plural(visibleCompanies, ['застройщик','застройщика','застройщиков']) : 'По этому запросу ничего не найдено';
+    else if (city) status.textContent = visibleComplexes ? 'В городе ' + citySelect.selectedOptions[0].textContent.split(' · ')[0] + ' — ' + formatNumber(visibleComplexes) + ' ЖК · ' + formatNumber(visibleCompanies) + ' ' + plural(visibleCompanies, ['застройщик','застройщика','застройщиков']) : 'В этом городе ЖК не найдены';
+    else status.textContent = formatNumber(totalComplexes) + ' ЖК · ' + formatNumber(totalCompanies) + ' ' + plural(totalCompanies, ['застройщик','застройщика','застройщиков']);
   };
-
-  input.addEventListener('input', filterDirectory);
+  input.addEventListener('input', () => {
+    selectedDeveloper = '';
+    companies.forEach(company => {
+      if (company.matches('details')) company.open = false;
+    });
+    window.clearTimeout(inputTimer);
+    inputTimer = window.setTimeout(filterDirectory, 120);
+  });
+  citySelect.addEventListener('change', () => {
+    window.clearTimeout(inputTimer);
+    filterDirectory();
+  });
+  resetButton.addEventListener('click', () => {
+    window.clearTimeout(inputTimer);
+    input.value = '';
+    citySelect.value = '';
+    selectedDeveloper = '';
+    companies.forEach(company => {
+      if (company.matches('details')) company.open = false;
+    });
+    history.replaceState(null, '', window.location.pathname);
+    filterDirectory();
+    input.focus();
+  });
+  document.querySelectorAll('[data-developer-filter]').forEach(card => card.addEventListener('click', event => {
+    window.clearTimeout(inputTimer);
+    const id = card.dataset.developerFilter;
+    const company = document.getElementById(id);
+    if (!company) return;
+    event.preventDefault();
+    companies.forEach(item => {
+      if (item !== company && item.matches('details')) item.open = false;
+    });
+    selectedDeveloper = id;
+    input.value = company.querySelector('.developer-directory-name')?.textContent.trim() || '';
+    citySelect.value = '';
+    filterDirectory();
+    allList.open = true;
+    if (company.matches('details')) company.open = true;
+    history.replaceState(null, '', window.location.pathname + '#' + id);
+    company.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }));
   filterDirectory();
+  if (window.location.hash) window.requestAnimationFrame(openHashTarget);
+  window.addEventListener('hashchange', () => window.requestAnimationFrame(openHashTarget));
 })();
 
 document.getElementById('lead-form')?.addEventListener('submit', event => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
   const lines = [
-    `Имя: ${data.get('name')}`,
-    `Телефон: ${data.get('phone')}`,
-    `Жилой комплекс: ${data.get('complex') || 'не указан'}`,
-    `Площадь: ${data.get('area') || 'не указана'}`,
-    `Ситуация: ${data.get('comment') || 'не указана'}`,
-    `Дополнительно: ${data.getAll('scenario').join(', ') || 'не указано'}`
+    'Имя: ' + data.get('name'),
+    'Телефон: ' + data.get('phone'),
+    'Жилой комплекс: ' + (data.get('complex') || 'не указан'),
+    'Площадь: ' + (data.get('area') || 'не указана'),
+    'Ситуация: ' + (data.get('comment') || 'не указана'),
+    'Дополнительно: ' + (data.getAll('scenario').join(', ') || 'не указано')
   ];
-  location.href = `mailto:info@expert-novostroy.ru?subject=${encodeURIComponent('Консультация по приёмке квартиры')}&body=${encodeURIComponent(lines.join('\n'))}`;
+  location.href = 'mailto:info@expert-novostroy.ru?subject=' + encodeURIComponent('Консультация по приёмке квартиры') + '&body=' + encodeURIComponent(lines.join(String.fromCharCode(10)));
 });

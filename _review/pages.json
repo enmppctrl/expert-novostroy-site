@@ -8,7 +8,7 @@
       "url": "/",
       "type": "Home",
       "parent": null,
-      "updated": "2026-11-06",
+      "updated": "2026-11-25",
       "zone": "Core",
       "role": "Brand + router",
       "header": "LOGO",
@@ -83,18 +83,22 @@
       "url": "/uslugi/fotofiksaciya/",
       "type": "Услуга",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "legacy": true,
-      "currentUrl": "/fotofiksaciya/"
+      "currentUrl": "/fotofiksaciya/",
+      "status": "review",
+      "preview": "uslugi/fotofiksaciya/fotofiksaciya.html"
     },
     {
       "title": "Повторная приёмка",
       "url": "/uslugi/povtornaya-priyomka/",
       "type": "Услуга",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "legacy": true,
-      "currentUrl": "/povtornaya-priyomka/"
+      "currentUrl": "/povtornaya-priyomka/",
+      "status": "review",
+      "preview": "uslugi/povtornaya-priyomka/povtornaya-priyomka.html"
     },
     {
       "title": "Дистанционная приёмка",
@@ -116,26 +120,30 @@
       "url": "/uslugi/otsenka/",
       "type": "Service",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "zone": "Документы",
       "role": "Cross-sell",
       "header": "MEGA-secondary",
       "index": "Index",
       "priority": "P3",
-      "currentUrl": "/otsenka/"
+      "currentUrl": "/otsenka/",
+      "status": "review",
+      "preview": "uslugi/otsenka/otsenka.html"
     },
     {
       "title": "Тепловизионный осмотр",
       "url": "/uslugi/teplovizionnyy-osmotr/",
       "type": "Service",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "zone": "Приёмка",
       "role": "Attach rate",
       "header": "MEGA-secondary",
       "index": "Index",
       "priority": "P3",
-      "currentUrl": "/teplovizionnyy-osmotr/"
+      "currentUrl": "/teplovizionnyy-osmotr/",
+      "status": "review",
+      "preview": "uslugi/teplovizionnyy-osmotr/teplovizionnyy-osmotr.html"
     },
     {
       "title": "Неустойка по ДДУ",
@@ -276,7 +284,7 @@
       "type": "Knowledge hub",
       "parent": "/",
       "status": "review",
-      "updated": "2026-11-06",
+      "updated": "2026-11-25",
       "zone": "Knowledge",
       "role": "Authority / AI",
       "header": "MAIN",
@@ -346,8 +354,8 @@
       "url": "/baza-znaniy/spory/",
       "type": "Category",
       "parent": "/baza-znaniy/",
-      "status": "review",
-      "updated": "2026-11-06",
+      "status": "published",
+      "updated": "2026-11-25",
       "zone": "Knowledge",
       "role": "Legal authority",
       "header": "MEGA",
@@ -374,7 +382,7 @@
       "url": "/company/",
       "type": "Trust hub",
       "parent": "/",
-      "updated": "2026-11-21",
+      "updated": "2026-11-25",
       "zone": "Trust",
       "role": "E-E-A-T",
       "header": "TOPBAR",
@@ -382,7 +390,7 @@
       "priority": "P1",
       "currentUrl": "/kompaniya/",
       "preview": "company/company.html",
-      "status": "published"
+      "status": "review"
     },
     {
       "title": "Дефекты",
@@ -420,7 +428,7 @@
       "type": "Entity hub",
       "parent": "/baza-znaniy/",
       "status": "review",
-      "updated": "2026-11-21",
+      "updated": "2026-11-25",
       "zone": "Entity",
       "role": "Long-tail",
       "header": "BZ",
@@ -450,7 +458,7 @@
       "type": "People hub",
       "parent": "/company/",
       "status": "review",
-      "updated": "2026-11-06",
+      "updated": "2026-11-25",
       "zone": "Trust",
       "role": "E-E-A-T",
       "header": "TOPBAR",
@@ -494,7 +502,7 @@
       "url": "/company/licenses/",
       "type": "Trust content",
       "parent": "/company/",
-      "updated": "2026-11-06",
+      "updated": "2026-11-25",
       "zone": "Trust",
       "role": "E-E-A-T",
       "header": "Company/footer",
@@ -586,18 +594,22 @@
       "url": "/priemka-zavtra/",
       "type": "Сценарный лендинг",
       "parent": "/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "legacy": true,
-      "currentUrl": "/priemka-zavtra/"
+      "currentUrl": "/priemka-zavtra/",
+      "status": "review",
+      "preview": "priemka-zavtra/priemka-zavtra.html"
     },
     {
       "title": "Получили приглашение на приёмку",
       "url": "/poluchil-priglashenie-na-priemku/",
       "type": "Сценарный лендинг",
       "parent": "/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "legacy": true,
-      "currentUrl": "/poluchil-priglashenie-na-priemku/"
+      "currentUrl": "/poluchil-priglashenie-na-priemku/",
+      "status": "review",
+      "preview": "poluchil-priglashenie-na-priemku/poluchil-priglashenie-na-priemku.html"
     },
     {
       "title": "Химки",
@@ -614,9 +626,11 @@
       "url": "/zastroyshchik-zaderzhivaet-klyuchi/",
       "type": "Сценарный лендинг",
       "parent": "/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "legacy": true,
-      "currentUrl": "/zastroyshchik-zaderzhivaet-klyuchi/"
+      "currentUrl": "/zastroyshchik-zaderzhivaet-klyuchi/",
+      "status": "review",
+      "preview": "zastroyshchik-zaderzhivaet-klyuchi/zastroyshchik-zaderzhivaet-klyuchi.html"
     },
     {
       "title": "Глоссарий",
@@ -647,36 +661,42 @@
       "url": "/uslugi/proverka-prochnosti-styazhki/",
       "type": "Add-on",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "zone": "Приёмка",
       "role": "Attach rate",
       "header": "MEGA-secondary",
       "index": "No separate index",
-      "priority": "P3"
+      "priority": "P3",
+      "status": "review",
+      "preview": "uslugi/proverka-prochnosti-styazhki/proverka-prochnosti-styazhki.html"
     },
     {
       "title": "Обмерный план AutoCAD",
       "url": "/uslugi/obmernyy-plan/",
       "type": "Add-on",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "zone": "Документы",
       "role": "Supporting",
       "header": "MEGA-secondary",
       "index": "No separate index",
-      "priority": "P3"
+      "priority": "P3",
+      "status": "review",
+      "preview": "uslugi/obmernyy-plan/obmernyy-plan.html"
     },
     {
       "title": "Кладовая / машиноместо",
       "url": "/uslugi/kladovaya-i-mashinomesto/",
       "type": "Service",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-25",
       "zone": "Приёмка",
       "role": "Cross-sell",
       "header": "MEGA",
       "index": "No separate index",
-      "priority": "P3"
+      "priority": "P3",
+      "status": "review",
+      "preview": "uslugi/kladovaya-i-mashinomesto/kladovaya-i-mashinomesto.html"
     },
     {
       "title": "Строительная экспертиза",
@@ -747,7 +767,7 @@
       "url": "/company/yuristy/",
       "type": "Команда",
       "parent": "/company/",
-      "updated": "2026-11-06",
+      "updated": "2026-11-25",
       "legacy": true,
       "currentUrl": "/kompaniya/yuristy/",
       "status": "review",

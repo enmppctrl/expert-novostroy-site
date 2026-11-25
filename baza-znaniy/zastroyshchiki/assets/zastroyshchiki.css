@@ -133,3 +133,60 @@
 @media(max-width:1080px){.developer-page .developer-city-filter-list{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:720px){.developer-page .developer-city-filter-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:10px}.developer-page .developer-city-filter-list a{justify-content:flex-start;min-height:42px;padding-inline:12px;font-size:12px}}
 @media(max-width:360px){.developer-page .developer-city-filter-list{gap:6px;padding:8px}.developer-page .developer-city-filter-list a{padding-inline:8px;font-size:11px}}
+
+.developer-page .directory-section{padding:52px 0;background:#fff}
+.developer-page .directory-section .section-head{margin-bottom:24px}
+.developer-page .directory-section .section-head>p{margin-top:12px}
+.developer-page .developer-directory-panel{padding:28px;border:1px solid #DCE8F0;border-radius:28px;background:#F4F8FB}
+.developer-page .developer-directory-tools{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(230px,.8fr) auto;align-items:end;gap:12px;max-width:none;margin:0}
+.developer-page .developer-directory-field{display:grid;min-width:0;gap:8px;color:#536372;font-size:12px;font-weight:700;line-height:1.3}
+.developer-page .developer-directory-field input,.developer-page .developer-directory-field select{width:100%;min-height:52px;padding:13px 15px;border:1px solid #DCE8F0;border-radius:14px;outline:none;background:#fff;color:#303B49;font:400 14px/1.4 Montserrat,Arial,sans-serif}
+.developer-page .developer-directory-field input:focus,.developer-page .developer-directory-field select:focus{border-color:#7AAFCA;box-shadow:0 0 0 3px rgba(122,175,202,.16)}
+.developer-page .developer-directory-field select{cursor:pointer}
+.developer-page .developer-directory-reset{min-height:52px;padding:0 17px;border:1px solid #DCE8F0;border-radius:14px;background:#fff;color:#5D8AA3;font:700 13px/1 Montserrat,Arial,sans-serif;cursor:pointer;transition:background-color .18s ease,border-color .18s ease}
+.developer-page .developer-directory-reset:hover{border-color:#AFC9D8;background:#EDF7FB}
+.developer-page .developer-directory-status{min-height:18px;margin:12px 0 27px;color:#697786;font-size:12px;line-height:1.5}
+.developer-page .developer-directory-popular h3{margin:0 0 14px;color:#303B49;font-size:20px;font-weight:700;line-height:1.25}
+.developer-page .popular-developers-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.developer-page .popular-developer-card{min-height:98px;border-color:#DCE8F0;background:#fff}
+.developer-page .popular-developer-card span{align-self:flex-start}
+.developer-page .developer-directory-all{margin-top:25px;border:1px solid #DCE8F0;border-radius:19px;background:#fff;overflow:visible}
+.developer-page .developer-directory-all>summary{display:flex;min-height:60px;align-items:center;justify-content:space-between;gap:14px;padding:16px 19px;color:#303B49;font-size:16px;font-weight:700;line-height:1.35;cursor:pointer;list-style:none}
+.developer-page .developer-directory-all>summary::-webkit-details-marker{display:none}
+.developer-page .developer-directory-all>summary::after{display:grid;width:27px;height:27px;flex:0 0 27px;place-items:center;border-radius:50%;background:#EDF7FB;color:#5D8AA3;font-size:20px;font-weight:400;line-height:1;content:'+'}
+.developer-page .developer-directory-all[open]>summary{border-bottom:1px solid #E9F0F4}
+.developer-page .developer-directory-all[open]>summary::after{content:'−'}
+.developer-page .developer-directory-all>summary .developer-directory-count{margin-left:auto;color:#697786;font-size:12px;font-weight:600}
+.developer-page .developer-directory-list{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:9px;padding:14px;overflow:visible}
+.developer-page .developer-directory-company{position:relative;z-index:0;min-width:0;border:1px solid #E1EAF0;border-radius:15px;background:#fff;overflow:visible}
+.developer-page .developer-directory-company[open]{z-index:5}
+.developer-page .developer-directory-company>summary{display:flex;min-height:54px;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;color:#303B49;font-size:14px;font-weight:700;line-height:1.35;cursor:pointer;list-style:none}
+.developer-page .developer-directory-company>summary::-webkit-details-marker{display:none}
+.developer-page .developer-directory-company>summary::after{display:grid;width:24px;height:24px;flex:0 0 24px;place-items:center;border-radius:50%;background:#F4F8FB;color:#5D8AA3;font-size:18px;font-weight:400;line-height:1;content:'+'}
+.developer-page .developer-directory-company[open]>summary{border-bottom:1px solid #E9F0F4}
+.developer-page .developer-directory-company[open]>summary::after{content:'−'}
+.developer-page .developer-directory-name{min-width:0;overflow-wrap:anywhere}
+.developer-page .developer-directory-single-head{display:flex;min-height:48px;align-items:center;justify-content:space-between;gap:10px;padding:12px 15px;color:#303B49;font-size:14px;font-weight:700;line-height:1.35}
+.developer-page .developer-directory-single-head .developer-directory-count{color:#8A96A2;font-size:11px;font-weight:600;white-space:nowrap}
+.developer-page .developer-directory-projects{display:grid;grid-template-columns:1fr;gap:6px;margin:0;padding:0 10px 10px;list-style:none}
+.developer-page .developer-directory-company:not(.is-single) .developer-directory-projects{padding:10px}
+.developer-page .developer-directory-company:not(.is-single)[open]>.developer-directory-projects{position:absolute;top:calc(100% + 7px);left:0;z-index:6;width:100%;max-height:min(430px,65vh);overflow:auto;padding:10px;border:1px solid #DCE8F0;border-radius:14px;background:#fff;box-shadow:0 16px 34px rgba(47,57,71,.16);scrollbar-gutter:stable}
+.developer-page .developer-directory-project{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:10px 11px;border:1px solid #E9F0F4;border-radius:11px;background:#F8FBFD;color:#44515F;font-size:12px;line-height:1.4}
+.developer-page .developer-directory-project-name{width:100%;min-width:0;overflow-wrap:anywhere;color:#5D8AA3;font-weight:600;text-decoration:none;text-underline-offset:3px}
+.developer-page .developer-directory-project-name:hover{text-decoration:underline}
+.developer-page .developer-directory-city{width:100%;max-width:none;color:#697786;font-size:10px;line-height:1.4;text-align:left;white-space:normal;overflow-wrap:anywhere}
+.developer-page .developer-directory-list .is-hidden{display:none!important}
+.developer-page .developer-directory-empty{grid-column:1/-1;margin:0;padding:20px;border:1px solid #DCE8F0;border-radius:15px;background:#F4F8FB;color:#5D6C7C;font-size:14px}
+@media(max-width:1080px){.developer-page .popular-developers-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:850px){.developer-page .developer-directory-tools{grid-template-columns:minmax(0,1fr) minmax(220px,.8fr)}.developer-page .developer-directory-reset{grid-column:1/-1;justify-self:start;min-height:42px}.developer-page .popular-developers-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.developer-page .developer-directory-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.developer-page .directory-section{padding:32px 0}.developer-page .developer-directory-panel{padding:17px;border-radius:22px}.developer-page .developer-directory-tools{grid-template-columns:1fr;gap:11px}.developer-page .developer-directory-reset{grid-column:auto;justify-self:stretch}.developer-page .developer-directory-status{margin:10px 0 22px}.developer-page .developer-directory-popular h3{font-size:18px}.developer-page .popular-developers-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.developer-page .popular-developer-card{min-height:90px;padding:10px;border-radius:14px}.developer-page .popular-developer-card img{height:40px}.developer-page .developer-directory-all{margin-top:21px}.developer-page .developer-directory-all>summary{min-height:56px;padding:14px;font-size:14px}.developer-page .developer-directory-list{grid-template-columns:1fr;gap:8px;padding:9px}.developer-page .developer-directory-company:not(.is-single)[open]>.developer-directory-projects{position:static;width:auto;max-height:none;overflow:visible;padding:10px;border:0;border-radius:0 0 14px 14px;box-shadow:none;scrollbar-gutter:auto}.developer-page .developer-directory-project{grid-template-columns:1fr;gap:4px}.developer-page .developer-directory-city{text-align:left;white-space:normal}}
+@media(max-width:360px){.developer-page .developer-directory-panel{padding:14px}.developer-page .popular-developer-card{min-height:84px;padding:8px}.developer-page .developer-directory-all>summary{gap:9px;padding:12px;font-size:13px}}
+
+.developer-page .popular-developers-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.developer-page .popular-developer-card{position:relative;display:flex;min-height:122px;align-items:center;justify-content:center;gap:4px;padding:12px 14px 30px;border:1px solid #DCE8F0;border-radius:17px;background:#fff;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.developer-page .popular-developer-card img{display:block;width:100%;height:68px;object-fit:contain;object-position:center}
+.developer-page .popular-developer-card>span{position:absolute;right:12px;bottom:10px;display:inline-flex;min-height:20px;align-items:center;justify-content:center;padding:4px 8px;border-radius:999px;background:#F4F8FB;color:#697786;font-size:10px;font-weight:600;line-height:1;white-space:nowrap}
+.developer-page .popular-developer-card .popular-developer-wordmark{display:flex;width:100%;min-height:68px;align-items:center;justify-content:center;padding:0 4px;color:#303B49;font-size:17px;font-weight:700;letter-spacing:-.03em;line-height:1.15;text-align:center}
+@media(max-width:850px){.developer-page .popular-developers-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){.developer-page .popular-developers-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.developer-page .popular-developer-card{min-height:112px;padding:10px 11px 28px;border-radius:15px}.developer-page .popular-developer-card img{height:60px}.developer-page .popular-developer-card .popular-developer-wordmark{min-height:60px;font-size:16px}.developer-page .popular-developer-card>span{right:10px;bottom:9px}}
+@media(max-width:360px){.developer-page .popular-developer-card{min-height:106px;padding-inline:9px}.developer-page .popular-developer-card img{height:54px}.developer-page .popular-developer-card .popular-developer-wordmark{min-height:54px;font-size:15px}}

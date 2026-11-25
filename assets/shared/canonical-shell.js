@@ -12,6 +12,33 @@
   window.addEventListener('scroll', updateFixed, { passive: true });
   updateFixed();
 
+  const navToggles = [...document.querySelectorAll('body.canonical-header-page .nav-toggle')];
+  const closeDesktopMenus = except => {
+    navToggles.forEach(toggle => {
+      const item = toggle.closest('.has-menu');
+      if (item !== except) {
+        item?.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  };
+  navToggles.forEach(toggle => {
+    const item = toggle.closest('.has-menu');
+    toggle.addEventListener('click', event => {
+      event.stopPropagation();
+      const open = !item.classList.contains('is-open');
+      closeDesktopMenus(item);
+      item.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.has-menu')) closeDesktopMenus();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeDesktopMenus();
+  });
+
   const burger = document.getElementById('mobileBurger');
   const menu = document.getElementById('mobileMenu');
   const backdrop = document.getElementById('mobileMenuBackdrop');
