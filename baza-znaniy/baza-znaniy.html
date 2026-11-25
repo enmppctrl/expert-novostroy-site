@@ -51,7 +51,6 @@
 @media(max-width:1200px){.scenario-grid,.stage-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.service-catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.question-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.header-trust-links{display:none}.desktop-nav{gap:17px}.desktop-nav .nav-link{font-size:11px}.header-main{gap:17px}}
 @media(max-width:720px){.hero-quick{display:grid;grid-template-columns:1fr 1fr}.hero-quick a{justify-content:center;text-align:center}.scenario-grid,.stage-grid,.service-catalog-grid,.question-grid,.result-grid{grid-template-columns:1fr}.scenario-card,.stage-card{min-height:auto}.service-card{min-height:220px}}
 </style>
-<link rel="stylesheet" href="../assets/shared/canonical-shell.css">
 <style id="knowledge-topic-navigation">
 .topic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:stretch;margin:0;padding:0;border:0;min-width:0}
 .knowledge-topic{appearance:none;display:grid;grid-template-columns:minmax(0,1fr) 54px;grid-template-rows:auto 1fr;align-content:stretch;min-width:0;min-height:276px;width:100%;padding:0;border:1px solid var(--en-line);border-radius:20px;background:#fff;box-shadow:var(--shadow-sm);color:inherit;font:inherit;text-align:left;cursor:pointer;overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease}
@@ -115,7 +114,8 @@
 }
 @media(prefers-reduced-motion:reduce){.knowledge-topic,.topic-indicator{transition:none}.topic-results{animation:none}}
 </style>
-<link rel="stylesheet" href="../assets/shared/canonical-header.css">
+<link rel="stylesheet" href="/expert-novostroy-site/assets/shared/canonical-shell.css">
+<link rel="stylesheet" href="/expert-novostroy-site/assets/shared/canonical-header.css">
 </head>
 <body class="canonical-header-page">
 
@@ -304,7 +304,7 @@ topicChoices.forEach(choice=>choice.addEventListener('click',()=>{const topic=ch
 if(mobileTopicLayout.addEventListener)mobileTopicLayout.addEventListener('change',arrangeTopicResults);else mobileTopicLayout.addListener(arrangeTopicResults);
 arrangeTopicResults();
 </script>
-<script src="../assets/shared/canonical-shell.js" defer></script>
+<script src="/expert-novostroy-site/assets/shared/canonical-shell.js"></script>
 </body>
 </html>
 
