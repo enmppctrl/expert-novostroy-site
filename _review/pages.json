@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "architectureSource": "Expert_Novostroy_МАСТЕР_ТЗ_САЙТА_FINAL_2026-10-06.xlsx",
   "pages": [
     {
@@ -284,7 +284,7 @@
       "type": "Knowledge hub",
       "parent": "/",
       "status": "review",
-      "updated": "2026-11-25",
+      "updated": "2026-11-26",
       "zone": "Knowledge",
       "role": "Authority / AI",
       "header": "MAIN",
@@ -428,7 +428,7 @@
       "type": "Entity hub",
       "parent": "/baza-znaniy/",
       "status": "review",
-      "updated": "2026-11-25",
+      "updated": "2026-11-26",
       "zone": "Entity",
       "role": "Long-tail",
       "header": "BZ",
@@ -502,7 +502,7 @@
       "url": "/company/licenses/",
       "type": "Trust content",
       "parent": "/company/",
-      "updated": "2026-11-25",
+      "updated": "2026-11-26",
       "zone": "Trust",
       "role": "E-E-A-T",
       "header": "Company/footer",
@@ -652,9 +652,11 @@
       "url": "/uslugi/zaklyuchenie-po-teplovizoru/",
       "type": "Услуга",
       "parent": "/uslugi/",
-      "updated": "2026-10-12",
+      "updated": "2026-11-26",
       "legacy": true,
-      "currentUrl": "/zaklyuchenie-po-teplovizoru/"
+      "currentUrl": "/zaklyuchenie-po-teplovizoru/",
+      "status": "review",
+      "preview": "uslugi/zaklyuchenie-po-teplovizoru/zaklyuchenie-po-teplovizoru.html"
     },
     {
       "title": "Проверка прочности стяжки",
