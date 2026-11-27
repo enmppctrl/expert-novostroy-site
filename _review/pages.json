@@ -1,6 +1,6 @@
 {
   "project": "Эксперт Новострой",
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "architectureSource": "Expert_Novostroy_МАСТЕР_ТЗ_САЙТА_FINAL_2026-10-06.xlsx",
   "pages": [
     {
@@ -8,7 +8,7 @@
       "url": "/",
       "type": "Home",
       "parent": null,
-      "updated": "2026-11-25",
+      "updated": "2026-11-27",
       "zone": "Core",
       "role": "Brand + router",
       "header": "LOGO",
@@ -17126,7 +17126,9 @@
       "type": "GEO",
       "parent": "/uslugi/priemka-kvartiry/",
       "currentUrl": "/priemka-kvartiry-balashiha/",
-      "preview": null
+      "preview": "priemka-kvartiry-balashiha/priemka-kvartiry-balashiha.html",
+      "status": "review",
+      "updated": "2026-11-27"
     },
     {
       "title": "Красногорск",
